@@ -134,3 +134,17 @@ footer {
 .svg-path-6 {
   fill: var(--text);
 }
+
+.active {
+  border-bottom: 2px solid var(--primary);
+  font-weight: 500;
+}
+
+/* Form */
+
+.form {
+  width: 100%;
+  margin: 3% auto;
+  box-shadow: var(--boxshadow);
+  border-radius: 5px;
+}
