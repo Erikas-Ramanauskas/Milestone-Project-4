@@ -1,11 +1,57 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Global css links -->
+    {% block base_css %}
+    <!-- Global Bootstrap link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{% static '/css/base.css' %}" />
+    {% endblock %}
+
+    <!-- Additional css links -->
+    {% block extra_css %} {% endblock %}
+
+    <!-- Core Javascript links -->
+    {% block corejs %}
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+      integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    {% endblock %}
+
+    <!-- Additional Javascript links -->
+    {% block extra_js %} {% endblock %}
+
+    <!-- Custom Title -->
+    <title>G-Mark - {% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <!-- header  -->
+    {% include 'includes/header.html' %}
+
+    <main>{% block content %} {% endblock %}</main>
+    <!-- footer -->
+    {% include 'includes/footer.html' %}
+  </body>
 </html>

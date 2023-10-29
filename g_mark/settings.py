@@ -39,10 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    
     
     # Apps
-    'home'
+    'home',
+    
+    # Allauth
+     'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -60,7 +69,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -69,9 +79,22 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
+                # `allauth` needs this from django
+                'django.template.context_processors.request',
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+
 ]
 
 WSGI_APPLICATION = 'g_mark.wsgi.application'
@@ -116,6 +139,16 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+# Account settup for allauth
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+
 USE_TZ = True
 
 
@@ -123,6 +156,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Static files directory
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
