@@ -1,6 +1,83 @@
 {% load static %}
 
 <header>
+  {% with request.resolver_match.url_name as url_name %}
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- logo -->
+      <a class="navbar-brand" href="#">{% include 'includes/logo.html' %}</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--  navigation list -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link {% if url_name == 'home' %} active {% endif %}"
+              aria-current="page"
+              href="{% url 'home' %}"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}" href="/accounts/logout/"
+              >Log Out</a
+            >
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link {% if url_name == 'accounts_singup' %} active {% endif %}" href="/accounts/signup/"
+              >Register</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if url_name == 'accounts_login' %} active {% endif %}" href="/accounts/login/"
+              >Log In</a
+            >
+          </li>
+          {% endif %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">New</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- search  -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  {% endwith %}
+</header>
+
+{% load static %}
+
+<header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <!-- logo -->

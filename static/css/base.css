@@ -134,3 +134,153 @@ footer {
 .svg-path-6 {
   fill: var(--text);
 }
+/* header */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
+
+:root {
+  /* fonts */
+  --title: "Lato", sans-serif;
+  --main-font: "Playfair Display", serif;
+
+  /* Colours */
+  --text: #0b1d07;
+  --background: #f8fdf7;
+  --primary: #611a74;
+  --secondary: #f4cde9;
+  --accent: #592dc8;
+
+  /* Utility */
+  --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  --boxshadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  --border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.color-1-bg {
+  background-color: var(--text);
+}
+.color-1-text {
+  color: var(--text);
+}
+
+.color-2-bg {
+  background-color: var(--background);
+}
+
+.color-2-text {
+  color: var(--background);
+}
+
+.color-3-bg {
+  background-color: var(--primary);
+}
+
+.color-3-text {
+  color: var(--primary);
+}
+
+.color-4-bg {
+  background-color: var(--secondary);
+}
+
+.color-4-text {
+  color: var(--secondary);
+}
+
+.color-5-bg {
+  background-color: var(--accent);
+}
+
+.color-5-text {
+  color: var(--accent);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title);
+}
+
+main {
+  flex: 1 0 auto;
+  background-color: var(--background);
+}
+
+/* footer */
+footer {
+  flex-shrink: 0;
+}
+
+.navbar {
+  background-color: var(--secondary);
+  box-shadow: var(--small-boxshadow);
+}
+
+/* svg-logo-path */
+.logo-svg {
+  height: 3.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo-svg {
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-svg {
+    height: 2rem;
+  }
+}
+
+.svg-path-1 {
+  fill: var(--text);
+}
+
+.svg-path-2 {
+  fill: var(--accent);
+}
+
+.svg-path-3 {
+  fill: var(--secondary);
+}
+
+.svg-path-4 {
+  fill: var(--primary);
+}
+
+.svg-path-5 {
+  fill: var(--accent);
+}
+
+.svg-path-6 {
+  fill: var(--text);
+}
+
+.active {
+  border-bottom: 2px solid var(--primary);
+  font-weight: 500;
+}
+
+/* Form */
+
+.form {
+  width: 100%;
+  margin: 3% auto;
+  box-shadow: var(--boxshadow);
+  border-radius: 5px;
+}
