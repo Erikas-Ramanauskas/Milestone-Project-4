@@ -1,0 +1,1 @@
+web: gunicorn g_mark.wsgi:application
