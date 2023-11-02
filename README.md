@@ -1,6 +1,4 @@
-# Project Cauldron
 
-##
 
 ![Responsive]()
 
