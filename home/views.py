@@ -1,5 +1,6 @@
-from django.views.generic import TemplateView
+from django.shortcuts import render
 
 
-class Index(TemplateView):
-    template_name = "home/index.html"
+def index(request):
+    """"A view to return the index page"""
+    return render(request, 'home/index.html')

@@ -1,1 +1,115 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <header class="container-fluid ">
+        <div class="row">
+            <!-- Header Row -->
+            <div class="col-12 col-md-5 my-5 text-center text-container" id="index-header-action">
+                <h2 class="mx-5">Generation that makes a mark in todays world, <br> steps forward with Confort and Fashion </h2>
+                <button>Explore the shop</button>
+            </div>  
+            <div id="home-picture" class="col-12 col-md-6 ">
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <!-- Delivery container -->
+    <section class="container-fluid p-0" >
+        <div class="row justify-content-end even-home-container">
+        <!-- All product row -->
+            <div id="shoe-picture-1">
+                <div></div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-8 self py-4 text-center text-container">
+                <h2 class="mx-5 text-white text-shadow-black">Orders of £99 and over pay nothign for shippping</h2>
+                <button>Browse me</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- category container -->
+    <section class="container">
+        <div class="row g-5 odd-home-container text-center ">
+            <div class="col-12">
+                <h1>Explore our products by categories</h1>
+                <p>One thing you can always count on: high-quality products, no matter which category you shop.</p>
+            </div>
+            <div class="col-12 col-md-5 shadow ms-auto border border-secondary px-0">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img class="main-page-pic" src="/static/images/Sneakers.png" alt="Sneakers picture">
+                    </div>
+                    <div class="col-12 col-md">
+                        <h3>Sport</h3>
+                        <p>Casual and versatile, sneakers are comfortable for everyday wear and come in various styles, including athletic and fashion sneakers.</p>
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 shadow ms-auto border border-secondary px-0">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img class="main-page-pic" src="/static/images/dress_shoes.png" alt="Dress shoes picture">
+                    </div>
+                    <div class="col-12 col-md">
+                        <h3>Classic</h3>
+                        <p>Typically made of leather, dress shoes are suitable for formal events, business attire, and special occasions. Common types include oxfords, derbies, and loafers.</p>
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 shadow ms-auto border border-secondary px-0">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img class="main-page-pic" src="/static/images/high_heals.png" alt="High Heals picture">
+                    </div>
+                    <div class="col-12 col-md">
+                        <h3>Elegant</h3>
+                        <p>These are women's shoes with elevated heels, often worn to add height and elegance to formal or dressy outfits.</p>
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 shadow ms-auto border border-secondary px-0">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img class="main-page-pic" src="/static/images/winter_shoes.png" alt="Winter shoes picture">
+                    </div>
+                    <div class="col-12 col-md">
+                        <h3>Winter</h3>
+                        <p>Insulated and designed to keep your feet warm and dry in snowy and cold weather.</p>
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- feautures container -->
+     <section class="container-fluid p-0" >
+        <div class="row even-home-container">
+        <!-- All product row -->
+        
+            <div class="col-12 col-md-4 self py-4 text-center text-container text-white text-shadow-black">
+                <p class="home-icons color-1-text"><i class="fa-solid fa-handshake"></i></p>
+                <h2>30 Day waranty</h2>
+                <p>Your satisfaction and piece of mind guaranteed.</p>
+            </div>
+            <div class="col-12 col-md-4 self py-4 text-center text-container text-white text-shadow-black">
+                <p class="home-icons color-1-text"><i class="fa-solid fa-globe"></i></p>
+                <h2>International Deliveries</h2>
+                <p>Delivering goods to over 100 countires.</p>
+            </div>
+            <div class="col-12 col-md-4 self py-4 text-center text-container text-white text-shadow-black">
+                <p class="home-icons color-1-text"><i class="fa-solid fa-globe"></i></p>
+                <h2>International Deliveries</h2>
+                <p>Delivering goods to over 100 countires.</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -3,9 +3,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+     {% block extra_meta %} {% endblock %}
+    
     <!-- Global css links -->
     {% block base_css %}
     <!-- Global Bootstrap link -->
@@ -16,6 +19,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- global Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Global Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
@@ -31,7 +37,8 @@
       integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></script> 
+
     <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -49,8 +56,12 @@
   <body>
     <!-- header  -->
     {% include 'includes/header.html' %}
+    {% include 'includes/navbar.html' %}
+    
+    {% block header %} {% endblock %}
 
     <main>{% block content %} {% endblock %}</main>
+    
     <!-- footer -->
     {% include 'includes/footer.html' %}
   </body>
