@@ -1,26 +1,8 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, Size, Brand
 
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    list_display = (
-        'sku',
-        'name',
-        'price',
-        'description',
-        'image',
-        'image_alt',
-        'shoe_size',
-        'shoe_sex',
-        'shoe_type',
-        'shoe_brand',
-    )
-    
-    list_filter = (
-        'price',
-        'shoe_size',
-        'shoe_sex',
-        'shoe_type',
-        'shoe_brand',
-    )
+admin.site.register(Product)
+admin.site.register(Category)
+admin.site.register(Size)
+admin.site.register(Brand)

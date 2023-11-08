@@ -1,0 +1,130 @@
+[
+  {
+    "pk": "1",
+    "model": "products.category",
+    "fields": {
+      "name": "sneakers",
+      "friendly_name": "Sneakers"
+    }
+  },
+  {
+    "pk": "2",
+    "model": "products.category",
+    "fields": {
+      "name": "sandals",
+      "friendly_name": "Sandals"
+    }
+  },
+  {
+    "pk": "3",
+    "model": "products.category",
+    "fields": {
+      "name": "boots",
+      "friendly_name": "Boots"
+    }
+  },
+  {
+    "pk": "4",
+    "model": "products.category",
+    "fields": {
+      "name": "flats",
+      "friendly_name": "Flats"
+    }
+  },
+  {
+    "pk": "5",
+    "model": "products.category",
+    "fields": {
+      "name": "high_heels",
+      "friendly_name": "High Heels"
+    }
+  },
+  {
+    "pk": "6",
+    "model": "products.category",
+    "fields": {
+      "name": "loafers",
+      "friendly_name": "Loafers"
+    }
+  },
+  {
+    "pk": "7",
+    "model": "products.category",
+    "fields": {
+      "name": "running_shoes",
+      "friendly_name": "Running Shoes"
+    }
+  },
+  {
+    "pk": "8",
+    "model": "products.category",
+    "fields": {
+      "name": "basketball_shoes",
+      "friendly_name": "Basketball Shoes"
+    }
+  },
+  {
+    "pk": "9",
+    "model": "products.category",
+    "fields": {
+      "name": "tennis_shoes",
+      "friendly_name": "Tennis Shoes"
+    }
+  },
+  {
+    "pk": "10",
+    "model": "products.category",
+    "fields": {
+      "name": "hiking_boots",
+      "friendly_name": "Hiking Boots"
+    }
+  },
+  {
+    "pk": "11",
+    "model": "products.category",
+    "fields": {
+      "name": "rain_boots",
+      "friendly_name": "Rain Boots"
+    }
+  },
+  {
+    "pk": "12",
+    "model": "products.category",
+    "fields": {
+      "name": "ankle_boots",
+      "friendly_name": "Ankle Boots"
+    }
+  },
+  {
+    "pk": "13",
+    "model": "products.category",
+    "fields": {
+      "name": "platform_shoes",
+      "friendly_name": "Platform Shoes"
+    }
+  },
+  {
+    "pk": "14",
+    "model": "products.category",
+    "fields": {
+      "name": "mules",
+      "friendly_name": "Mules"
+    }
+  },
+  {
+    "pk": "15",
+    "model": "products.category",
+    "fields": {
+      "name": "chukka_boots",
+      "friendly_name": "Chukka Boots"
+    }
+  },
+  {
+    "pk": "16",
+    "model": "products.category",
+    "fields": {
+      "name": "cowboy_boots",
+      "friendly_name": "Cowboy Boots"
+    }
+  }
+]

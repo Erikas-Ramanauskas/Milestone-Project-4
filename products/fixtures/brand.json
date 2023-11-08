@@ -1,0 +1,306 @@
+[
+  {
+    "pk": "1",
+    "model": "products.size",
+    "fields": {
+      "name": "nike",
+      "friendly_name": "Nike"
+    }
+  },
+  {
+    "pk": "2",
+    "model": "products.size",
+    "fields": {
+      "name": "adidas",
+      "friendly_name": "Adidas"
+    }
+  },
+  {
+    "pk": "3",
+    "model": "products.size",
+    "fields": {
+      "name": "puma",
+      "friendly_name": "Puma"
+    }
+  },
+  {
+    "pk": "4",
+    "model": "products.size",
+    "fields": {
+      "name": "reebok",
+      "friendly_name": "Reebok"
+    }
+  },
+  {
+    "pk": "5",
+    "model": "products.size",
+    "fields": {
+      "name": "converse",
+      "friendly_name": "Converse"
+    }
+  },
+  {
+    "pk": "6",
+    "model": "products.size",
+    "fields": {
+      "name": "new_balance",
+      "friendly_name": "New Balance"
+    }
+  },
+  {
+    "pk": "7",
+    "model": "products.size",
+    "fields": {
+      "name": "vans",
+      "friendly_name": "Vans"
+    }
+  },
+  {
+    "pk": "8",
+    "model": "products.size",
+    "fields": {
+      "name": "under_armour",
+      "friendly_name": "Under Armour"
+    }
+  },
+  {
+    "pk": "9",
+    "model": "products.size",
+    "fields": {
+      "name": "skechers",
+      "friendly_name": "Skechers"
+    }
+  },
+  {
+    "pk": "10",
+    "model": "products.size",
+    "fields": {
+      "name": "asics",
+      "friendly_name": "ASICS"
+    }
+  },
+  {
+    "pk": "11",
+    "model": "products.size",
+    "fields": {
+      "name": "brooks",
+      "friendly_name": "Brooks"
+    }
+  },
+  {
+    "pk": "12",
+    "model": "products.size",
+    "fields": {
+      "name": "clarks",
+      "friendly_name": "Clarks"
+    }
+  },
+  {
+    "pk": "13",
+    "model": "products.size",
+    "fields": {
+      "name": "timberland",
+      "friendly_name": "Timberland"
+    }
+  },
+  {
+    "pk": "14",
+    "model": "products.size",
+    "fields": {
+      "name": "dr_martens",
+      "friendly_name": "Dr. Martens"
+    }
+  },
+  {
+    "pk": "15",
+    "model": "products.size",
+    "fields": {
+      "name": "fila",
+      "friendly_name": "FILA"
+    }
+  },
+  {
+    "pk": "16",
+    "model": "products.size",
+    "fields": {
+      "name": "merrell",
+      "friendly_name": "Merrell"
+    }
+  },
+  {
+    "pk": "17",
+    "model": "products.size",
+    "fields": {
+      "name": "salomon",
+      "friendly_name": "Salomon"
+    }
+  },
+  {
+    "pk": "18",
+    "model": "products.size",
+    "fields": {
+      "name": "ecco",
+      "friendly_name": "Ecco"
+    }
+  },
+  {
+    "pk": "19",
+    "model": "products.size",
+    "fields": {
+      "name": "lacoste",
+      "friendly_name": "Lacoste"
+    }
+  },
+  {
+    "pk": "20",
+    "model": "products.size",
+    "fields": {
+      "name": "saucony",
+      "friendly_name": "Saucony"
+    }
+  },
+  {
+    "pk": "21",
+    "model": "products.size",
+    "fields": {
+      "name": "vionic",
+      "friendly_name": "Vionic"
+    }
+  },
+  {
+    "pk": "22",
+    "model": "products.size",
+    "fields": {
+      "name": "mizuno",
+      "friendly_name": "Mizuno"
+    }
+  },
+  {
+    "pk": "23",
+    "model": "products.size",
+    "fields": {
+      "name": "hoka_one_one",
+      "friendly_name": "Hoka One One"
+    }
+  },
+  {
+    "pk": "24",
+    "model": "products.size",
+    "fields": {
+      "name": "birkenstock",
+      "friendly_name": "Birkenstock"
+    }
+  },
+  {
+    "pk": "25",
+    "model": "products.size",
+    "fields": {
+      "name": "ugg",
+      "friendly_name": "UGG"
+    }
+  },
+  {
+    "pk": "26",
+    "model": "products.size",
+    "fields": {
+      "name": "cole_haan",
+      "friendly_name": "Cole Haan"
+    }
+  },
+  {
+    "pk": "27",
+    "model": "products.size",
+    "fields": {
+      "name": "steve_madden",
+      "friendly_name": "Steve Madden"
+    }
+  },
+  {
+    "pk": "28",
+    "model": "products.size",
+    "fields": {
+      "name": "aldo",
+      "friendly_name": "Aldo"
+    }
+  },
+  {
+    "pk": "29",
+    "model": "products.size",
+    "fields": {
+      "name": "fendi",
+      "friendly_name": "Fendi"
+    }
+  },
+  {
+    "pk": "30",
+    "model": "products.size",
+    "fields": {
+      "name": "gucci",
+      "friendly_name": "Gucci"
+    }
+  },
+  {
+    "pk": "31",
+    "model": "products.size",
+    "fields": {
+      "name": "prada",
+      "friendly_name": "Prada"
+    }
+  },
+  {
+    "pk": "32",
+    "model": "products.size",
+    "fields": {
+      "name": "versace",
+      "friendly_name": "Versace"
+    }
+  },
+  {
+    "pk": "33",
+    "model": "products.size",
+    "fields": {
+      "name": "balenciaga",
+      "friendly_name": "Balenciaga"
+    }
+  },
+  {
+    "pk": "34",
+    "model": "products.size",
+    "fields": {
+      "name": "louis_vuitton",
+      "friendly_name": "Louis Vuitton"
+    }
+  },
+  {
+    "pk": "35",
+    "model": "products.size",
+    "fields": {
+      "name": "jimmy_choo",
+      "friendly_name": "Jimmy Choo"
+    }
+  },
+  {
+    "pk": "36",
+    "model": "products.size",
+    "fields": {
+      "name": "christian_louboutin",
+      "friendly_name": "Christian Louboutin"
+    }
+  },
+  {
+    "pk": "37",
+    "model": "products.size",
+    "fields": {
+      "name": "valentino",
+      "friendly_name": "Valentino"
+    }
+  },
+  {
+    "pk": "38",
+    "model": "products.size",
+    "fields": {
+      "name": "dior",
+      "friendly_name": "Dior"
+    }
+  }
+]
