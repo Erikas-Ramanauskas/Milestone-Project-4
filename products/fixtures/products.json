@@ -1,16 +1,16 @@
 [
   {
-    "pk": "1",
+    "pk": 1,
     "model": "products.product",
     "fields": {
-      "sku": "pp5092312593",
+      "sku": "pp2204034712",
       "name": "SleekStride",
       "description": "Elevate your style with these elegant leather loafers. The SleekStride shoes are perfect for formal occasions or adding a touch of sophistication to your daily attire. Crafted with premium materials and a comfortable fit, they'll keep you striding in confidence.",
-      "price": "59.99",
-      "shoe_sex": "M",
-      "size": "6",
-      "category": "high_heels",
-      "brand": "puma",
+      "price": 59.99,
+      "shoe_sex": "Male",
+      "size": 9,
+      "category": 10,
+      "brand": 23,
       "image": [
         "IMG_0841.jpg",
         "IMG_0842.jpg",
@@ -32,17 +32,17 @@
     }
   },
   {
-    "pk": "2",
+    "pk": 2,
     "model": "products.product",
     "fields": {
-      "sku": "pp9806766901",
+      "sku": "pp4573567701",
       "name": "TrailBlazers",
       "description": "Get ready to explore the great outdoors with our TrailBlazers hiking boots. Designed for rugged terrains, these shoes offer superior grip and support, keeping your feet comfortable and protected during your adventures.",
-      "price": "79.99",
-      "shoe_sex": "F",
-      "size": "5.5",
-      "category": "rain_boots",
-      "brand": "adidas",
+      "price": 79.99,
+      "shoe_sex": "Female",
+      "size": 3,
+      "category": 6,
+      "brand": 34,
       "image": [
         "IMG_0849.jpg",
         "IMG_0850.jpg",
@@ -66,17 +66,17 @@
     }
   },
   {
-    "pk": "3",
+    "pk": 3,
     "model": "products.product",
     "fields": {
-      "sku": "pp3201380874",
+      "sku": "pp7350523220",
       "name": "UrbanChic Sneakers",
       "description": "The UrbanChic Sneakers are a must-have for city dwellers and fashion-forward individuals. These trendy sneakers blend style and comfort effortlessly, making them perfect for a casual day out or a night on the town.",
-      "price": "129.99",
-      "shoe_sex": "M",
-      "size": "10.5",
-      "category": "sneakers",
-      "brand": "converse",
+      "price": 129.99,
+      "shoe_sex": "Male",
+      "size": 4,
+      "category": 1,
+      "brand": 6,
       "image": [
         "IMG_0859.jpg",
         "IMG_0860.jpg",
@@ -98,17 +98,17 @@
     }
   },
   {
-    "pk": "4",
+    "pk": 4,
     "model": "products.product",
     "fields": {
-      "sku": "pp5775213643",
+      "sku": "pp24427848",
       "name": "ComfyCloud Slippers",
       "description": "Experience the ultimate relaxation with our ComfyCloud Slippers. These plush, memory foam slippers provide heavenly comfort for your feet after a long day. They're perfect for lounging at home and unwinding in style.",
-      "price": "49.99",
-      "shoe_sex": "F",
-      "size": "8",
-      "category": "tennis_shoes",
-      "brand": "skechers",
+      "price": 49.99,
+      "shoe_sex": "Female",
+      "size": 8,
+      "category": 3,
+      "brand": 8,
       "image": [
         "IMG_0867.jpg",
         "IMG_0868.jpg",
@@ -128,17 +128,17 @@
     }
   },
   {
-    "pk": "5",
+    "pk": 5,
     "model": "products.product",
     "fields": {
-      "sku": "pp7936580764",
+      "sku": "pp8614165102",
       "name": "SportPro Runners",
       "description": "Gear up for your next workout or run with the SportPro Runners. These athletic shoes are designed for performance, featuring breathable mesh uppers, responsive cushioning, and excellent support to help you achieve your fitness goals.",
-      "price": "89.99",
-      "shoe_sex": "M",
-      "size": "11",
-      "category": "basketball_shoes",
-      "brand": "louis_vuitton",
+      "price": 89.99,
+      "shoe_sex": "Male",
+      "size": 4,
+      "category": 4,
+      "brand": 31,
       "image": [
         "IMG_0874.jpg",
         "IMG_0875.jpg",
@@ -160,17 +160,17 @@
     }
   },
   {
-    "pk": "6",
+    "pk": 6,
     "model": "products.product",
     "fields": {
-      "sku": "pp8170472840",
+      "sku": "pp3071108310",
       "name": "Boho-Chic Sandals",
       "description": "Embrace a bohemian vibe with our Boho-Chic Sandals. These stylish and comfortable sandals are ideal for summer outings, beach trips, or simply adding a touch of free-spirited charm to your look.",
-      "price": "169.99",
-      "shoe_sex": "M",
-      "size": "7",
-      "category": "flats",
-      "brand": "balenciaga",
+      "price": 169.99,
+      "shoe_sex": "Male",
+      "size": 1,
+      "category": 2,
+      "brand": 14,
       "image": [
         "IMG_0892.jpg",
         "IMG_0893.jpg",
@@ -190,17 +190,17 @@
     }
   },
   {
-    "pk": "7",
+    "pk": 7,
     "model": "products.product",
     "fields": {
-      "sku": "pp1042544428",
+      "sku": "pp6782672885",
       "name": "ClassicOxfords",
       "description": "ClassicOxfords are timeless footwear that never goes out of style. Crafted with attention to detail, these traditional oxford shoes are perfect for formal occasions, office meetings, and elegant dinners.",
-      "price": "39.99",
-      "shoe_sex": "F",
-      "size": "6.5",
-      "category": "mules",
-      "brand": "reebok",
+      "price": 39.99,
+      "shoe_sex": "Female",
+      "size": 2,
+      "category": 16,
+      "brand": 5,
       "image": [
         "IMG_0899.jpg",
         "IMG_0900.jpg",
@@ -224,17 +224,17 @@
     }
   },
   {
-    "pk": "8",
+    "pk": 8,
     "model": "products.product",
     "fields": {
-      "sku": "pp8976825668",
+      "sku": "pp4829332736",
       "name": "EverydayEssentials Flats",
       "description": "Simplify your footwear collection with our EverydayEssentials Flats. These versatile flats are designed to complement any outfit, offering both comfort and style for your day-to-day activities.",
-      "price": "99.99",
-      "shoe_sex": "F",
-      "size": "9.5",
-      "category": "hiking_boots",
-      "brand": "fila",
+      "price": 99.99,
+      "shoe_sex": "Female",
+      "size": 7,
+      "category": 1,
+      "brand": 29,
       "image": [
         "IMG_0917.jpg",
         "IMG_0918.jpg",
@@ -254,17 +254,17 @@
     }
   },
   {
-    "pk": "9",
+    "pk": 9,
     "model": "products.product",
     "fields": {
-      "sku": "pp6214011470",
+      "sku": "pp6147200279",
       "name": "AdventureSeeker Boots",
       "description": "For the intrepid traveler and outdoor enthusiast, AdventureSeeker Boots are the perfect choice. These durable and waterproof boots will keep your feet dry and comfortable during your explorations in any weather.",
-      "price": "59.99",
-      "shoe_sex": "M",
-      "size": "11.5",
-      "category": "platform_shoes",
-      "brand": "gucci",
+      "price": 59.99,
+      "shoe_sex": "Male",
+      "size": 3,
+      "category": 9,
+      "brand": 8,
       "image": [
         "IMG_0924.jpg",
         "IMG_0925.jpg",
@@ -286,17 +286,17 @@
     }
   },
   {
-    "pk": "10",
+    "pk": 10,
     "model": "products.product",
     "fields": {
-      "sku": "pp8554736381",
+      "sku": "pp4450867402",
       "name": "SprintTech Performance Shoes",
       "description": "Elevate your athletic performance with SprintTech Performance Shoes. These high-tech running shoes feature advanced cushioning, lightweight construction, and excellent breathability, ensuring you stay ahead of the competition.",
-      "price": "119.99",
-      "shoe_sex": "M",
-      "size": "8.5",
-      "category": "sandals",
-      "brand": "under_armour",
+      "price": 119.99,
+      "shoe_sex": "Male",
+      "size": 9,
+      "category": 5,
+      "brand": 24,
       "image": [
         "IMG_0932.jpg",
         "IMG_0933.jpg",
@@ -318,17 +318,17 @@
     }
   },
   {
-    "pk": "11",
+    "pk": 11,
     "model": "products.product",
     "fields": {
-      "sku": "pp4910579483",
+      "sku": "pp7352203458",
       "name": "GlamourGlide Heels",
       "description": "Step into the spotlight with GlamourGlide Heels. These stunning high heels are designed for special occasions and glamorous evenings out. With their eye-catching design and comfortable fit, you'll be the center of attention.",
-      "price": "69.99",
-      "shoe_sex": "F",
-      "size": "7.5",
-      "category": "ankle_boots",
-      "brand": "ecco",
+      "price": 69.99,
+      "shoe_sex": "Female",
+      "size": 1,
+      "category": 16,
+      "brand": 38,
       "image": [
         "IMG_0943.jpg",
         "IMG_0944.jpg",
@@ -348,17 +348,17 @@
     }
   },
   {
-    "pk": "12",
+    "pk": 12,
     "model": "products.product",
     "fields": {
-      "sku": "pp9981658323",
+      "sku": "pp6173788272",
       "name": "RetroRevive Sneakers",
       "description": "Embrace nostalgia with our RetroRevive Sneakers. These vintage-inspired sneakers combine timeless style with modern comfort, making them a perfect choice for those who appreciate a classic look.",
-      "price": "149.99",
-      "shoe_sex": "M",
-      "size": "10",
-      "category": "running_shoes",
-      "brand": "prada",
+      "price": 149.99,
+      "shoe_sex": "Male",
+      "size": 10,
+      "category": 2,
+      "brand": 21,
       "image": [
         "IMG_0950.jpg",
         "IMG_0951.jpg",
@@ -378,17 +378,17 @@
     }
   },
   {
-    "pk": "13",
+    "pk": 13,
     "model": "products.product",
     "fields": {
-      "sku": "pp7477819030",
+      "sku": "pp3996847668",
       "name": "SnowPeak Explorer Boots",
       "description": "Conquer the snowy landscapes with SnowPeak Explorer Boots. These winter-ready boots are insulated and waterproof, ensuring warmth and protection on your cold-weather adventures.",
-      "price": "54.99",
-      "shoe_sex": "F",
-      "size": "9",
-      "category": "loafers",
-      "brand": "new_balance",
+      "price": 54.99,
+      "shoe_sex": "Female",
+      "size": 3,
+      "category": 3,
+      "brand": 2,
       "image": [
         "IMG_0958.jpg",
         "IMG_0959.jpg",
@@ -408,17 +408,17 @@
     }
   },
   {
-    "pk": "14",
+    "pk": 14,
     "model": "products.product",
     "fields": {
-      "sku": "pp8285238384",
+      "sku": "pp3923179416",
       "name": "CruiseControl Loafers",
       "description": "Cruise in style and comfort with CruiseControl Loafers. These slip-on loafers are perfect for casual occasions, offering a relaxed and easygoing vibe that complements your laid-back attire.",
-      "price": "74.99",
-      "shoe_sex": "M",
-      "size": "6",
-      "category": "chukka_boots",
-      "brand": "hoka_one_one",
+      "price": 74.99,
+      "shoe_sex": "Male",
+      "size": 2,
+      "category": 12,
+      "brand": 15,
       "image": [
         "IMG_0965.jpg",
         "IMG_0966.jpg",
@@ -440,17 +440,17 @@
     }
   },
   {
-    "pk": "15",
+    "pk": 15,
     "model": "products.product",
     "fields": {
-      "sku": "pp3444093801",
+      "sku": "pp8319463712",
       "name": "DanceFusion Jazz Shoes",
       "description": "Unleash your inner dancer with DanceFusion Jazz Shoes. These flexible and supportive jazz shoes are ideal for dance enthusiasts, helping you move with grace and precision during your routines.",
-      "price": "139.99",
-      "shoe_sex": "F",
-      "size": "11.5",
-      "category": "boots",
-      "brand": "timberland",
+      "price": 139.99,
+      "shoe_sex": "Female",
+      "size": 10,
+      "category": 8,
+      "brand": 19,
       "image": [
         "IMG_0981.jpg",
         "IMG_0982.jpg",
@@ -468,17 +468,17 @@
     }
   },
   {
-    "pk": "16",
+    "pk": 16,
     "model": "products.product",
     "fields": {
-      "sku": "pp1373843519",
+      "sku": "pp6934048204",
       "name": "EcoStride Sustainable Sneakers",
       "description": "Make a positive impact with EcoStride Sustainable Sneakers. These eco-friendly shoes are crafted from recycled and sustainable materials, perfect for those who want to tread lightly on the planet.",
-      "price": "44.99",
-      "shoe_sex": "F",
-      "size": "5.5",
-      "category": "dress_shoes",
-      "brand": "versace",
+      "price": 44.99,
+      "shoe_sex": "Female",
+      "size": 8,
+      "category": 16,
+      "brand": 6,
       "image": [
         "IMG_0988.jpg",
         "IMG_0989.jpg",
@@ -498,17 +498,17 @@
     }
   },
   {
-    "pk": "17",
+    "pk": 17,
     "model": "products.product",
     "fields": {
-      "sku": "pp1121932888",
+      "sku": "pp3277349291",
       "name": "PowerLift Cross-Trainers",
       "description": "Achieve your fitness goals with PowerLift Cross-Trainers. These versatile athletic shoes provide excellent stability and support for weightlifting, cross-training, and intense workouts.",
-      "price": "94.99",
-      "shoe_sex": "M",
-      "size": "7",
-      "category": "slippers",
-      "brand": "ugg",
+      "price": 94.99,
+      "shoe_sex": "Male",
+      "size": 8,
+      "category": 12,
+      "brand": 18,
       "image": [
         "IMG_0995.jpg",
         "IMG_0996.jpg",
@@ -526,17 +526,17 @@
     }
   },
   {
-    "pk": "18",
+    "pk": 18,
     "model": "products.product",
     "fields": {
-      "sku": "pp1033097805",
+      "sku": "pp8651087876",
       "name": "BohoBreeze Espadrilles",
       "description": "Enjoy the carefree spirit of summer with BohoBreeze Espadrilles. These lightweight and stylish espadrilles are a great choice for beach days, picnics, and outdoor festivals.",
-      "price": "34.99",
-      "shoe_sex": "M",
-      "size": "10.5",
-      "category": "oxfords",
-      "brand": "brooks",
+      "price": 34.99,
+      "shoe_sex": "Male",
+      "size": 4,
+      "category": 12,
+      "brand": 11,
       "image": [
         "IMG_1004.jpg",
         "IMG_1005.jpg",
@@ -556,17 +556,17 @@
     }
   },
   {
-    "pk": "19",
+    "pk": 19,
     "model": "products.product",
     "fields": {
-      "sku": "pp4060134065",
+      "sku": "pp4614911985",
       "name": "ExecutiveEdge Dress Shoes",
       "description": "Elevate your professional attire with ExecutiveEdge Dress Shoes. These polished and refined shoes are designed for the corporate world, making a strong impression in the boardroom and at formal events.",
-      "price": "109.99",
-      "shoe_sex": "F",
-      "size": "9",
-      "category": "espadrilles",
-      "brand": "valentino",
+      "price": 109.99,
+      "shoe_sex": "Female",
+      "size": 1,
+      "category": 8,
+      "brand": 35,
       "image": [
         "IMG_1015.jpg",
         "IMG_1016.jpg",
@@ -584,17 +584,17 @@
     }
   },
   {
-    "pk": "20",
+    "pk": 20,
     "model": "products.product",
     "fields": {
-      "sku": "pp9556246784",
+      "sku": "pp9247575064",
       "name": "ZenSoul Yoga Sandals",
       "description": "Find your inner peace with ZenSoul Yoga Sandals. These comfortable and flexible sandals are perfect for yoga practice and meditation, allowing you to connect with your Zen.",
-      "price": "79.99",
-      "shoe_sex": "M",
-      "size": "8.5",
-      "category": "wedges",
-      "brand": "asics",
+      "price": 79.99,
+      "shoe_sex": "Male",
+      "size": 4,
+      "category": 5,
+      "brand": 24,
       "image": [
         "IMG_1021.jpg",
         "IMG_1023.jpg",
@@ -614,17 +614,17 @@
     }
   },
   {
-    "pk": "21",
+    "pk": 21,
     "model": "products.product",
     "fields": {
-      "sku": "pp7587087834",
+      "sku": "pp111366722",
       "name": "VelvetDream Pumps",
       "description": "Step into elegance with VelvetDream Pumps. These luxurious velvet heels are the epitome of sophistication, perfect for formal events and adding a touch of opulence to your ensemble.",
-      "price": "159.99",
-      "shoe_sex": "F",
-      "size": "12",
-      "category": "clogs",
-      "brand": "mizuno",
+      "price": 159.99,
+      "shoe_sex": "Female",
+      "size": 9,
+      "category": 3,
+      "brand": 34,
       "image": [
         "IMG_1038.jpg",
         "IMG_1039.jpg",
@@ -654,17 +654,17 @@
     }
   },
   {
-    "pk": "22",
+    "pk": 22,
     "model": "products.product",
     "fields": {
-      "sku": "pp2920446952",
+      "sku": "pp1343853829",
       "name": "TerraTrek Hiking Boots",
       "description": "Explore the great outdoors with confidence in TerraTrek Hiking Boots. These rugged and durable boots provide excellent traction and ankle support, ensuring a comfortable and secure hike.",
-      "price": "49.99",
-      "shoe_sex": "M",
-      "size": "6.5",
-      "category": "flip_flops",
-      "brand": "clarks",
+      "price": 49.99,
+      "shoe_sex": "Male",
+      "size": 10,
+      "category": 8,
+      "brand": 36,
       "image": [
         "IMG_1052.jpg",
         "IMG_1053.jpg",
@@ -694,17 +694,17 @@
     }
   },
   {
-    "pk": "23",
+    "pk": 23,
     "model": "products.product",
     "fields": {
-      "sku": "pp1182498935",
+      "sku": "pp2913745085",
       "name": "StreetSmart Sneaker Boots",
       "description": "Combine style and function with StreetSmart Sneaker Boots. These versatile boots offer a sporty edge while keeping your feet cozy and well-protected during urban adventures.",
-      "price": "89.99",
-      "shoe_sex": "F",
-      "size": "7.5",
-      "category": "boat_shoes",
-      "brand": "cole_haan",
+      "price": 89.99,
+      "shoe_sex": "Female",
+      "size": 8,
+      "category": 8,
+      "brand": 38,
       "image": [
         "IMG_1065.jpg",
         "IMG_1066.jpg",
@@ -720,17 +720,17 @@
     }
   },
   {
-    "pk": "24",
+    "pk": 24,
     "model": "products.product",
     "fields": {
-      "sku": "pp5076512483",
+      "sku": "pp7771489798",
       "name": "Starstruck Ballet Flats",
       "description": "Shine bright with Starstruck Ballet Flats. These sparkling flats are a perfect choice for a night of dancing or adding a touch of glam to your casual outfit. They're a star-studded addition to your shoe collection.",
-      "price": "29.99",
-      "shoe_sex": "F",
-      "size": "9.5",
-      "category": "penny_loafers",
-      "brand": "dior",
+      "price": 29.99,
+      "shoe_sex": "Female",
+      "size": 4,
+      "category": 2,
+      "brand": 8,
       "image": [
         "IMG_1071.jpg",
         "IMG_1072.jpg",
@@ -750,17 +750,17 @@
     }
   },
   {
-    "pk": "25",
+    "pk": 25,
     "model": "products.product",
     "fields": {
-      "sku": "pp4145368502",
+      "sku": "pp8771933658",
       "name": "EcoWalk All-Terrain Shoes",
       "description": "Embrace eco-conscious living with EcoWalk All-Terrain Shoes. These sustainable, all-purpose shoes are made from eco-friendly materials, making them ideal for both outdoor activities and everyday wear.",
-      "price": "119.99",
-      "shoe_sex": "M",
-      "size": "11",
-      "category": "derby_shoes",
-      "brand": "fila",
+      "price": 119.99,
+      "shoe_sex": "Male",
+      "size": 8,
+      "category": 1,
+      "brand": 2,
       "image": [
         "IMG_1080.jpg",
         "IMG_1081.jpg",
@@ -780,17 +780,17 @@
     }
   },
   {
-    "pk": "26",
+    "pk": 26,
     "model": "products.product",
     "fields": {
-      "sku": "pp208501971",
+      "sku": "pp7930484240",
       "name": "StrideRight Running Shoes",
       "description": "Get ahead in your running game with StrideRight Running Shoes. These high-performance running shoes offer exceptional cushioning and stability, propelling you toward your fitness goals.",
-      "price": "64.99",
-      "shoe_sex": "F",
-      "size": "8",
-      "category": "ballet_flats",
-      "brand": "birkenstock",
+      "price": 64.99,
+      "shoe_sex": "Female",
+      "size": 3,
+      "category": 3,
+      "brand": 31,
       "image": [
         "IMG_1089.jpg",
         "IMG_1090.jpg",
@@ -806,17 +806,17 @@
     }
   },
   {
-    "pk": "27",
+    "pk": 27,
     "model": "products.product",
     "fields": {
-      "sku": "pp1828686824",
+      "sku": "pp961153051",
       "name": "IslandBreeze Flip-Flops",
       "description": "Experience the essence of a tropical paradise with IslandBreeze Flip-Flops. These comfortable and vibrant flip-flops are perfect for beach getaways, relaxation by the pool, or casual island-inspired style.",
-      "price": "124.99",
-      "shoe_sex": "M",
-      "size": "11.5",
-      "category": "monk_strap_shoes",
-      "brand": "steve_madden",
+      "price": 124.99,
+      "shoe_sex": "Male",
+      "size": 2,
+      "category": 3,
+      "brand": 14,
       "image": [
         "IMG_1093.jpg",
         "IMG_1097.jpg",
@@ -838,17 +838,17 @@
     }
   },
   {
-    "pk": "28",
+    "pk": 28,
     "model": "products.product",
     "fields": {
-      "sku": "pp3720330272",
+      "sku": "pp5863355075",
       "name": "VintageCharm Brogues",
       "description": "Step back in time with VintageCharm Brogues. These classic brogue shoes exude timeless charm and sophistication, making them an excellent choice for vintage-inspired or formal occasions.",
-      "price": "59.99",
-      "shoe_sex": "M",
-      "size": "10",
-      "category": "driving_shoes",
-      "brand": "aldo",
+      "price": 59.99,
+      "shoe_sex": "Male",
+      "size": 3,
+      "category": 9,
+      "brand": 13,
       "image": [
         "IMG_1105.jpg",
         "IMG_1106.jpg",
@@ -868,17 +868,17 @@
     }
   },
   {
-    "pk": "29",
+    "pk": 29,
     "model": "products.product",
     "fields": {
-      "sku": "pp5329922828",
+      "sku": "pp2846303354",
       "name": "TrailMaster Trail Running Shoes",
       "description": "Conquer rugged terrains with TrailMaster Trail Running Shoes. These durable and grippy shoes are designed for trail running and off-road adventures, offering stability and comfort on unpredictable paths.",
-      "price": "99.99",
-      "shoe_sex": "F",
-      "size": "7",
-      "category": "wingtip_shoes",
-      "brand": "merrell",
+      "price": 99.99,
+      "shoe_sex": "Female",
+      "size": 1,
+      "category": 7,
+      "brand": 11,
       "image": [
         "IMG_1114.jpg",
         "IMG_1115.jpg",
@@ -896,17 +896,17 @@
     }
   },
   {
-    "pk": "30",
+    "pk": 30,
     "model": "products.product",
     "fields": {
-      "sku": "pp6354084025",
+      "sku": "pp3592146467",
       "name": "CloudWalker Slip-Ons",
       "description": "Enjoy the feeling of walking on clouds with CloudWalker Slip-Ons. These lightweight and cushioned slip-on shoes provide the ultimate comfort for your everyday activities, making every step a delight.",
-      "price": "69.99",
-      "shoe_sex": "F",
-      "size": "5.5",
-      "category": "slip-on_shoes",
-      "brand": "mizuno",
+      "price": 69.99,
+      "shoe_sex": "Female",
+      "size": 4,
+      "category": 16,
+      "brand": 12,
       "image": [
         "IMG_1121.jpg",
         "IMG_1122.jpg",
@@ -924,17 +924,17 @@
     }
   },
   {
-    "pk": "31",
+    "pk": 31,
     "model": "products.product",
     "fields": {
-      "sku": "pp8111450999",
+      "sku": "pp3335763363",
       "name": "Running Bliss",
       "description": "Experience pure comfort and speed with our Running Bliss shoes. Perfect for athletes looking to shatter their records.",
-      "price": "79.99",
-      "shoe_sex": "M",
-      "size": "9.5",
-      "category": "chelsea_boots",
-      "brand": "converse",
+      "price": 79.99,
+      "shoe_sex": "Male",
+      "size": 4,
+      "category": 14,
+      "brand": 9,
       "image": [
         "IMG_1127.jpg",
         "IMG_1128.jpg",
@@ -954,17 +954,17 @@
     }
   },
   {
-    "pk": "32",
+    "pk": 32,
     "model": "products.product",
     "fields": {
-      "sku": "pp5029942349",
+      "sku": "pp9534452237",
       "name": "Elegant Grace",
       "description": "Step into style with our Elegant Grace heels. These shoes are the epitome of sophistication, perfect for special occasions.",
-      "price": "89.99",
-      "shoe_sex": "F",
-      "size": "6",
-      "category": "combat_boots",
-      "brand": "under_armour",
+      "price": 89.99,
+      "shoe_sex": "Female",
+      "size": 6,
+      "category": 15,
+      "brand": 22,
       "image": [
         "IMG_1134.jpg",
         "IMG_1135.jpg",
@@ -984,17 +984,17 @@
     }
   },
   {
-    "pk": "33",
+    "pk": 33,
     "model": "products.product",
     "fields": {
-      "sku": "pp1633190357",
+      "sku": "pp94609322",
       "name": "Active Explorer",
       "description": "Gear up for your next adventure with Active Explorer hiking boots. They provide the ultimate support and durability.",
-      "price": "74.99",
-      "shoe_sex": "F",
-      "size": "8.5",
-      "category": "work_boots",
-      "brand": "gucci",
+      "price": 74.99,
+      "shoe_sex": "Female",
+      "size": 5,
+      "category": 11,
+      "brand": 7,
       "image": [
         "IMG_1142.jpg",
         "IMG_1143.jpg",
@@ -1014,17 +1014,17 @@
     }
   },
   {
-    "pk": "34",
+    "pk": 34,
     "model": "products.product",
     "fields": {
-      "sku": "pp4667803070",
+      "sku": "pp5465546669",
       "name": "Casual Comfort",
       "description": "Slip into Casual Comfort sneakers for all-day ease. Perfect for a laid-back look and long strolls.",
-      "price": "69.99",
-      "shoe_sex": "M",
-      "size": "12",
-      "category": "moccasins",
-      "brand": "valentino",
+      "price": 69.99,
+      "shoe_sex": "Male",
+      "size": 8,
+      "category": 2,
+      "brand": 28,
       "image": [
         "IMG_1152.jpg",
         "IMG_1153.jpg",

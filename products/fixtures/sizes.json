@@ -1,0 +1,102 @@
+[
+  {
+    "pk": "1",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 35,
+      "uk_name": 3,
+      "us_m_name": 4,
+      "us_w_name": 5.5
+    }
+  },
+  {
+    "pk": "2",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 36,
+      "uk_name": 3.5,
+      "us_m_name": 4.5,
+      "us_w_name": 6
+    }
+  },
+  {
+    "pk": "3",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 37,
+      "uk_name": 4,
+      "us_m_name": 5,
+      "us_w_name": 6.5
+    }
+  },
+  {
+    "pk": "4",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 38,
+      "uk_name": 5,
+      "us_m_name": 6,
+      "us_w_name": 7.5
+    }
+  },
+  {
+    "pk": "5",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 39,
+      "uk_name": 6,
+      "us_m_name": 7,
+      "us_w_name": 8.5
+    }
+  },
+  {
+    "pk": "6",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 40,
+      "uk_name": 7,
+      "us_m_name": 8,
+      "us_w_name": 9.5
+    }
+  },
+  {
+    "pk": "7",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 41,
+      "uk_name": 7.5,
+      "us_m_name": 8.5,
+      "us_w_name": 10
+    }
+  },
+  {
+    "pk": "8",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 42,
+      "uk_name": 8.5,
+      "us_m_name": 9.5,
+      "us_w_name": 11
+    }
+  },
+  {
+    "pk": "9",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 43,
+      "uk_name": 9.5,
+      "us_m_name": 10.5,
+      "us_w_name": 11.5
+    }
+  },
+  {
+    "pk": "10",
+    "model": "products.size",
+    "fields": {
+      "eu_name": 44,
+      "uk_name": 10.5,
+      "us_m_name": 11.5,
+      "us_w_name": 12.5
+    }
+  }
+]
