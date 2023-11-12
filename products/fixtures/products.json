@@ -3,476 +3,1046 @@
     "pk": 1,
     "model": "products.product",
     "fields": {
-      "sku": "pp9780763209",
+      "sku": "pp3887109119",
       "name": "SleekStride",
       "description": "Elevate your style with these elegant leather loafers. The SleekStride shoes are perfect for formal occasions or adding a touch of sophistication to your daily attire. Crafted with premium materials and a comfortable fit, they'll keep you striding in confidence.",
       "price": 59.99,
       "shoe_sex": "M",
       "size": 9,
       "category": 10,
-      "brand": 23
+      "brand": 23,
+      "image": [
+        "IMG_0841.jpg",
+        "IMG_0842.jpg",
+        "IMG_0843.jpg",
+        "IMG_0844.jpg",
+        "IMG_0845.jpg",
+        "IMG_0846.jpg",
+        "IMG_0847.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0841.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0842.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0843.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0844.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0845.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0846.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0847.jpg"
+      ]
     }
   },
   {
     "pk": 2,
     "model": "products.product",
     "fields": {
-      "sku": "pp6368666250",
+      "sku": "pp8041756672",
       "name": "TrailBlazers",
       "description": "Get ready to explore the great outdoors with our TrailBlazers hiking boots. Designed for rugged terrains, these shoes offer superior grip and support, keeping your feet comfortable and protected during your adventures.",
       "price": 79.99,
       "shoe_sex": "F",
       "size": 3,
       "category": 6,
-      "brand": 34
+      "brand": 34,
+      "image": [
+        "IMG_0849.jpg",
+        "IMG_0850.jpg",
+        "IMG_0851.jpg",
+        "IMG_0852.jpg",
+        "IMG_0853.jpg",
+        "IMG_0854.jpg",
+        "IMG_0855.jpg",
+        "IMG_0856.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0849.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0850.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0851.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0852.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0853.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0854.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0855.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0856.jpg"
+      ]
     }
   },
   {
     "pk": 3,
     "model": "products.product",
     "fields": {
-      "sku": "pp1440377692",
+      "sku": "pp8189811828",
       "name": "UrbanChic Sneakers",
       "description": "The UrbanChic Sneakers are a must-have for city dwellers and fashion-forward individuals. These trendy sneakers blend style and comfort effortlessly, making them perfect for a casual day out or a night on the town.",
       "price": 129.99,
       "shoe_sex": "M",
       "size": 4,
       "category": 1,
-      "brand": 6
+      "brand": 6,
+      "image": [
+        "IMG_0859.jpg",
+        "IMG_0860.jpg",
+        "IMG_0861.jpg",
+        "IMG_0862.jpg",
+        "IMG_0863.jpg",
+        "IMG_0864.jpg",
+        "IMG_0865.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0859.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0860.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0861.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0862.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0863.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0864.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0865.jpg"
+      ]
     }
   },
   {
     "pk": 4,
     "model": "products.product",
     "fields": {
-      "sku": "pp1111032569",
+      "sku": "pp7258984023",
       "name": "ComfyCloud Slippers",
       "description": "Experience the ultimate relaxation with our ComfyCloud Slippers. These plush, memory foam slippers provide heavenly comfort for your feet after a long day. They're perfect for lounging at home and unwinding in style.",
       "price": 49.99,
       "shoe_sex": "F",
       "size": 8,
       "category": 3,
-      "brand": 8
+      "brand": 8,
+      "image": [
+        "IMG_0867.jpg",
+        "IMG_0868.jpg",
+        "IMG_0869.jpg",
+        "IMG_0870.jpg",
+        "IMG_0871.jpg",
+        "IMG_0872.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0867.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0868.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0869.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0870.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0871.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0872.jpg"
+      ]
     }
   },
   {
     "pk": 5,
     "model": "products.product",
     "fields": {
-      "sku": "pp9609162081",
+      "sku": "pp9546045958",
       "name": "SportPro Runners",
       "description": "Gear up for your next workout or run with the SportPro Runners. These athletic shoes are designed for performance, featuring breathable mesh uppers, responsive cushioning, and excellent support to help you achieve your fitness goals.",
       "price": 89.99,
       "shoe_sex": "M",
       "size": 4,
       "category": 4,
-      "brand": 31
+      "brand": 31,
+      "image": [
+        "IMG_0874.jpg",
+        "IMG_0875.jpg",
+        "IMG_0876.jpg",
+        "IMG_0877.jpg",
+        "IMG_0878.jpg",
+        "IMG_0879.jpg",
+        "IMG_0880.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0874.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0875.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0876.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0877.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0878.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0879.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0880.jpg"
+      ]
     }
   },
   {
     "pk": 6,
     "model": "products.product",
     "fields": {
-      "sku": "pp1538323169",
+      "sku": "pp3274923689",
       "name": "Boho-Chic Sandals",
       "description": "Embrace a bohemian vibe with our Boho-Chic Sandals. These stylish and comfortable sandals are ideal for summer outings, beach trips, or simply adding a touch of free-spirited charm to your look.",
       "price": 169.99,
       "shoe_sex": "M",
       "size": 1,
       "category": 2,
-      "brand": 14
+      "brand": 14,
+      "image": [
+        "IMG_0892.jpg",
+        "IMG_0893.jpg",
+        "IMG_0894.jpg",
+        "IMG_0895.jpg",
+        "IMG_0896.jpg",
+        "IMG_0897.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0892.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0893.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0894.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0895.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0896.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0897.jpg"
+      ]
     }
   },
   {
     "pk": 7,
     "model": "products.product",
     "fields": {
-      "sku": "pp739253965",
+      "sku": "pp123986345",
       "name": "ClassicOxfords",
       "description": "ClassicOxfords are timeless footwear that never goes out of style. Crafted with attention to detail, these traditional oxford shoes are perfect for formal occasions, office meetings, and elegant dinners.",
       "price": 39.99,
       "shoe_sex": "F",
       "size": 2,
       "category": 16,
-      "brand": 5
+      "brand": 5,
+      "image": [
+        "IMG_0899.jpg",
+        "IMG_0900.jpg",
+        "IMG_0901.jpg",
+        "IMG_0902.jpg",
+        "IMG_0903.jpg",
+        "IMG_0904.jpg",
+        "IMG_0905.jpg",
+        "IMG_0906.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0899.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0900.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0901.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0902.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0903.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0904.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0905.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0906.jpg"
+      ]
     }
   },
   {
     "pk": 8,
     "model": "products.product",
     "fields": {
-      "sku": "pp3031073824",
+      "sku": "pp8572761201",
       "name": "EverydayEssentials Flats",
       "description": "Simplify your footwear collection with our EverydayEssentials Flats. These versatile flats are designed to complement any outfit, offering both comfort and style for your day-to-day activities.",
       "price": 99.99,
       "shoe_sex": "F",
       "size": 7,
       "category": 1,
-      "brand": 29
+      "brand": 29,
+      "image": [
+        "IMG_0917.jpg",
+        "IMG_0918.jpg",
+        "IMG_0919.jpg",
+        "IMG_0920.jpg",
+        "IMG_0921.jpg",
+        "IMG_0922.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0917.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0918.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0919.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0920.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0921.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0922.jpg"
+      ]
     }
   },
   {
     "pk": 9,
     "model": "products.product",
     "fields": {
-      "sku": "pp8630994231",
+      "sku": "pp9396442387",
       "name": "AdventureSeeker Boots",
       "description": "For the intrepid traveler and outdoor enthusiast, AdventureSeeker Boots are the perfect choice. These durable and waterproof boots will keep your feet dry and comfortable during your explorations in any weather.",
       "price": 59.99,
       "shoe_sex": "M",
       "size": 3,
       "category": 9,
-      "brand": 8
+      "brand": 8,
+      "image": [
+        "IMG_0924.jpg",
+        "IMG_0925.jpg",
+        "IMG_0926.jpg",
+        "IMG_0927.jpg",
+        "IMG_0928.jpg",
+        "IMG_0929.jpg",
+        "IMG_0930.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0924.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0925.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0926.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0927.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0928.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0929.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0930.jpg"
+      ]
     }
   },
   {
     "pk": 10,
     "model": "products.product",
     "fields": {
-      "sku": "pp8070270757",
+      "sku": "pp6805797724",
       "name": "SprintTech Performance Shoes",
       "description": "Elevate your athletic performance with SprintTech Performance Shoes. These high-tech running shoes feature advanced cushioning, lightweight construction, and excellent breathability, ensuring you stay ahead of the competition.",
       "price": 119.99,
       "shoe_sex": "M",
       "size": 9,
       "category": 5,
-      "brand": 24
+      "brand": 24,
+      "image": [
+        "IMG_0932.jpg",
+        "IMG_0933.jpg",
+        "IMG_0934.jpg",
+        "IMG_0935.jpg",
+        "IMG_0936.jpg",
+        "IMG_0937.jpg",
+        "IMG_0938.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0932.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0933.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0934.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0935.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0936.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0937.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0938.jpg"
+      ]
     }
   },
   {
     "pk": 11,
     "model": "products.product",
     "fields": {
-      "sku": "pp1298767365",
+      "sku": "pp8174134140",
       "name": "GlamourGlide Heels",
       "description": "Step into the spotlight with GlamourGlide Heels. These stunning high heels are designed for special occasions and glamorous evenings out. With their eye-catching design and comfortable fit, you'll be the center of attention.",
       "price": 69.99,
       "shoe_sex": "F",
       "size": 1,
       "category": 16,
-      "brand": 38
+      "brand": 38,
+      "image": [
+        "IMG_0943.jpg",
+        "IMG_0944.jpg",
+        "IMG_0945.jpg",
+        "IMG_0946.jpg",
+        "IMG_0947.jpg",
+        "IMG_0948.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0943.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0944.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0945.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0946.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0947.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0948.jpg"
+      ]
     }
   },
   {
     "pk": 12,
     "model": "products.product",
     "fields": {
-      "sku": "pp246315434",
+      "sku": "pp4664365009",
       "name": "RetroRevive Sneakers",
       "description": "Embrace nostalgia with our RetroRevive Sneakers. These vintage-inspired sneakers combine timeless style with modern comfort, making them a perfect choice for those who appreciate a classic look.",
       "price": 149.99,
       "shoe_sex": "M",
       "size": 10,
       "category": 2,
-      "brand": 21
+      "brand": 21,
+      "image": [
+        "IMG_0950.jpg",
+        "IMG_0951.jpg",
+        "IMG_0952.jpg",
+        "IMG_0953.jpg",
+        "IMG_0954.jpg",
+        "IMG_0955.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0950.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0951.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0952.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0953.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0954.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0955.jpg"
+      ]
     }
   },
   {
     "pk": 13,
     "model": "products.product",
     "fields": {
-      "sku": "pp1872109590",
+      "sku": "pp8214720202",
       "name": "SnowPeak Explorer Boots",
       "description": "Conquer the snowy landscapes with SnowPeak Explorer Boots. These winter-ready boots are insulated and waterproof, ensuring warmth and protection on your cold-weather adventures.",
       "price": 54.99,
       "shoe_sex": "F",
       "size": 3,
       "category": 3,
-      "brand": 2
+      "brand": 2,
+      "image": [
+        "IMG_0958.jpg",
+        "IMG_0959.jpg",
+        "IMG_0960.jpg",
+        "IMG_0961.jpg",
+        "IMG_0962.jpg",
+        "IMG_0963.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0958.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0959.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0960.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0961.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0962.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0963.jpg"
+      ]
     }
   },
   {
     "pk": 14,
     "model": "products.product",
     "fields": {
-      "sku": "pp1939886090",
+      "sku": "pp9054053381",
       "name": "CruiseControl Loafers",
       "description": "Cruise in style and comfort with CruiseControl Loafers. These slip-on loafers are perfect for casual occasions, offering a relaxed and easygoing vibe that complements your laid-back attire.",
       "price": 74.99,
       "shoe_sex": "M",
       "size": 2,
       "category": 12,
-      "brand": 15
+      "brand": 15,
+      "image": [
+        "IMG_0965.jpg",
+        "IMG_0966.jpg",
+        "IMG_0967.jpg",
+        "IMG_0968.jpg",
+        "IMG_0969.jpg",
+        "IMG_0970.jpg",
+        "IMG_0971.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0965.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0966.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0967.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0968.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0969.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0970.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0971.jpg"
+      ]
     }
   },
   {
     "pk": 15,
     "model": "products.product",
     "fields": {
-      "sku": "pp2293536416",
+      "sku": "pp9914824812",
       "name": "DanceFusion Jazz Shoes",
       "description": "Unleash your inner dancer with DanceFusion Jazz Shoes. These flexible and supportive jazz shoes are ideal for dance enthusiasts, helping you move with grace and precision during your routines.",
       "price": 139.99,
       "shoe_sex": "F",
       "size": 10,
       "category": 8,
-      "brand": 19
+      "brand": 19,
+      "image": [
+        "IMG_0981.jpg",
+        "IMG_0982.jpg",
+        "IMG_0983.jpg",
+        "IMG_0984.jpg",
+        "IMG_0985.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0981.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0982.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0983.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0984.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0985.jpg"
+      ]
     }
   },
   {
     "pk": 16,
     "model": "products.product",
     "fields": {
-      "sku": "pp9954974507",
+      "sku": "pp6407325166",
       "name": "EcoStride Sustainable Sneakers",
       "description": "Make a positive impact with EcoStride Sustainable Sneakers. These eco-friendly shoes are crafted from recycled and sustainable materials, perfect for those who want to tread lightly on the planet.",
       "price": 44.99,
       "shoe_sex": "F",
       "size": 8,
       "category": 16,
-      "brand": 6
+      "brand": 6,
+      "image": [
+        "IMG_0988.jpg",
+        "IMG_0989.jpg",
+        "IMG_0990.jpg",
+        "IMG_0991.jpg",
+        "IMG_0992.jpg",
+        "IMG_0993.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0988.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0989.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0990.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0991.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0992.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0993.jpg"
+      ]
     }
   },
   {
     "pk": 17,
     "model": "products.product",
     "fields": {
-      "sku": "pp1743077928",
+      "sku": "pp3910835169",
       "name": "PowerLift Cross-Trainers",
       "description": "Achieve your fitness goals with PowerLift Cross-Trainers. These versatile athletic shoes provide excellent stability and support for weightlifting, cross-training, and intense workouts.",
       "price": 94.99,
       "shoe_sex": "M",
       "size": 8,
       "category": 12,
-      "brand": 18
+      "brand": 18,
+      "image": [
+        "IMG_0995.jpg",
+        "IMG_0996.jpg",
+        "IMG_0997.jpg",
+        "IMG_0998.jpg",
+        "IMG_0999.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0995.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0996.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0997.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0998.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_0999.jpg"
+      ]
     }
   },
   {
     "pk": 18,
     "model": "products.product",
     "fields": {
-      "sku": "pp7505344557",
+      "sku": "pp4805299334",
       "name": "BohoBreeze Espadrilles",
       "description": "Enjoy the carefree spirit of summer with BohoBreeze Espadrilles. These lightweight and stylish espadrilles are a great choice for beach days, picnics, and outdoor festivals.",
       "price": 34.99,
       "shoe_sex": "M",
       "size": 4,
       "category": 12,
-      "brand": 11
+      "brand": 11,
+      "image": [
+        "IMG_1004.jpg",
+        "IMG_1005.jpg",
+        "IMG_1006.jpg",
+        "IMG_1007.jpg",
+        "IMG_1008.jpg",
+        "IMG_1009.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1004.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1005.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1006.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1007.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1008.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1009.jpg"
+      ]
     }
   },
   {
     "pk": 19,
     "model": "products.product",
     "fields": {
-      "sku": "pp4129354253",
+      "sku": "pp5225557642",
       "name": "ExecutiveEdge Dress Shoes",
       "description": "Elevate your professional attire with ExecutiveEdge Dress Shoes. These polished and refined shoes are designed for the corporate world, making a strong impression in the boardroom and at formal events.",
       "price": 109.99,
       "shoe_sex": "F",
       "size": 1,
       "category": 8,
-      "brand": 35
+      "brand": 35,
+      "image": [
+        "IMG_1015.jpg",
+        "IMG_1016.jpg",
+        "IMG_1017.jpg",
+        "IMG_1018.jpg",
+        "IMG_1019.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1015.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1016.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1017.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1018.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1019.jpg"
+      ]
     }
   },
   {
     "pk": 20,
     "model": "products.product",
     "fields": {
-      "sku": "pp3229116824",
+      "sku": "pp1747482554",
       "name": "ZenSoul Yoga Sandals",
       "description": "Find your inner peace with ZenSoul Yoga Sandals. These comfortable and flexible sandals are perfect for yoga practice and meditation, allowing you to connect with your Zen.",
       "price": 79.99,
       "shoe_sex": "M",
       "size": 4,
       "category": 5,
-      "brand": 24
+      "brand": 24,
+      "image": [
+        "IMG_1021.jpg",
+        "IMG_1023.jpg",
+        "IMG_1024.jpg",
+        "IMG_1025.jpg",
+        "IMG_1026.jpg",
+        "IMG_1027.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1021.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1023.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1024.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1025.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1026.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1027.jpg"
+      ]
     }
   },
   {
     "pk": 21,
     "model": "products.product",
     "fields": {
-      "sku": "pp7718309473",
+      "sku": "pp7630447814",
       "name": "VelvetDream Pumps",
       "description": "Step into elegance with VelvetDream Pumps. These luxurious velvet heels are the epitome of sophistication, perfect for formal events and adding a touch of opulence to your ensemble.",
       "price": 159.99,
       "shoe_sex": "F",
       "size": 9,
       "category": 3,
-      "brand": 34
+      "brand": 34,
+      "image": [
+        "IMG_1038.jpg",
+        "IMG_1039.jpg",
+        "IMG_1040.jpg",
+        "IMG_1041.jpg",
+        "IMG_1042.jpg",
+        "IMG_1043.jpg",
+        "IMG_1044.jpg",
+        "IMG_1045.jpg",
+        "IMG_1046.jpg",
+        "IMG_1047.jpg",
+        "IMG_1048.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1038.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1039.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1040.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1041.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1042.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1043.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1044.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1045.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1046.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1047.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1048.jpg"
+      ]
     }
   },
   {
     "pk": 22,
     "model": "products.product",
     "fields": {
-      "sku": "pp6740289865",
+      "sku": "pp2368626694",
       "name": "TerraTrek Hiking Boots",
       "description": "Explore the great outdoors with confidence in TerraTrek Hiking Boots. These rugged and durable boots provide excellent traction and ankle support, ensuring a comfortable and secure hike.",
       "price": 49.99,
       "shoe_sex": "M",
       "size": 10,
       "category": 8,
-      "brand": 36
+      "brand": 36,
+      "image": [
+        "IMG_1052.jpg",
+        "IMG_1053.jpg",
+        "IMG_1054.jpg",
+        "IMG_1055.jpg",
+        "IMG_1056.jpg",
+        "IMG_1057.jpg",
+        "IMG_1058.jpg",
+        "IMG_1059.jpg",
+        "IMG_1060.jpg",
+        "IMG_1061.jpg",
+        "IMG_1062.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1052.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1053.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1054.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1055.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1056.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1057.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1058.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1059.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1060.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1061.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1062.jpg"
+      ]
     }
   },
   {
     "pk": 23,
     "model": "products.product",
     "fields": {
-      "sku": "pp2884716457",
+      "sku": "pp3031845932",
       "name": "StreetSmart Sneaker Boots",
       "description": "Combine style and function with StreetSmart Sneaker Boots. These versatile boots offer a sporty edge while keeping your feet cozy and well-protected during urban adventures.",
       "price": 89.99,
       "shoe_sex": "F",
       "size": 8,
       "category": 8,
-      "brand": 38
+      "brand": 38,
+      "image": [
+        "IMG_1065.jpg",
+        "IMG_1066.jpg",
+        "IMG_1067.jpg",
+        "IMG_1068.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1065.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1066.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1067.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1068.jpg"
+      ]
     }
   },
   {
     "pk": 24,
     "model": "products.product",
     "fields": {
-      "sku": "pp6060244891",
+      "sku": "pp7564093908",
       "name": "Starstruck Ballet Flats",
       "description": "Shine bright with Starstruck Ballet Flats. These sparkling flats are a perfect choice for a night of dancing or adding a touch of glam to your casual outfit. They're a star-studded addition to your shoe collection.",
       "price": 29.99,
       "shoe_sex": "F",
       "size": 4,
       "category": 2,
-      "brand": 8
+      "brand": 8,
+      "image": [
+        "IMG_1071.jpg",
+        "IMG_1072.jpg",
+        "IMG_1073.jpg",
+        "IMG_1074.jpg",
+        "IMG_1075.jpg",
+        "IMG_1076.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1071.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1072.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1073.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1074.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1075.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1076.jpg"
+      ]
     }
   },
   {
     "pk": 25,
     "model": "products.product",
     "fields": {
-      "sku": "pp2210902773",
+      "sku": "pp5475449623",
       "name": "EcoWalk All-Terrain Shoes",
       "description": "Embrace eco-conscious living with EcoWalk All-Terrain Shoes. These sustainable, all-purpose shoes are made from eco-friendly materials, making them ideal for both outdoor activities and everyday wear.",
       "price": 119.99,
       "shoe_sex": "M",
       "size": 8,
       "category": 1,
-      "brand": 2
+      "brand": 2,
+      "image": [
+        "IMG_1080.jpg",
+        "IMG_1081.jpg",
+        "IMG_1082.jpg",
+        "IMG_1083.jpg",
+        "IMG_1084.jpg",
+        "IMG_1085.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1080.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1081.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1082.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1083.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1084.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1085.jpg"
+      ]
     }
   },
   {
     "pk": 26,
     "model": "products.product",
     "fields": {
-      "sku": "pp77346525",
+      "sku": "pp5654775907",
       "name": "StrideRight Running Shoes",
       "description": "Get ahead in your running game with StrideRight Running Shoes. These high-performance running shoes offer exceptional cushioning and stability, propelling you toward your fitness goals.",
       "price": 64.99,
       "shoe_sex": "F",
       "size": 3,
       "category": 3,
-      "brand": 31
+      "brand": 31,
+      "image": [
+        "IMG_1089.jpg",
+        "IMG_1090.jpg",
+        "IMG_1091.jpg",
+        "IMG_1092.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1089.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1090.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1091.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1092.jpg"
+      ]
     }
   },
   {
     "pk": 27,
     "model": "products.product",
     "fields": {
-      "sku": "pp7645614502",
+      "sku": "pp1493420943",
       "name": "IslandBreeze Flip-Flops",
       "description": "Experience the essence of a tropical paradise with IslandBreeze Flip-Flops. These comfortable and vibrant flip-flops are perfect for beach getaways, relaxation by the pool, or casual island-inspired style.",
       "price": 124.99,
       "shoe_sex": "M",
       "size": 2,
       "category": 3,
-      "brand": 14
+      "brand": 14,
+      "image": [
+        "IMG_1093.jpg",
+        "IMG_1097.jpg",
+        "IMG_1098.jpg",
+        "IMG_1099.jpg",
+        "IMG_1100.jpg",
+        "IMG_1101.jpg",
+        "IMG_1102.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1093.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1097.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1098.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1099.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1100.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1101.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1102.jpg"
+      ]
     }
   },
   {
     "pk": 28,
     "model": "products.product",
     "fields": {
-      "sku": "pp960586909",
+      "sku": "pp8112596325",
       "name": "VintageCharm Brogues",
       "description": "Step back in time with VintageCharm Brogues. These classic brogue shoes exude timeless charm and sophistication, making them an excellent choice for vintage-inspired or formal occasions.",
       "price": 59.99,
       "shoe_sex": "M",
       "size": 3,
       "category": 9,
-      "brand": 13
+      "brand": 13,
+      "image": [
+        "IMG_1105.jpg",
+        "IMG_1106.jpg",
+        "IMG_1107.jpg",
+        "IMG_1108.jpg",
+        "IMG_1109.jpg",
+        "IMG_1110.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1105.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1106.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1107.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1108.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1109.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1110.jpg"
+      ]
     }
   },
   {
     "pk": 29,
     "model": "products.product",
     "fields": {
-      "sku": "pp7378630279",
+      "sku": "pp346569368",
       "name": "TrailMaster Trail Running Shoes",
       "description": "Conquer rugged terrains with TrailMaster Trail Running Shoes. These durable and grippy shoes are designed for trail running and off-road adventures, offering stability and comfort on unpredictable paths.",
       "price": 99.99,
       "shoe_sex": "F",
       "size": 1,
       "category": 7,
-      "brand": 11
+      "brand": 11,
+      "image": [
+        "IMG_1114.jpg",
+        "IMG_1115.jpg",
+        "IMG_1116.jpg",
+        "IMG_1117.jpg",
+        "IMG_1118.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1114.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1115.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1116.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1117.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1118.jpg"
+      ]
     }
   },
   {
     "pk": 30,
     "model": "products.product",
     "fields": {
-      "sku": "pp8737046103",
+      "sku": "pp1597100456",
       "name": "CloudWalker Slip-Ons",
       "description": "Enjoy the feeling of walking on clouds with CloudWalker Slip-Ons. These lightweight and cushioned slip-on shoes provide the ultimate comfort for your everyday activities, making every step a delight.",
       "price": 69.99,
       "shoe_sex": "F",
       "size": 4,
       "category": 16,
-      "brand": 12
+      "brand": 12,
+      "image": [
+        "IMG_1121.jpg",
+        "IMG_1122.jpg",
+        "IMG_1123.jpg",
+        "IMG_1124.jpg",
+        "IMG_1125.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1121.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1122.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1123.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1124.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1125.jpg"
+      ]
     }
   },
   {
     "pk": 31,
     "model": "products.product",
     "fields": {
-      "sku": "pp6469986859",
+      "sku": "pp6749729451",
       "name": "Running Bliss",
       "description": "Experience pure comfort and speed with our Running Bliss shoes. Perfect for athletes looking to shatter their records.",
       "price": 79.99,
       "shoe_sex": "M",
       "size": 4,
       "category": 14,
-      "brand": 9
+      "brand": 9,
+      "image": [
+        "IMG_1127.jpg",
+        "IMG_1128.jpg",
+        "IMG_1129.jpg",
+        "IMG_1130.jpg",
+        "IMG_1131.jpg",
+        "IMG_1132.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1127.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1128.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1129.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1130.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1131.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1132.jpg"
+      ]
     }
   },
   {
     "pk": 32,
     "model": "products.product",
     "fields": {
-      "sku": "pp6597192188",
+      "sku": "pp8647970197",
       "name": "Elegant Grace",
       "description": "Step into style with our Elegant Grace heels. These shoes are the epitome of sophistication, perfect for special occasions.",
       "price": 89.99,
       "shoe_sex": "F",
       "size": 6,
       "category": 15,
-      "brand": 22
+      "brand": 22,
+      "image": [
+        "IMG_1134.jpg",
+        "IMG_1135.jpg",
+        "IMG_1136.jpg",
+        "IMG_1137.jpg",
+        "IMG_1138.jpg",
+        "IMG_1139.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1134.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1135.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1136.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1137.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1138.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1139.jpg"
+      ]
     }
   },
   {
     "pk": 33,
     "model": "products.product",
     "fields": {
-      "sku": "pp9364055419",
+      "sku": "pp77798288",
       "name": "Active Explorer",
       "description": "Gear up for your next adventure with Active Explorer hiking boots. They provide the ultimate support and durability.",
       "price": 74.99,
       "shoe_sex": "F",
       "size": 5,
       "category": 11,
-      "brand": 7
+      "brand": 7,
+      "image": [
+        "IMG_1142.jpg",
+        "IMG_1143.jpg",
+        "IMG_1144.jpg",
+        "IMG_1145.jpg",
+        "IMG_1146.jpg",
+        "IMG_1149.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1142.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1143.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1144.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1145.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1146.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1149.jpg"
+      ]
     }
   },
   {
     "pk": 34,
     "model": "products.product",
     "fields": {
-      "sku": "pp9012444336",
+      "sku": "pp5269151431",
       "name": "Casual Comfort",
       "description": "Slip into Casual Comfort sneakers for all-day ease. Perfect for a laid-back look and long strolls.",
       "price": 69.99,
       "shoe_sex": "M",
       "size": 8,
       "category": 2,
-      "brand": 28
+      "brand": 28,
+      "image": [
+        "IMG_1152.jpg",
+        "IMG_1153.jpg",
+        "IMG_1154.jpg",
+        "IMG_1155.jpg",
+        "IMG_1156.jpg",
+        "IMG_1157.jpg",
+        "IMG_1158.jpg"
+      ],
+      "image_url": [
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1152.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1153.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1154.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1155.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1156.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1157.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1158.jpg"
+      ]
     }
   }
 ]
