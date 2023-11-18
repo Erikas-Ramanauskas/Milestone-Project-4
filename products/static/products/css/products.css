@@ -1,0 +1,232 @@
+/* Root always change on base.css then copy it to here */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+:root {
+  /* fonts */
+  --title: "Lato", sans-serif;
+  --main-font: 'Roboto', sans-serif;
+
+  /* Colours */
+  --text: #0b1d07;
+  --background: #f8fdf7;
+  --primary: #611a74;
+  --secondary: #f4cde9;
+  --accent: #592ec7;
+
+  /* Utility */
+  --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  --boxshadow: 0 0 1rem rgba(89, 46, 199, 0.2);
+  --border: 1px solid rgba(0, 0, 0, 0.2);
+  --skew-angle: 2deg;
+}
+
+.test {
+  border: 1px solid rgb(255, 0, 162);
+}
+
+.color-1-bg {
+  background-color: var(--text);
+}
+
+.color-1-text {
+  color: var(--text);
+}
+
+.color-2-bg {
+  background-color: var(--background);
+}
+
+.color-2-text {
+  color: var(--background);
+}
+
+.color-3-bg {
+  background-color: var(--primary);
+}
+
+.color-3-text {
+  color: var(--primary);
+}
+
+.color-4-bg {
+  background-color: var(--secondary);
+}
+
+.color-4-text {
+  color: var(--secondary);
+}
+
+.color-5-bg {
+  background-color: var(--accent);
+}
+
+.color-5-text {
+  color: var(--accent);
+}
+
+
+/* Products modifications */
+.product-brand {
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.product-card{
+  position: relative;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.product-link {
+  display: flex;
+  justify-content: center;
+}
+
+
+.product-link img {
+  max-width: 80%;
+  object-fit: scale-down;
+}
+
+.product-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover, 
+.product-card:hover .hidden-info {
+  box-shadow: var(--boxshadow);
+}
+
+.hidden-info{
+  background-color: var(--secondary);
+  position: absolute;
+  height: 50px;
+  bottom: -50px;
+  left: 0;
+  display: hidden;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.hidden-info div{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-info button{
+  background-color: var(--text);
+  color: var(--background);
+  display: none;
+}
+
+
+.product-card:hover .hidden-info, 
+.product-card:focus .hidden-info {
+  width: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.product-card:hover .hidden-info button{
+  display: block;
+}
+
+.hidden-info button:hover{
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+
+/* Slides */
+
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+}

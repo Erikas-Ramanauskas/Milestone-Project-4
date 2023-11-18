@@ -20,9 +20,17 @@
   --skew-angle: 5deg;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
 .color-1-bg {
   background-color: var(--text);
 }
+
 .color-1-text {
   color: var(--text);
 }
@@ -72,7 +80,7 @@ p {
 body {
   display: flex;
   flex-direction: column;
-  font-family: var(--main-font);
+  font-family: var(--title);
 }
 
 h1,
