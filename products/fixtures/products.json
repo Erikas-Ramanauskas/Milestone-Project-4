@@ -3,7 +3,7 @@
     "pk": 1,
     "model": "products.product",
     "fields": {
-      "sku": "pp3887109119",
+      "sku": "pp5888189604",
       "name": "SleekStride",
       "description": "Elevate your style with these elegant leather loafers. The SleekStride shoes are perfect for formal occasions or adding a touch of sophistication to your daily attire. Crafted with premium materials and a comfortable fit, they'll keep you striding in confidence.",
       "price": 59.99,
@@ -35,7 +35,7 @@
     "pk": 2,
     "model": "products.product",
     "fields": {
-      "sku": "pp8041756672",
+      "sku": "pp5527795561",
       "name": "TrailBlazers",
       "description": "Get ready to explore the great outdoors with our TrailBlazers hiking boots. Designed for rugged terrains, these shoes offer superior grip and support, keeping your feet comfortable and protected during your adventures.",
       "price": 79.99,
@@ -69,7 +69,7 @@
     "pk": 3,
     "model": "products.product",
     "fields": {
-      "sku": "pp8189811828",
+      "sku": "pp9964152513",
       "name": "UrbanChic Sneakers",
       "description": "The UrbanChic Sneakers are a must-have for city dwellers and fashion-forward individuals. These trendy sneakers blend style and comfort effortlessly, making them perfect for a casual day out or a night on the town.",
       "price": 129.99,
@@ -101,7 +101,7 @@
     "pk": 4,
     "model": "products.product",
     "fields": {
-      "sku": "pp7258984023",
+      "sku": "pp6335041674",
       "name": "ComfyCloud Slippers",
       "description": "Experience the ultimate relaxation with our ComfyCloud Slippers. These plush, memory foam slippers provide heavenly comfort for your feet after a long day. They're perfect for lounging at home and unwinding in style.",
       "price": 49.99,
@@ -131,7 +131,7 @@
     "pk": 5,
     "model": "products.product",
     "fields": {
-      "sku": "pp9546045958",
+      "sku": "pp3113695048",
       "name": "SportPro Runners",
       "description": "Gear up for your next workout or run with the SportPro Runners. These athletic shoes are designed for performance, featuring breathable mesh uppers, responsive cushioning, and excellent support to help you achieve your fitness goals.",
       "price": 89.99,
@@ -163,7 +163,7 @@
     "pk": 6,
     "model": "products.product",
     "fields": {
-      "sku": "pp3274923689",
+      "sku": "pp808812345",
       "name": "Boho-Chic Sandals",
       "description": "Embrace a bohemian vibe with our Boho-Chic Sandals. These stylish and comfortable sandals are ideal for summer outings, beach trips, or simply adding a touch of free-spirited charm to your look.",
       "price": 169.99,
@@ -193,7 +193,7 @@
     "pk": 7,
     "model": "products.product",
     "fields": {
-      "sku": "pp123986345",
+      "sku": "pp4022621921",
       "name": "ClassicOxfords",
       "description": "ClassicOxfords are timeless footwear that never goes out of style. Crafted with attention to detail, these traditional oxford shoes are perfect for formal occasions, office meetings, and elegant dinners.",
       "price": 39.99,
@@ -227,7 +227,7 @@
     "pk": 8,
     "model": "products.product",
     "fields": {
-      "sku": "pp8572761201",
+      "sku": "pp475997870",
       "name": "EverydayEssentials Flats",
       "description": "Simplify your footwear collection with our EverydayEssentials Flats. These versatile flats are designed to complement any outfit, offering both comfort and style for your day-to-day activities.",
       "price": 99.99,
@@ -257,7 +257,7 @@
     "pk": 9,
     "model": "products.product",
     "fields": {
-      "sku": "pp9396442387",
+      "sku": "pp2492960179",
       "name": "AdventureSeeker Boots",
       "description": "For the intrepid traveler and outdoor enthusiast, AdventureSeeker Boots are the perfect choice. These durable and waterproof boots will keep your feet dry and comfortable during your explorations in any weather.",
       "price": 59.99,
@@ -289,7 +289,7 @@
     "pk": 10,
     "model": "products.product",
     "fields": {
-      "sku": "pp6805797724",
+      "sku": "pp1385337698",
       "name": "SprintTech Performance Shoes",
       "description": "Elevate your athletic performance with SprintTech Performance Shoes. These high-tech running shoes feature advanced cushioning, lightweight construction, and excellent breathability, ensuring you stay ahead of the competition.",
       "price": 119.99,
@@ -321,7 +321,7 @@
     "pk": 11,
     "model": "products.product",
     "fields": {
-      "sku": "pp8174134140",
+      "sku": "pp6255454702",
       "name": "GlamourGlide Heels",
       "description": "Step into the spotlight with GlamourGlide Heels. These stunning high heels are designed for special occasions and glamorous evenings out. With their eye-catching design and comfortable fit, you'll be the center of attention.",
       "price": 69.99,
@@ -351,7 +351,7 @@
     "pk": 12,
     "model": "products.product",
     "fields": {
-      "sku": "pp4664365009",
+      "sku": "pp90195719",
       "name": "RetroRevive Sneakers",
       "description": "Embrace nostalgia with our RetroRevive Sneakers. These vintage-inspired sneakers combine timeless style with modern comfort, making them a perfect choice for those who appreciate a classic look.",
       "price": 149.99,
@@ -381,7 +381,7 @@
     "pk": 13,
     "model": "products.product",
     "fields": {
-      "sku": "pp8214720202",
+      "sku": "pp6843549273",
       "name": "SnowPeak Explorer Boots",
       "description": "Conquer the snowy landscapes with SnowPeak Explorer Boots. These winter-ready boots are insulated and waterproof, ensuring warmth and protection on your cold-weather adventures.",
       "price": 54.99,
@@ -411,7 +411,7 @@
     "pk": 14,
     "model": "products.product",
     "fields": {
-      "sku": "pp9054053381",
+      "sku": "pp4431344795",
       "name": "CruiseControl Loafers",
       "description": "Cruise in style and comfort with CruiseControl Loafers. These slip-on loafers are perfect for casual occasions, offering a relaxed and easygoing vibe that complements your laid-back attire.",
       "price": 74.99,
@@ -443,7 +443,7 @@
     "pk": 15,
     "model": "products.product",
     "fields": {
-      "sku": "pp9914824812",
+      "sku": "pp928013071",
       "name": "DanceFusion Jazz Shoes",
       "description": "Unleash your inner dancer with DanceFusion Jazz Shoes. These flexible and supportive jazz shoes are ideal for dance enthusiasts, helping you move with grace and precision during your routines.",
       "price": 139.99,
@@ -471,7 +471,7 @@
     "pk": 16,
     "model": "products.product",
     "fields": {
-      "sku": "pp6407325166",
+      "sku": "pp7873290096",
       "name": "EcoStride Sustainable Sneakers",
       "description": "Make a positive impact with EcoStride Sustainable Sneakers. These eco-friendly shoes are crafted from recycled and sustainable materials, perfect for those who want to tread lightly on the planet.",
       "price": 44.99,
@@ -501,7 +501,7 @@
     "pk": 17,
     "model": "products.product",
     "fields": {
-      "sku": "pp3910835169",
+      "sku": "pp272270013",
       "name": "PowerLift Cross-Trainers",
       "description": "Achieve your fitness goals with PowerLift Cross-Trainers. These versatile athletic shoes provide excellent stability and support for weightlifting, cross-training, and intense workouts.",
       "price": 94.99,
@@ -529,7 +529,7 @@
     "pk": 18,
     "model": "products.product",
     "fields": {
-      "sku": "pp4805299334",
+      "sku": "pp3952572409",
       "name": "BohoBreeze Espadrilles",
       "description": "Enjoy the carefree spirit of summer with BohoBreeze Espadrilles. These lightweight and stylish espadrilles are a great choice for beach days, picnics, and outdoor festivals.",
       "price": 34.99,
@@ -559,7 +559,7 @@
     "pk": 19,
     "model": "products.product",
     "fields": {
-      "sku": "pp5225557642",
+      "sku": "pp3550314961",
       "name": "ExecutiveEdge Dress Shoes",
       "description": "Elevate your professional attire with ExecutiveEdge Dress Shoes. These polished and refined shoes are designed for the corporate world, making a strong impression in the boardroom and at formal events.",
       "price": 109.99,
@@ -587,7 +587,7 @@
     "pk": 20,
     "model": "products.product",
     "fields": {
-      "sku": "pp1747482554",
+      "sku": "pp5460799082",
       "name": "ZenSoul Yoga Sandals",
       "description": "Find your inner peace with ZenSoul Yoga Sandals. These comfortable and flexible sandals are perfect for yoga practice and meditation, allowing you to connect with your Zen.",
       "price": 79.99,
@@ -617,7 +617,7 @@
     "pk": 21,
     "model": "products.product",
     "fields": {
-      "sku": "pp7630447814",
+      "sku": "pp4650368838",
       "name": "VelvetDream Pumps",
       "description": "Step into elegance with VelvetDream Pumps. These luxurious velvet heels are the epitome of sophistication, perfect for formal events and adding a touch of opulence to your ensemble.",
       "price": 159.99,
@@ -657,7 +657,7 @@
     "pk": 22,
     "model": "products.product",
     "fields": {
-      "sku": "pp2368626694",
+      "sku": "pp4052997424",
       "name": "TerraTrek Hiking Boots",
       "description": "Explore the great outdoors with confidence in TerraTrek Hiking Boots. These rugged and durable boots provide excellent traction and ankle support, ensuring a comfortable and secure hike.",
       "price": 49.99,
@@ -697,7 +697,7 @@
     "pk": 23,
     "model": "products.product",
     "fields": {
-      "sku": "pp3031845932",
+      "sku": "pp7902883552",
       "name": "StreetSmart Sneaker Boots",
       "description": "Combine style and function with StreetSmart Sneaker Boots. These versatile boots offer a sporty edge while keeping your feet cozy and well-protected during urban adventures.",
       "price": 89.99,
@@ -723,7 +723,7 @@
     "pk": 24,
     "model": "products.product",
     "fields": {
-      "sku": "pp7564093908",
+      "sku": "pp4193667609",
       "name": "Starstruck Ballet Flats",
       "description": "Shine bright with Starstruck Ballet Flats. These sparkling flats are a perfect choice for a night of dancing or adding a touch of glam to your casual outfit. They're a star-studded addition to your shoe collection.",
       "price": 29.99,
@@ -753,7 +753,7 @@
     "pk": 25,
     "model": "products.product",
     "fields": {
-      "sku": "pp5475449623",
+      "sku": "pp1712206844",
       "name": "EcoWalk All-Terrain Shoes",
       "description": "Embrace eco-conscious living with EcoWalk All-Terrain Shoes. These sustainable, all-purpose shoes are made from eco-friendly materials, making them ideal for both outdoor activities and everyday wear.",
       "price": 119.99,
@@ -783,7 +783,7 @@
     "pk": 26,
     "model": "products.product",
     "fields": {
-      "sku": "pp5654775907",
+      "sku": "pp8785256935",
       "name": "StrideRight Running Shoes",
       "description": "Get ahead in your running game with StrideRight Running Shoes. These high-performance running shoes offer exceptional cushioning and stability, propelling you toward your fitness goals.",
       "price": 64.99,
@@ -795,13 +795,15 @@
         "IMG_1089.jpg",
         "IMG_1090.jpg",
         "IMG_1091.jpg",
-        "IMG_1092.jpg"
+        "IMG_1092.jpg",
+        "IMG_1093.jpg"
       ],
       "image_url": [
         "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1089.jpg",
         "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1090.jpg",
         "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1091.jpg",
-        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1092.jpg"
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1092.jpg",
+        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1093.jpg"
       ]
     }
   },
@@ -809,7 +811,7 @@
     "pk": 27,
     "model": "products.product",
     "fields": {
-      "sku": "pp1493420943",
+      "sku": "pp9284377788",
       "name": "IslandBreeze Flip-Flops",
       "description": "Experience the essence of a tropical paradise with IslandBreeze Flip-Flops. These comfortable and vibrant flip-flops are perfect for beach getaways, relaxation by the pool, or casual island-inspired style.",
       "price": 124.99,
@@ -818,7 +820,6 @@
       "category": 3,
       "brand": 14,
       "image": [
-        "IMG_1093.jpg",
         "IMG_1097.jpg",
         "IMG_1098.jpg",
         "IMG_1099.jpg",
@@ -827,7 +828,6 @@
         "IMG_1102.jpg"
       ],
       "image_url": [
-        "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1093.jpg",
         "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1097.jpg",
         "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1098.jpg",
         "https://milestone-project--4.s3.eu-west-2.amazonaws.com/media/IMG_1099.jpg",
@@ -841,7 +841,7 @@
     "pk": 28,
     "model": "products.product",
     "fields": {
-      "sku": "pp8112596325",
+      "sku": "pp6929599024",
       "name": "VintageCharm Brogues",
       "description": "Step back in time with VintageCharm Brogues. These classic brogue shoes exude timeless charm and sophistication, making them an excellent choice for vintage-inspired or formal occasions.",
       "price": 59.99,
@@ -871,7 +871,7 @@
     "pk": 29,
     "model": "products.product",
     "fields": {
-      "sku": "pp346569368",
+      "sku": "pp2132707786",
       "name": "TrailMaster Trail Running Shoes",
       "description": "Conquer rugged terrains with TrailMaster Trail Running Shoes. These durable and grippy shoes are designed for trail running and off-road adventures, offering stability and comfort on unpredictable paths.",
       "price": 99.99,
@@ -899,7 +899,7 @@
     "pk": 30,
     "model": "products.product",
     "fields": {
-      "sku": "pp1597100456",
+      "sku": "pp421259620",
       "name": "CloudWalker Slip-Ons",
       "description": "Enjoy the feeling of walking on clouds with CloudWalker Slip-Ons. These lightweight and cushioned slip-on shoes provide the ultimate comfort for your everyday activities, making every step a delight.",
       "price": 69.99,
@@ -927,7 +927,7 @@
     "pk": 31,
     "model": "products.product",
     "fields": {
-      "sku": "pp6749729451",
+      "sku": "pp7567736149",
       "name": "Running Bliss",
       "description": "Experience pure comfort and speed with our Running Bliss shoes. Perfect for athletes looking to shatter their records.",
       "price": 79.99,
@@ -957,7 +957,7 @@
     "pk": 32,
     "model": "products.product",
     "fields": {
-      "sku": "pp8647970197",
+      "sku": "pp9538160664",
       "name": "Elegant Grace",
       "description": "Step into style with our Elegant Grace heels. These shoes are the epitome of sophistication, perfect for special occasions.",
       "price": 89.99,
@@ -987,7 +987,7 @@
     "pk": 33,
     "model": "products.product",
     "fields": {
-      "sku": "pp77798288",
+      "sku": "pp1854874892",
       "name": "Active Explorer",
       "description": "Gear up for your next adventure with Active Explorer hiking boots. They provide the ultimate support and durability.",
       "price": 74.99,
@@ -1017,7 +1017,7 @@
     "pk": 34,
     "model": "products.product",
     "fields": {
-      "sku": "pp5269151431",
+      "sku": "pp9160872234",
       "name": "Casual Comfort",
       "description": "Slip into Casual Comfort sneakers for all-day ease. Perfect for a laid-back look and long strolls.",
       "price": 69.99,

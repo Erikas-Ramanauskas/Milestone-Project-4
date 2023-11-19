@@ -1,3 +1,4 @@
+// function creates list of immages to be jumped to a specific picture.
 function slider() {
   const slides = document.querySelectorAll('.slide');
   const skipsContainer = document.querySelector('.image_skips');
@@ -35,15 +36,6 @@ function slider() {
       skipsContainer.appendChild(listItem);
     });
   }
-  
-  // function createSlides() {
-  //   slides.forEach(function (_, i) {
-  //     skipsContainer.insertAdjacentHTML(
-  //       'beforeend',
-  //       `<button class="image_skips__slide" data-slide="${i}"></button>`
-  //     );
-  //   });
-  // };
 
   function activateSlide(slide) {
     document

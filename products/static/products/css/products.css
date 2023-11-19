@@ -160,8 +160,7 @@
   align-items: center;
   justify-content: center;
 
-  /* THIS creates the animation! */
-  transition: transform 1s;
+  /* transition: transform 1s; */
 }
 
 .slide > img {
@@ -177,14 +176,15 @@
   margin-top: 15px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .image_skips_picture {
-  height: 3rem;
-  margin: 2px;
+  width: 4vw;
   aspect-ratio: 1/1;
+  margin: 2px;
   cursor: pointer;
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
   list-style-type: none;
 }
 
