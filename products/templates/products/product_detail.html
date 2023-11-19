@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
+{% block extra_js %} 
+    <script
+      defer src="{% static 'products/js/products.js' %}"
+        crossorigin="anonymous"
+    ></script>
+{% endblock %}
+
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -23,12 +35,9 @@
                                         <img src="{{ image }}" alt="Slide {{ forloop.counter }}" class="" />
                                     </div>
                                 {% endfor %}
-
-                                <button class="slider__btn slider__btn--left" aria-label="Next Slide">&larr;</button>
-                                <button class="slider__btn slider__btn--right" aria-label="Previous Slide">&rarr;</button>
-                                <div class="dots"></div>
                             </div>
                         <!-- end of new slider -->
+                            <ul class="image_skips"></ul>
                     {% else %}
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
