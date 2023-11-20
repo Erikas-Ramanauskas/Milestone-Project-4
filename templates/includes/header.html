@@ -39,23 +39,13 @@
                 <ul>
                   <li><a class="dropdown-item" href="{% url 'products' %}">All Shoes</a></li>
                   {% for brand in brands %}
-                    <li><a class="dropdown-item" href="#">{{ brand.friendly_name }}</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?brand={{ brand.name }}">{{ brand.friendly_name }}</a></li>
                   {% endfor %}
                 </ul>
                 <ul>
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-                <ul>
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-                <ul>
-                  <li><a class="dropdown-item" href="#">dfdgh</a></li>
-                  <li><a class="dropdown-item" href="#">sdfghg</a></li>
-                  <li><a class="dropdown-item" href="#">sdfjgdhf</a></li>
+                   {% for category in categories %}
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>
@@ -81,8 +71,8 @@
         </ul>
 
         <!-- search  -->
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
           <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
       </div>
