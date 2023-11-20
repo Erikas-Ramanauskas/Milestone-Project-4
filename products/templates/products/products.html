@@ -44,7 +44,7 @@
                                     <div class="pt-0 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
-                                                <p class="mb-0 text-left font-weight-bold color-5-text">£{{ product.price }}</p>
+                                                <p class="mb-0 px-1 text-left font-weight-bold color-5-text"><i class="fa-solid fa-sterling-sign"></i>{{ product.price }}</p>
                                                 {% if product.size %}
                                                     <small class="text-muted"><i class="color-5-text fa-solid fa-shoe-prints"></i> Size: {{ product.size }} UK</small>
                                                 {% else %}
@@ -57,7 +57,7 @@
                             </div>
                             <div class="hidden-info">
                                 <div>
-                                    <button class="btn add-button">Add to basket</button>
+                                    <button class="btn add-button add-button-card">Add to cart</button>
                                 </div>
                             </div>
                         </div>

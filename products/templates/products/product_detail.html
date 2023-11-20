@@ -28,33 +28,39 @@
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
                     {% if product.image %}
-                       <!-- new slider -->
-                            <div class="slider">
-                                {% for image in product.image_url %}
-                                    <div class="slide">
-                                        <img src="{{ image }}" alt="Slide {{ forloop.counter }}" class="" />
-                                    </div>
-                                {% endfor %}
-                            </div>
+                        <!-- new slider -->
+                        <div class="slider">
+                            {% for image in product.image_url %}
+                                <div class="slide">
+                                    <img src="{{ image }}" alt="Slide {{ forloop.counter }}" class="" />
+                                </div>
+                            {% endfor %}
+                        </div>
                         <!-- end of new slider -->
                             <ul class="image_skips"></ul>
                     {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        </a>
+                        <div class="slider">
+                            <div class="slide">
+                                <img class="card-img-top img-fluid " src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </div>
+                        </div>
                     {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                <div class="product-details-container mb-5 mt-md-5 p-4 color-4-bg rounded-3">
+                    <h3 class="mb-0 color-1-text">{{ product.brand.friendly_name }}</h3>
+                    <h4 class="">{{ product.name }}</h4>
+                    <p class="mb-0 px-1 mt-3 text-left font-weight-bold color-5-text"><i class="fa-solid fa-sterling-sign"></i>{{ product.price }}</p>
                     {% if product.size %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.size }} / 5</small>
+                       <small class="text-muted"><i class="color-5-text fa-solid fa-shoe-prints"></i> Size: {{ product.size }} UK</small>
                     {% else %}
-                        <small class="text-muted">No Rating</small>
+                        <small class="text-muted">No Size</small>
                     {% endif %}
-                    <p class="mt-3">{{ product.size }}</p>
+                    <p class="mt-3">{{ product.description }}</p>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button class="btn add-button">Add to cart</button>
+                    </div>
                 </div>
             </div>
         </div>

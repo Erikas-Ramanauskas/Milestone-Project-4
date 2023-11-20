@@ -105,7 +105,7 @@
 button.btn-special{
     text-transform: uppercase;
     letter-spacing: 2px;
-    background-color: var(--text);
+    background-color: var(--secondary);
     color: var(--background);
 }
 

@@ -164,3 +164,25 @@ footer {
   box-shadow: var(--boxshadow);
   border-radius: 5px;
 }
+
+.dropdown-menu div{
+  max-width: 100vw;
+  display: flex;
+  align-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown-menu div {
+        flex-wrap: wrap;
+    }
+}
+
+.dropdown-menu div ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu[data-bs-popper]{
+  left: -100%;
+}
