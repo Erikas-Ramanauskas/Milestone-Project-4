@@ -100,20 +100,6 @@
 }
 
 
-/* Buttons */
-
-a.btn-special{
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: var(--text);
-    color: var(--background);
-}
-
-a.btn-special:hover{
-    background-color: var(--text);
-    filter: brightness(2);
-    color: var(--background);
-}
 
 
 .home-icons {

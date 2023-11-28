@@ -14,7 +14,7 @@ import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 if os.path.exists('env.py'):
     import env
@@ -26,7 +26,7 @@ if os.path.exists('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = os.environ.get('DEVELOPMENT', '') == 'True'
 
 
 ALLOWED_HOSTS = []
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # Apps
     'home',
     'products',
+    'bag',
     
     
     # Other
@@ -99,6 +100,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'products.context_processors.all_categories',
+                'bag.contexts.bag_contents',
                 
                  # `allauth` needs this from django
                 'django.template.context_processors.request',
@@ -220,4 +222,5 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+FREE_DELIVERY_THRESHOLD = 99
+STANDARD_DELIVERY_PERCENTAGE = 10

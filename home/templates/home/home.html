@@ -26,8 +26,8 @@
                 <div></div>
             </div>
             <div class="col-12 col-md-5 col-lg-8 self py-4 text-center text-container">
-                <h2 class="mx-5 text-white text-shadow-black">Orders of £99 and over pay nothing for shippping</h2>
-                <button type="button" class="btn btn-special">Browse me</button>
+                <h2 class="mx-5 text-white text-shadow-black">Orders of £{{ free_delivery_threshold }} and over pay nothing for shippping</h2>
+                <a href="{% url 'products' %}" class="btn btn-special">Browse me</a>
             </div>
         </div>
     </section>
@@ -47,7 +47,7 @@
                     <div class="col-12 col-md">
                         <h3>Sport</h3>
                         <p class="mb-4">Casual and versatile, sneakers are comfortable for everyday wear and come in various styles.</p>
-                        <button type="button" class="btn btn-special">Explore</button>
+                        <a href="{% url 'products' %}?category=sneakers,running_shoes,basketball_shoes,tennis_shoes,hiking_boots" class="btn btn-special">Explore</a>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <div class="col-12 col-md">
                         <h3>Classic</h3>
                         <p class="mb-4">Typically made of leather, dress shoes are suitable for formal events, business attire, and special occasions.</p>
-                        <button type="button" class="btn btn-special">Explore</button>
+                        <a href="{% url 'products' %}?category=loafers,platform_shoes,mules,chukka_boots" class="btn btn-special">Explore</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <div class="col-12 col-md">
                         <h3>Elegant</h3>
                         <p class="mb-4">These are women's shoes with elevated heels, often worn to add height and elegance to formal or dressy outfits.</p>
-                        <button type="button" class="btn btn-special">Explore</button>
+                        <a href="{% url 'products' %}?category=high_heels,ankle_boots" class="btn btn-special">Explore</a>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                     <div class="col-12 col-md">
                         <h3>Winter</h3>
                         <p class="mb-4">Insulated and designed to keep your feet warm and dry in snowy and cold weather.</p>
-                        <button type="button" class="btn btn-special">Explore</button>
+                        <a href="{% url 'products' %}?category=boots,flats,rain_boots,cowboy_boots" class="btn btn-special">Explore</a>
                     </div>
                 </div>
             </div>

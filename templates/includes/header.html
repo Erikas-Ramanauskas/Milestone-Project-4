@@ -2,7 +2,7 @@
 
 <header>
   {% with request.resolver_match.url_name as url_name %}
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary color-4-bg">
     <div class="container-fluid">
       <!-- logo -->
       <a class="navbar-brand" href="{% url 'home' %}">{% include 'includes/logo.html' %}</a>
@@ -34,22 +34,38 @@
            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
             </a>
-            <div class="dropdown-menu">
+            <!-- both list loops though avialable options. if there are no shoe of specific brand or category the meniu will not display the category or brand -->
+            <div class="dropdown-menu">  
               <div>
-                <ul>
-                  <li><a class="dropdown-item" href="{% url 'products' %}">All Shoes</a></li>
-                  {% for brand in brands %}
-                    <li><a class="dropdown-item" href="{% url 'products' %}?brand={{ brand.name }}">{{ brand.friendly_name }}</a></li>
-                  {% endfor %}
-                </ul>
-                <ul>
-                   {% for category in categories %}
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
-                  {% endfor %}
-                </ul>
+                <div>
+                  <p class="color-4-bg dropdown-item navigation-type mb-0" >By brand</p>
+                  <hr>
+                  <ul>
+                    {% for brand in brands %}
+                      <li><a class="dropdown-item" href="{% url 'products' %}?brand={{ brand.name }}">{{ brand.friendly_name }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div>
+                   <p class="color-4-bg dropdown-item navigation-type mb-0">By category</p>
+                  <hr>
+                  <ul>
+                    {% for category in categories %}
+                      <li><a class="dropdown-item" href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
               </div>
             </div>
           </li>
+       
+      
+        </ul>
+        <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
+            <button class="btn btn-special" type="submit">Search</button>
+        </form>
+        <ul id="log-in-items">
           {% if request.user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}" href="/accounts/logout/"
@@ -71,10 +87,7 @@
         </ul>
 
         <!-- search  -->
-        <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
-          <button class="btn btn-outline-primary" type="submit">Search</button>
-        </form>
+        
       </div>
     </div>
   </nav>
