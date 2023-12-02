@@ -9,6 +9,7 @@ def bag_contents(request):
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
+    bag_ids = set(bag.keys())
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
@@ -41,6 +42,8 @@ def bag_contents(request):
     
     grand_total = delivery + total
     
+    bag_ids_list = [int(x) for x in list(bag_ids)]
+    
     context = {
         'bag_items': bag_items,
         'total': total,
@@ -49,6 +52,7 @@ def bag_contents(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
+        'bag_ids': bag_ids_list,
     }
 
     return context

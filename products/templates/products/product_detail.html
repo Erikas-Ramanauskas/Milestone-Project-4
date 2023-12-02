@@ -59,7 +59,17 @@
                     {% endif %}
                     <p class="mt-3">{{ product.description }}</p>
                     <div class="d-flex justify-content-center mt-4">
-                        <button class="btn add-button">Add to cart</button>
+                        <form action="{% url 'add_to_bag' product.id %}" method="POST">
+                            <div>
+                                {% csrf_token %}
+                                {% if product.id in bag_ids %}
+                                    <input class="btn add-button rounded-0 text-uppercase" value="Already in A Cart" disabled>
+                                {% else %}
+                                    <input type="submit" class="btn add-button rounded-0 text-uppercase" value="Add to cart">
+                                {% endif %}
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </form>
                     </div>
                 </div>
             </div>

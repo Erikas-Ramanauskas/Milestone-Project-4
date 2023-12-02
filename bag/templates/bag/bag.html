@@ -41,7 +41,6 @@
                                 <tr>
                                     <th colspan="2" scope="col">Product Info</th>
                                     <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
                                     <th colspan="2" scope="col">Subtotal</th>
                                 </tr>
                             </thead>
@@ -58,21 +57,19 @@
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
-                                    </td>
+                                 
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <i class="fa-solid fa-trash-can"></i>
+                                        <a class="remove-item" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can"></i></a>
                                     </td>
                                 </tr>
                             {% endfor %}
                           
                         </table>
                 {% else %}
-                <div id="empty-cart" class="test">
+                <div id="empty-cart" class="test"> 
                     <p>Your cart looks empty!</p>
                     <p><a href="{% url 'products' %}">Find Something Great!</a></p>
                 </div>    
@@ -92,9 +89,17 @@
                         <i class="fas fa-lock"></i>
                     </span>
                 </a>
-            
-                
             </div>
         </div>
     </div>
+    
+    <!-- form for remove button csrf token -->
+    <form action="">
+        {% csrf_token %}
+    </form>
+    
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'bag/js/bag.js' %}"></script>
 {% endblock %}
