@@ -43,3 +43,13 @@ td {
     color: var(--accent);
     text-decoration: none;
 }
+
+.remove-item{
+    font-size: 1.5rem;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.remove-item:hover{
+    color: var(--primary);
+}

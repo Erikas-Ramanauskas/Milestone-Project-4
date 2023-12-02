@@ -24,9 +24,9 @@
          <div class="row">
             <div class="col text-center">
                 {% if free_delivery_delta > 0 %}
-                    <p class="mb-1 text-danger">
+                    <h5 class="mb-3 color-3-text">
                         You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                    </p>
+                    </h5>
                 {% endif %}
             </div>
         </div>
@@ -47,21 +47,21 @@
 
                             {% for item in bag_items %}
                                 <tr>
-                                    <td class="p-3">
+                                    <td class="p-2">
                                        <a href="{% url 'product_detail' item.product.id %}"><img class="img-fluid bag-img" src="{{ item.product.image_url.0 }}"></a> 
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-4">
                                         <p class="my-0"><strong> <a class="product-link" href="{% url 'product_detail' item.product.id %}">{{ item.product.name }}</a></strong></p>
                                         <p class="my-0 small text-muted">Product code: {{ item.product.sku|upper }}</p>
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                    <td class="py-4">
+                                        <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
                                  
-                                    <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                    <td class="py-4">
+                                        <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-4">
                                         <a class="remove-item" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can"></i></a>
                                     </td>
                                 </tr>
@@ -81,9 +81,9 @@
                 <hr>
                 <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                 <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                <h6 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h6>
+                <h6 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h6>
                
-                <a href="" class="btn btn-special">
+                <a href="" class="btn btn-special my-3">
                     <span class="text-uppercase">Secure Checkout</span>
                     <span class="icon">
                         <i class="fas fa-lock"></i>

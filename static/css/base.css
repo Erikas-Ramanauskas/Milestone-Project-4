@@ -215,6 +215,15 @@ footer {
   list-style: none;
 }
 
+.nav-item .fa-cart-shopping{
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.nav-item .fa-cart-shopping:hover{
+  color: var(--primary);
+}
+
 
 /* Buttons */
 
@@ -228,7 +237,6 @@ button.btn-special{
 
 a.btn-special:hover,
 button.btn-special:hover{
-    background-color: var(--text);
-    filter: brightness(2);
+    background-color: var(--primary);
     color: var(--background);
 }
