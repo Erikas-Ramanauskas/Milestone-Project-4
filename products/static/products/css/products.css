@@ -93,8 +93,8 @@
   justify-content: space-between;
 }
 
-.product-card:hover, 
-.product-card:hover .hidden-info {
+.product-card:is(:hover, :focus), 
+.product-card:is(:hover, :focus) .hidden-info {
   box-shadow: var(--boxshadow);
 }
 
@@ -125,18 +125,18 @@
 }
 
 
-.product-card:hover .hidden-info, 
+.product-card:is(:hover, :focus) .hidden-info, 
 .product-card:focus .hidden-info {
   width: 100%;
   display: block;
   z-index: 1;
 }
 
-.product-card:hover .add-button{
+.product-card:is(:hover, :focus) .add-button{
   display: block;
 }
 
-.add-button:hover{
+.add-button:is(:hover, :focus){
   background-color: var(--primary);
   color: var(--background);
 }

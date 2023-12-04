@@ -50,6 +50,6 @@ td {
     text-decoration: none;
 }
 
-.remove-item:hover{
+.remove-item:is(:hover, :focus){
     color: var(--primary);
 }

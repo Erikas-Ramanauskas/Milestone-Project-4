@@ -1,5 +1,3 @@
-console.log("test");
-
 document.addEventListener("DOMContentLoaded", function () {
     const removeItem = document.querySelectorAll('.remove-item')
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
@@ -7,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     removeItem.forEach((item) => {
         item.addEventListener('click', function (e) {
 
-            console.log(csrfToken)
             const itemId = this.getAttribute('id').split('remove_')[1];
             const url = `/bag/remove/${itemId}/`;
 

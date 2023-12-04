@@ -183,11 +183,11 @@ footer {
   flex-direction: column;
 }
 
-.dropdown-menu ul li :hover{
+.dropdown-menu ul li :is(:hover, :focus){
   background-color: var(--secondary)!important;
 }
 
-.dropdown-menu .navigation-type:hover{
+.dropdown-menu .navigation-type:is(:hover, :focus){
   background-color: var(--secondary);
 }
 
@@ -220,7 +220,7 @@ footer {
   color: var(--text);
 }
 
-.nav-item .fa-cart-shopping:hover{
+.nav-item .fa-cart-shopping:is(:hover, :focus){
   color: var(--primary);
 }
 
@@ -235,8 +235,37 @@ button.btn-special{
     color: var(--background);
 }
 
-a.btn-special:hover,
-button.btn-special:hover{
+a.btn-special:is(:hover, :focus),
+button.btn-special:is(:hover, :focus){
     background-color: var(--primary);
     color: var(--background);
+}
+
+
+/* toest */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.toast .toast-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bag-notification-wrapper {
+    max-height: 25vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

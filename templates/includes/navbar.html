@@ -31,7 +31,7 @@
           </li>
           <!-- Product Dropdown -->
           <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <a class="nav-link dropdown-toggle" href="#" role="button" aria-current="page" data-bs-toggle="dropdown" aria-expanded="false">
             Products
             </a>
             <!-- both list loops though avialable options. if there are no shoe of specific brand or category the meniu will not display the category or brand -->
@@ -42,7 +42,7 @@
                   <hr>
                   <ul>
                     {% for brand in brands %}
-                      <li><a class="dropdown-item" href="{% url 'products' %}?brand={{ brand.name }}">{{ brand.friendly_name }}</a></li>
+                      <li><a class="dropdown-item" aria-current="page" href="{% url 'products' %}?brand={{ brand.name }}">{{ brand.friendly_name }}</a></li>
                     {% endfor %}
                   </ul>
                 </div>
@@ -51,7 +51,7 @@
                   <hr>
                   <ul>
                     {% for category in categories %}
-                      <li><a class="dropdown-item" href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
+                      <li><a class="dropdown-item" aria-current="page"  href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
                     {% endfor %}
                   </ul>
                 </div>
@@ -68,24 +68,24 @@
         <ul id="log-in-items" class="navbar-nav me-auto mb-2 mb-lg-0">
           {% if request.user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}" href="/accounts/logout/"
+            <a class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}" aria-current="page" href="/accounts/logout/"
               >Log Out</a
             >
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link {% if url_name == 'accounts_singup' %} active {% endif %}" href="/accounts/signup/"
+            <a class="nav-link {% if url_name == 'accounts_singup' %} active {% endif %}" aria-current="page" href="/accounts/signup/"
               >Register</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if url_name == 'accounts_login' %} active {% endif %}" href="/accounts/login/"
+            <a class="nav-link {% if url_name == 'accounts_login' %} active {% endif %}" aria-current="page" href="/accounts/login/"
               >Log In</a
             >
           </li>
           {% endif %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'bag' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="nav-link" aria-current="page" href="{% url 'bag' %}"><i class="fa-solid fa-cart-shopping"></i></a>
           </li>
         </ul>
 
