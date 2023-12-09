@@ -1,0 +1,61 @@
+:root {
+  /* fonts */
+  --title: "Lato", sans-serif;
+  --main-font: "Playfair Display", serif;
+
+  /* Colours */
+  --text: #0b1d07;
+  --background: #f8fdf7;
+  --primary: #611a74;
+  --secondary: #f4cde9;
+  --accent: #592dc8;
+
+  /* Utility */
+  --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  --boxshadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  --border: 1px solid rgba(0, 0, 0, 0.2);
+  --skew-angle: 5deg;
+}
+
+.StripeElement,
+.stripe-style-input {
+  color: #000;
+  font-family: var(--main-font);
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.StripeElement,
+.stripe-style-input::placeholder {
+    color: #aab7c4;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #000;
+    border: 1px solid #000;
+}

@@ -100,6 +100,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'products.context_processors.all_categories',
                 'bag.contexts.bag_contents',
                 
@@ -110,6 +111,10 @@ TEMPLATES = [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field'
             ],
+            'libraries':{
+            'bag_tools': 'bag.templatetags.bag_tools',
+            
+            }
         },
     },
 ]
