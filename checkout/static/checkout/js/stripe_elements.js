@@ -44,6 +44,8 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault(); //prevents form action  "post" from happening
     card.update({ 'disabled': true });
     document.getElementById('submit-button').setAttribute('disabled', true);
+    fadeToggle('payment-form');
+    fadeToggle('loading-overlay');
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -58,6 +60,8 @@ form.addEventListener('submit', function(ev) {
                 <span>${result.error.message}</span>`;
             errorDiv.innerHTML = html;
             card.update({ 'disabled': false });
+            fadeToggle('payment-form');
+            fadeToggle('loading-overlay');
             document.getElementById('submit-button').removeAttribute('disabled');
         } else {
             if (result.paymentIntent.status === 'succeeded') {
@@ -66,3 +70,24 @@ form.addEventListener('submit', function(ev) {
         }
     });
 });
+
+function fadeToggle(elementId) {
+    const element = document.getElementById(elementId);
+    const style = window.getComputedStyle(element);
+    const duration = 100
+    
+
+    if (style.display === 'block') {
+        element.style.opacity = 0;
+        element.style.transition = `opacity ${duration}ms ease`;
+        element.style.display = 'none';
+        console.log("activated");  
+        } else {
+            element.style.opacity = 1;
+            element.style.transition = `opacity ${duration}ms ease`;
+        setTimeout(function () {
+            element.style.display = 'block';
+        }, 100);
+        console.log("Disabled");  
+    }
+}
