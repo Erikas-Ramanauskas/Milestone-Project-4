@@ -81,12 +81,6 @@ p {
     letter-spacing: 1.5px;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--title);
-}
-
 h1,
 h2,
 h3,

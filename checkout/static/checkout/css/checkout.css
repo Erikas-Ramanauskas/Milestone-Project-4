@@ -32,8 +32,6 @@
   transition: box-shadow 150ms ease;
 }
 
-
-
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
@@ -51,10 +49,10 @@
 
 .fieldset-label {
   position: relative;
-  right: .5rem;
+  right: 0.5rem;
 }
 
-#payment-form{
+#payment-form {
   display: block;
 }
 
@@ -64,10 +62,9 @@
   border: 1px solid #000;
 }
 
-
 #loading-overlay {
-	display: none;
-	position: fixed;
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -77,9 +74,19 @@
 }
 
 .loading-spinner {
-	display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
   height: 100%;
+}
+
+select,
+select option {
+  color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
 }
