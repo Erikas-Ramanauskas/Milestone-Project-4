@@ -1,5 +1,5 @@
 /* header */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
 
 :root {
   /* fonts */
@@ -20,7 +20,7 @@
   --skew-angle: 5deg;
 }
 
-.test{
+.test {
   border: 1px solid red;
 }
 
@@ -73,12 +73,14 @@
 
 html,
 body {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 p {
-    letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
 }
 
 h1,
@@ -91,15 +93,17 @@ h6 {
   letter-spacing: 2px;
 }
 
-
 main {
-  flex: 1 0 auto;
+  flex: 1;
   background-color: var(--background);
 }
 
 /* footer */
 footer {
+  margin-top: auto;
   flex-shrink: 0;
+  position: relative;
+  bottom: 0;
 }
 
 .navbar {
@@ -163,35 +167,33 @@ footer {
   border-radius: 5px;
 }
 
-
-.dropdown-menu div{
+.dropdown-menu div {
   width: 80vw;
   max-height: 80vh;
   display: flex;
   flex-direction: row;
-
 }
 
-.dropdown-menu div div{
+.dropdown-menu div div {
   display: flex;
   flex-direction: column;
 }
 
-.dropdown-menu ul li :is(:hover, :focus){
-  background-color: var(--secondary)!important;
+.dropdown-menu ul li :is(:hover, :focus) {
+  background-color: var(--secondary) !important;
 }
 
-.dropdown-menu .navigation-type:is(:hover, :focus){
+.dropdown-menu .navigation-type:is(:hover, :focus) {
   background-color: var(--secondary);
 }
 
 @media screen and (max-width: 768px) {
-    .dropdown-menu div {
-        flex-wrap: wrap;
-    }
+  .dropdown-menu div {
+    flex-wrap: wrap;
+  }
 }
 
-.dropdown-menu div ul{
+.dropdown-menu div ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -201,48 +203,46 @@ footer {
   margin: 0;
 }
 
-.dropdown-menu[data-bs-popper]{
+.dropdown-menu[data-bs-popper] {
   left: -100%;
 }
 
-#log-in-items{
+#log-in-items {
   list-style: none;
 }
 
-.nav-item .fa-cart-shopping{
+.nav-item .fa-cart-shopping {
   font-size: 1.5rem;
   color: var(--text);
 }
 
-.nav-item .fa-cart-shopping:is(:hover, :focus){
+.nav-item .fa-cart-shopping:is(:hover, :focus) {
   color: var(--primary);
 }
-
 
 /* Buttons */
 
 a.btn-special,
-button.btn-special{
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: var(--text);
-    color: var(--background);
+button.btn-special {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: var(--text);
+  color: var(--background);
 }
 
 a.btn-special:is(:hover, :focus),
-button.btn-special:is(:hover, :focus){
-    background-color: var(--primary);
-    color: var(--background);
+button.btn-special:is(:hover, :focus) {
+  background-color: var(--primary);
+  color: var(--background);
 }
-
 
 /* toest */
 
 .message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 99999999999;
 }
 
 .custom-toast {
@@ -250,16 +250,16 @@ button.btn-special:is(:hover, :focus){
 }
 
 .toast-capper {
-    height: 2px;
+  height: 2px;
 }
 
-.toast .toast-header{
+.toast .toast-header {
   display: flex;
   justify-content: space-between;
 }
 
 .bag-notification-wrapper {
-    max-height: 25vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+  max-height: 25vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

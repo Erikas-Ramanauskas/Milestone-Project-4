@@ -1,78 +1,74 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
-{% endblock %}
-
-{% block extra_js %} 
-    <script
-      defer src="{% static 'products/js/products.js' %}"
-        crossorigin="anonymous"
-    ></script>
-{% endblock %}
-
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
+{% extends "base.html" %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
+{% endblock %} {% block extra_js %}
+<script defer src="{% static 'products/js/products.js' %}" crossorigin="anonymous"></script>
+{% endblock %} {% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+      <div class="image-container my-5">
+        {% if product.image %}
+        <!-- new slider -->
+        <div class="slider">
+          {% for image in product.image_url %}
+          <div class="slide">
+            <img src="{{ image }}" alt="Slide {{ forloop.counter }}" class="" />
+          </div>
+          {% endfor %}
         </div>
-    </div>
-{% endblock %}
-
-{% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5">
-                    {% if product.image %}
-                        <!-- new slider -->
-                        <div class="slider">
-                            {% for image in product.image_url %}
-                                <div class="slide">
-                                    <img src="{{ image }}" alt="Slide {{ forloop.counter }}" class="" />
-                                </div>
-                            {% endfor %}
-                        </div>
-                        <!-- end of new slider -->
-                            <ul class="image_skips"></ul>
-                    {% else %}
-                        <div class="slider">
-                            <div class="slide">
-                                <img class="card-img-top img-fluid " src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            </div>
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5 p-4 color-4-bg rounded-3">
-                    <h3 class="mb-0 color-1-text">{{ product.brand.friendly_name }}</h3>
-                    <h4 class="">{{ product.name }}</h4>
-                    <p class="mb-0 px-1 mt-3 text-left font-weight-bold color-5-text"><i class="fa-solid fa-sterling-sign"></i>{{ product.price }}</p>
-                    {% if product.size %}
-                       <small class="text-muted"><i class="color-5-text fa-solid fa-shoe-prints"></i> Size: {{ product.size }} UK</small>
-                    {% else %}
-                        <small class="text-muted">No Size</small>
-                    {% endif %}
-                    <p class="mt-3">{{ product.description }}</p>
-                    <div class="d-flex justify-content-center mt-4">
-                        <form action="{% url 'add_to_bag' product.id %}" method="POST">
-                            <div>
-                                {% csrf_token %}
-                                {% if product.id in bag_ids %}
-                                    <input class="btn add-button rounded-0 text-uppercase" value="Already in A Cart" disabled>
-                                {% else %}
-                                    <input type="submit" class="btn add-button rounded-0 text-uppercase" value="Add to cart">
-                                {% endif %}
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <!-- end of new slider -->
+        <ul class="image_skips"></ul>
+        {% else %}
+        <div class="slider">
+          <div class="slide">
+            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
+          </div>
         </div>
+        {% endif %}
+      </div>
     </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="product-details-container mb-5 mt-md-5 p-4 color-4-bg rounded-3">
+        {% if request.user.is_superuser %}
+        <small class="ml-3">
+          <a href="{% url 'edit_product' product.id %}">Edit</a> |
+          <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+        </small>
+        {% endif %}
+        <h3 class="mb-0 color-1-text">{{ product.brand.friendly_name }}</h3>
+        <h4 class="">{{ product.name }}</h4>
+        <p class="mb-0 px-1 mt-3 text-left font-weight-bold color-5-text">
+          <i class="fa-solid fa-sterling-sign"></i>{{ product.price }}
+        </p>
+        {% if product.size %}
+        <small class="text-muted"
+          ><i class="color-5-text fa-solid fa-shoe-prints"></i> Size: {{ product.size }} UK</small
+        >
+        {% else %}
+        <small class="text-muted">No Size</small>
+        {% endif %}
+        <p class="mt-3">{{ product.description }}</p>
+        <div class="d-flex justify-content-center mt-4">
+          <form action="{% url 'add_to_bag' product.id %}" method="POST">
+            <div>
+              {% csrf_token %} {% if product.id in bag_ids %}
+              <input class="btn add-button rounded-0 text-uppercase" value="Already in A Cart" disabled />
+              {% else %}
+              <input type="submit" class="btn add-button rounded-0 text-uppercase" value="Add to cart" />
+              {% endif %}
+            </div>
+            <input type="hidden" name="redirect_url" value="{{ request.path }}" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

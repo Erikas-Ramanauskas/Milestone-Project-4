@@ -31,55 +31,97 @@
           </li>
           <!-- Product Dropdown -->
           <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="#" role="button" aria-current="page" data-bs-toggle="dropdown" aria-expanded="false">
-            Products
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              aria-current="page"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Products
             </a>
             <!-- both list loops though avialable options. if there are no shoe of specific brand or category the meniu will not display the category or brand -->
-            <div class="dropdown-menu">  
+            <div class="dropdown-menu">
               <div>
                 <div>
-                  <p class="color-4-bg dropdown-item navigation-type mb-0" >By brand</p>
-                  <hr>
+                  <p class="color-4-bg dropdown-item navigation-type mb-0">By brand</p>
+                  <hr />
                   <ul>
                     {% for brand in brands %}
-                      <li><a class="dropdown-item" aria-current="page" href="{% url 'products' %}?brand={{ brand.name }}">{{ brand.friendly_name }}</a></li>
+                    <li>
+                      <a class="dropdown-item" aria-current="page" href="{% url 'products' %}?brand={{ brand.name }}"
+                        >{{ brand.friendly_name }}</a
+                      >
+                    </li>
                     {% endfor %}
                   </ul>
                 </div>
                 <div>
-                   <p class="color-4-bg dropdown-item navigation-type mb-0">By category</p>
-                  <hr>
+                  <p class="color-4-bg dropdown-item navigation-type mb-0">By category</p>
+                  <hr />
                   <ul>
                     {% for category in categories %}
-                      <li><a class="dropdown-item" aria-current="page"  href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        aria-current="page"
+                        href="{% url 'products' %}?category={{ category.name }}"
+                        >{{ category.friendly_name }}</a
+                      >
+                    </li>
                     {% endfor %}
                   </ul>
                 </div>
               </div>
             </div>
           </li>
-       
-      
         </ul>
         <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
-            <button class="btn btn-special" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
+          <button class="btn btn-special" type="submit">Search</button>
         </form>
         <ul id="log-in-items" class="navbar-nav me-auto mb-2 mb-lg-0">
-          {% if request.user.is_authenticated %}
+          {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
           <li class="nav-item">
-            <a class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}" aria-current="page" href="/accounts/logout/"
+            <a
+              class="nav-link {% if url_name == 'add_product' %} active {% endif %}"
+              aria-current="page"
+              href="{% url 'add_product' %}"
+              >Add Product</a
+            >
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a
+              class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}"
+              aria-current="page"
+              href="{% url 'account_logout' %}"
               >Log Out</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {% if url_name == 'profile' %} active {% endif %}"
+              aria-current="page"
+              href="{% url 'profile' %}"
+              >Profile</a
             >
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link {% if url_name == 'accounts_singup' %} active {% endif %}" aria-current="page" href="/accounts/signup/"
+            <a
+              class="nav-link {% if url_name == 'accounts_singup' %} active {% endif %}"
+              aria-current="page"
+              href="{% url 'account_signup' %}"
               >Register</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if url_name == 'accounts_login' %} active {% endif %}" aria-current="page" href="/accounts/login/"
+            <a
+              class="nav-link {% if url_name == 'accounts_login' %} active {% endif %}"
+              aria-current="page"
+              href="{% url 'account_login' %}"
               >Log In</a
             >
           </li>
@@ -90,7 +132,6 @@
         </ul>
 
         <!-- search  -->
-        
       </div>
     </div>
   </nav>
