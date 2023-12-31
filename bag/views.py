@@ -26,7 +26,7 @@ def add_to_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
-    
+
     print('remove from bag')
 
     try:

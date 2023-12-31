@@ -87,7 +87,8 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=254, decimal_places=2)
 
     image = ArrayField(models.CharField(max_length=50), null=True, blank=True)
-    image_url = ArrayField(models.CharField(max_length=1024), null=True, blank=True)
+    image_url = ArrayField(models.CharField(
+        max_length=1024), null=True, blank=True)
 
     shoe_sex = models.CharField(
         max_length=254, choices=SHOE_SEX_CHOICES, default="Female"

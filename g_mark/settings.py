@@ -35,7 +35,8 @@ if DEBUG:
     ALLOWED_HOSTS += ['localhost', '127.0.0.1']
 else:
     # '*.herokuapp.com'
-    ALLOWED_HOSTS += ['https://milestone-project--4-cae9f77b4759.herokuapp.com/','https://milestone-project--4-cae9f77b4759.herokuapp.com/*','milestone-project--4-cae9f77b4759.herokuapp.com']
+    ALLOWED_HOSTS += ['https://milestone-project--4-cae9f77b4759.herokuapp.com/',
+                      'https://milestone-project--4-cae9f77b4759.herokuapp.com/*', 'milestone-project--4-cae9f77b4759.herokuapp.com']
 
 # Application definition
 
@@ -47,15 +48,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    
+
     # Apps
     'home',
     'products',
     'bag',
     'checkout',
     'profiles',
-    
-    
+
+
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
@@ -67,7 +68,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 ]
-
 
 
 SITE_ID = 1
@@ -104,17 +104,17 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'products.context_processors.all_categories',
                 'bag.contexts.bag_contents',
-                
-                 # `allauth` needs this from django
+
+                # `allauth` needs this from django
                 'django.template.context_processors.request',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field'
             ],
-            'libraries':{
-            'bag_tools': 'bag.templatetags.bag_tools',
-            
+            'libraries': {
+                'bag_tools': 'bag.templatetags.bag_tools',
+
             }
         },
     },
@@ -125,7 +125,6 @@ WSGI_APPLICATION = 'g_mark.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 
 
 if os.environ.get('DATABASE_URL'):
@@ -206,7 +205,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     AWS_S3_REGION_NAME = 'eu-west-2'
     AWS_STORAGE_BUCKET_NAME = 'milestone-project--4'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -218,7 +217,7 @@ if 'USE_AWS' in os.environ:
     STATICFILES_LOCATION = 'static'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
-    
+
     # Override static and media URL's in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
@@ -228,7 +227,6 @@ if 'USE_AWS' in os.environ:
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
@@ -242,4 +240,14 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 # Email
-DEFAULT_FROM_EMAIL = 'g_mark@info.co.uk'
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'g_mark@info.co.uk'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER', '')
