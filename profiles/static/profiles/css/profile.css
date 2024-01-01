@@ -1,5 +1,11 @@
 #profile-update-form .form-control {
-  color: #000;
+  color: #000000;
+}
+
+#profile-update-form .form-control:focus,
+#profile-update-form .form-select:focus
+{
+  box-shadow: var(--form-shadow);
 }
 
 #profile-update-form input::placeholder {

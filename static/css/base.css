@@ -14,6 +14,7 @@
   --accent: #592dc8;
 
   /* Utility */
+  --form-shadow: 0 0 0.5rem var(--primary);
   --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   --boxshadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   --border: 1px solid rgba(0, 0, 0, 0.2);
@@ -288,6 +289,7 @@ footer {
 
 a.btn-special,
 button.btn-special {
+  font-family: sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: var(--text);
@@ -326,4 +328,39 @@ button.btn-special:is(:hover, :focus) {
   max-height: 25vh;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+/* Form control */
+
+.allauth-form-inner-content .form-control:focus,
+.allauth-form-inner-content .form-select:focus,
+.allauth-form-inner-content .form-check-input:focus{
+  box-shadow: var(--form-shadow);
+  background-color: var(--secondary);
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+  font-family: sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: var(--text);
+  color: var(--background);
+}
+
+.allauth-form-inner-content button:is(:hover, :focus),
+.allauth-form-inner-content input[type='submit']:is(:hover, :focus){
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.allauth-form-inner-content a{
+  color: var(--text);
+  text-decoration: none;
+}
+
+.allauth-form-inner-content a:is(:hover, :focus){
+  color: var(--primary);
+  background-color: var(--secondary);
+  border-radius: 5px;
 }
