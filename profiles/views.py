@@ -36,6 +36,19 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
+def order_list(request):
+    profile = get_object_or_404(UserProfile, user=request.user)
+    orders = profile.orders.all()
+
+    template = 'profiles/order_list.html'
+    context = {
+        'orders': orders,
+    }
+
+    return render(request, template, context)
+
+
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 

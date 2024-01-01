@@ -1,10 +1,10 @@
 /* Root always change on base.css then copy it to here */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
 
 :root {
   /* fonts */
   --title: "Lato", sans-serif;
-  --main-font: 'Roboto', sans-serif;
+  --main-font: "Roboto", sans-serif;
 
   /* Colours */
   --text: #0b1d07;
@@ -64,14 +64,13 @@
   color: var(--accent);
 }
 
-
 /* Products modifications */
 .product-brand {
   font-weight: bold;
   margin-top: 1.5rem;
 }
 
-.product-card{
+.product-card {
   position: relative;
   border-radius: 1rem 1rem 0 0;
 }
@@ -80,7 +79,6 @@
   display: flex;
   justify-content: center;
 }
-
 
 .product-link img {
   max-width: 80%;
@@ -93,12 +91,12 @@
   justify-content: space-between;
 }
 
-.product-card:is(:hover, :focus), 
+.product-card:is(:hover, :focus),
 .product-card:is(:hover, :focus) .hidden-info {
   box-shadow: var(--boxshadow);
 }
 
-.hidden-info{
+.hidden-info {
   background-color: var(--secondary);
   position: absolute;
   height: 50px;
@@ -108,45 +106,43 @@
   border-radius: 0 0 1rem 1rem;
 }
 
-.hidden-info div{
+.hidden-info div {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.add-button{
+.add-button {
   background-color: var(--text);
   color: var(--background);
 }
 
-.add-button-card{
-  display: none
+.add-button-card {
+  display: none;
 }
 
-
-.product-card:is(:hover, :focus) .hidden-info, 
+.product-card:is(:hover, :focus) .hidden-info,
 .product-card:focus .hidden-info {
   width: 100%;
   display: block;
   z-index: 1;
 }
 
-.product-card:is(:hover, :focus) .add-button{
+.product-card:is(:hover, :focus) .add-button {
   display: block;
 }
 
-.add-button:is(:hover, :focus){
+.add-button:is(:hover, :focus) {
   background-color: var(--primary);
   color: var(--background);
 }
 
-form{
+form {
   height: inherit;
   margin: 0;
   padding: 0;
 }
-
 
 /* Slides */
 
@@ -174,7 +170,7 @@ form{
 
 .slide > img {
   /* Only for images that have different size than slide */
-  
+
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -201,11 +197,14 @@ form{
   height: 100%;
   width: 100%;
   object-fit: contain;
-} 
-
+}
 
 .image_skips_picture--active {
   filter: brightness(70%);
 }
 
 /* product Details */
+
+footer {
+  margin-top: 2rem;
+}

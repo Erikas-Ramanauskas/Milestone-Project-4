@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
 
 /* Root always change on base.css then copy it to here */
 :root {
   /* fonts */
   --title: "Lato", sans-serif;
-  --main-font: 'Roboto', sans-serif;
+  --main-font: "Roboto", sans-serif;
 
   /* Colours */
   --text: #0b1d07;
@@ -21,105 +20,104 @@
   --skew-angle: 2deg;
 }
 
-.text-shadow-black{
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+.text-shadow-black {
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
 }
 
-.text-shadow-white{
-    text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.6);
+.text-shadow-white {
+  text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.6);
 }
 
-
-
-
-#home-picture div{
-    background-image: url("/static/images/home-page-img-2.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    max-height: 70vh;
-    aspect-ratio: 1/1;
+#home-picture div {
+  background-image: url("/static/images/home-page-img-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  max-height: 70vh;
+  aspect-ratio: 1/1;
 }
 
-
-.even-home-container, .odd-home-container{
-    position: relative;
-    isolation: isolate;
-    min-height: 60vh;
-    padding: 3rem 0;
-    margin: 3rem 0 ;
+.even-home-container,
+.odd-home-container {
+  position: relative;
+  isolation: isolate;
+  min-height: 60vh;
+  padding: 3rem 0;
+  margin: 3rem 0;
 }
 
 #shoe-picture-1 {
-    position: absolute;
-    padding: 1rem;
-    left: 0rem;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    max-height: 100%;
-    aspect-ratio: 1/1;
-    z-index: -1;
+  position: absolute;
+  padding: 1rem;
+  left: 0rem;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  max-height: 100%;
+  aspect-ratio: 1/1;
+  z-index: -1;
 }
 
 #shoe-picture-1 div {
-    background-image: url("/static/images/pile_of_shoes.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    max-height: 80%;
-    aspect-ratio: 1/1;
+  background-image: url("/static/images/pile_of_shoes.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-height: 80%;
+  aspect-ratio: 1/1;
 }
 
-@media screen and (max-width: 767px){
-    #shoe-picture-1{
-        filter: grayscale(40%);
-        opacity: 0.5;
-        background-position: center;
-        width: 100%;
-    }
+@media screen and (max-width: 767px) {
+  #shoe-picture-1 {
+    filter: grayscale(40%);
+    opacity: 0.5;
+    background-position: center;
+    width: 100%;
+  }
 }
 
-.even-home-container::after{
-    content: '';
-    background-image: linear-gradient(45deg, var(--primary), var(--secondary));
-    position: absolute;
-    z-index: -2;
-    inset: 0;
-    transform: skewY(var(--skew-angle));
+.even-home-container::after {
+  content: "";
+  background-image: linear-gradient(45deg, var(--primary), var(--secondary));
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
 }
 
-.text-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.text-container h2{
-    padding-bottom: 1rem;
+.text-container h2 {
+  padding-bottom: 1rem;
 }
-
-
-
 
 .home-icons {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
+/* Categories */
+
+#category-container .row {
+  margin: 0;
+}
 
 /* images */
 
-img.main-page-pic{
-    width: 100%;
-    aspect-ratio: 1/1;
+img.main-page-pic {
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 /* accordion css */
 .accordion-button:not(.collapsed) {
-    background-color: var(--text);
-    color: white;
+  background-color: var(--text);
+  color: white;
 }
 
-.accordion-button{
-    background-color: var(--secondary);
+.accordion-button {
+  background-color: var(--secondary);
 }

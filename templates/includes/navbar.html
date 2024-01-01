@@ -11,126 +11,151 @@
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-bs-target="#navbar-supported-content"
+        aria-controls="navbar-supported-content"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
       <!--  navigation list -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a
-              class="nav-link {% if url_name == 'home' %} active {% endif %}"
-              aria-current="page"
-              href="{% url 'home' %}"
-              >Home</a
-            >
-          </li>
-          <!-- Product Dropdown -->
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              aria-current="page"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Products
-            </a>
-            <!-- both list loops though avialable options. if there are no shoe of specific brand or category the meniu will not display the category or brand -->
-            <div class="dropdown-menu">
-              <div>
+      <div class="collapse navbar-collapse" id="navbar-supported-content">
+        <div>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link {% if url_name == 'home' %} active {% endif %}"
+                aria-current="page"
+                href="{% url 'home' %}"
+                >Home</a
+              >
+            </li>
+            <!-- Product Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                aria-current="page"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <!-- both list loops though avialable options. if there are no shoe of specific brand or category the meniu will not display the category or brand -->
+              <div class="dropdown-menu product-list">
                 <div>
-                  <p class="color-4-bg dropdown-item navigation-type mb-0">By brand</p>
-                  <hr />
-                  <ul>
-                    {% for brand in brands %}
-                    <li>
-                      <a class="dropdown-item" aria-current="page" href="{% url 'products' %}?brand={{ brand.name }}"
-                        >{{ brand.friendly_name }}</a
-                      >
-                    </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-                <div>
-                  <p class="color-4-bg dropdown-item navigation-type mb-0">By category</p>
-                  <hr />
-                  <ul>
-                    {% for category in categories %}
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        aria-current="page"
-                        href="{% url 'products' %}?category={{ category.name }}"
-                        >{{ category.friendly_name }}</a
-                      >
-                    </li>
-                    {% endfor %}
-                  </ul>
+                  <div>
+                    <p class="color-4-bg dropdown-item navigation-type mb-0">By brand</p>
+                    <hr />
+                    <ul>
+                      {% for brand in brands %}
+                      <li>
+                        <a class="dropdown-item" aria-current="page" href="{% url 'products' %}?brand={{ brand.name }}"
+                          >{{ brand.friendly_name }}</a
+                        >
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="color-4-bg dropdown-item navigation-type mb-0">By category</p>
+                    <hr />
+                    <ul>
+                      {% for category in categories %}
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-current="page"
+                          href="{% url 'products' %}?category={{ category.name }}"
+                          >{{ category.friendly_name }}</a
+                        >
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-        </ul>
-        <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
-          <button class="btn btn-special" type="submit">Search</button>
-        </form>
-        <ul id="log-in-items" class="navbar-nav me-auto mb-2 mb-lg-0">
-          {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if url_name == 'add_product' %} active {% endif %}"
-              aria-current="page"
-              href="{% url 'add_product' %}"
-              >Add Product</a
-            >
-          </li>
-          {% endif %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}"
-              aria-current="page"
-              href="{% url 'account_logout' %}"
-              >Log Out</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link {% if url_name == 'profile' %} active {% endif %}"
-              aria-current="page"
-              href="{% url 'profile' %}"
-              >Profile</a
-            >
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if url_name == 'accounts_singup' %} active {% endif %}"
-              aria-current="page"
-              href="{% url 'account_signup' %}"
-              >Register</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link {% if url_name == 'accounts_login' %} active {% endif %}"
-              aria-current="page"
-              href="{% url 'account_login' %}"
-              >Log In</a
-            >
-          </li>
-          {% endif %}
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{% url 'bag' %}"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
-        </ul>
-
+            </li>
+          </ul>
+          <form class="d-flex" id="search-button" role="search" method="GET" action="{% url 'products' %}">
+            <input class="px-2" type="search" placeholder="Search" aria-label="Search" name="q" />
+            <button id="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          <ul id="log-in-items" class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <ul class="dropdown-menu">
+                {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
+                <li class="nav-item">
+                  <a
+                    class="nav-link {% if url_name == 'add_product' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'add_product' %}"
+                    >Add Product</a
+                  >
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                  <a
+                    class="nav-link {% if url_name == 'profile' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'profile' %}"
+                    >Profile</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link {% if url_name == 'order_list' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'order_list' %}"
+                    >Order History</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'account_logout' %}"
+                    >Log Out</a
+                  >
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a
+                    class="nav-link {% if url_name == 'accounts_singup' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'account_signup' %}"
+                    >Register</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link {% if url_name == 'accounts_login' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'account_login' %}"
+                    >Log In</a
+                  >
+                </li>
+                {% endif %}
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'bag' %}"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
         <!-- search  -->
       </div>
     </div>

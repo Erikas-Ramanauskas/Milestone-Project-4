@@ -151,12 +151,6 @@ footer {
 .svg-path-6 {
   fill: var(--text);
 }
-/* header */
-
-.active {
-  border-bottom: 2px solid var(--primary);
-  font-weight: 500;
-}
 
 /* Form */
 
@@ -167,9 +161,70 @@ footer {
   border-radius: 5px;
 }
 
+/* Navigation */
+.navbar-brand {
+  margin-right: 0;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+#navbar-supported-content > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.nav-link:is(:hover, :focus) {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Search Button */
+
+#search-button {
+  background-color: var(--background);
+  border: 2px solid var(--text);
+  border-radius: 5px;
+
+  input {
+    border: none;
+    border-radius: 5px;
+  }
+  input:focus {
+    outline: none;
+  }
+}
+
+#search-button:is(:hover, :focus) {
+  border: 2px solid var(--primary);
+}
+
+#btn-search {
+  font-size: 1rem;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: var(--text);
+  color: var(--background);
+}
+
+#btn-search:is(:hover, :focus) {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
 .dropdown-menu div {
-  width: 80vw;
-  max-height: 80vh;
   display: flex;
   flex-direction: row;
 }
@@ -177,6 +232,23 @@ footer {
 .dropdown-menu div div {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+}
+
+.dropdown-menu div ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  max-height: 75vh;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  break-inside: avoid;
+}
+
+.dropdown-menu li {
+  width: 200px;
 }
 
 .dropdown-menu ul li :is(:hover, :focus) {
@@ -193,16 +265,6 @@ footer {
   }
 }
 
-.dropdown-menu div ul {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  list-style: none;
-  max-height: 75vh;
-  padding: 0;
-  margin: 0;
-}
-
 .dropdown-menu[data-bs-popper] {
   left: -100%;
 }
@@ -211,12 +273,14 @@ footer {
   list-style: none;
 }
 
-.nav-item .fa-cart-shopping {
+.nav-item .fa-cart-shopping,
+.nav-item .fa-user {
   font-size: 1.5rem;
   color: var(--text);
 }
 
-.nav-item .fa-cart-shopping:is(:hover, :focus) {
+.nav-item .fa-cart-shopping:is(:hover, :focus),
+.nav-item .fa-user:is(:hover, :focus) {
   color: var(--primary);
 }
 
