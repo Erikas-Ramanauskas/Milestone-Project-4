@@ -1,33 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
-
-/* Root always change on base.css then copy it to here */
-:root {
-  /* fonts */
-  --title: "Lato", sans-serif;
-  --main-font: "Roboto", sans-serif;
-
-  /* Colours */
-  --text: #0b1d07;
-  --background: #f8fdf7;
-  --primary: #611a74;
-  --secondary: #f4cde9;
-  --accent: #592dc8;
-
-  /* Utility */
-  --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-  --boxshadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-  --border: 1px solid rgba(0, 0, 0, 0.2);
-  --skew-angle: 2deg;
-}
-
-.text-shadow-black {
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
-}
-
-.text-shadow-white {
-  text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.6);
-}
-
 #home-picture div {
   background-image: url("/static/images/home-page-img-2.png");
   background-repeat: no-repeat;

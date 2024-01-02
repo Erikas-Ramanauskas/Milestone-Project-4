@@ -14,7 +14,7 @@
   --accent: #592dc8;
 
   /* Utility */
-  --form-shadow: 0 0 0.5rem var(--primary);
+  --form-shadow: 0 0 0.7rem var(--primary);
   --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   --boxshadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   --border: 1px solid rgba(0, 0, 0, 0.2);
@@ -158,8 +158,9 @@ footer {
 .form {
   width: 100%;
   margin: 3% auto;
-  box-shadow: var(--boxshadow);
+  box-shadow: var(--form-shadow);
   border-radius: 5px;
+  padding: 5px 10px;
 }
 
 /* Navigation */
@@ -196,6 +197,7 @@ footer {
   background-color: var(--background);
   border: 2px solid var(--text);
   border-radius: 5px;
+  padding: 0;
 
   input {
     border: none;
@@ -294,10 +296,27 @@ button.btn-special {
   letter-spacing: 2px;
   background-color: var(--text);
   color: var(--background);
+  border-radius: 5px;
 }
 
 a.btn-special:is(:hover, :focus),
 button.btn-special:is(:hover, :focus) {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+a.btn-special-cancel,
+button.btn-special-cancel {
+  font-family: sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: var(--secondary);
+  color: var(--text);
+  border-radius: 5px;
+}
+
+a.btn-special-cancel:is(:hover, :focus),
+button.btn-special-cancel:is(:hover, :focus) {
   background-color: var(--primary);
   color: var(--background);
 }
@@ -332,11 +351,24 @@ button.btn-special:is(:hover, :focus) {
 
 /* Form control */
 
-.allauth-form-inner-content .form-control:focus,
-.allauth-form-inner-content .form-select:focus,
-.allauth-form-inner-content .form-check-input:focus{
-  box-shadow: var(--form-shadow);
+.allauth-form-inner-content input,
+.allauth-form-inner-content input:not([value=""]),
+.allauth-form-inner-content input:focus,
+.allauth-form-inner-content input:-webkit-autofill
+{
   background-color: var(--secondary);
+  -webkit-background-clip: text;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px var(--secondary);
+}
+
+.product-managment-form{
+  padding: 1rem 1rem;
+}
+
+.product-managment-form :is(.form-control:focus,.form-select:focus,.form-check-input:focus),
+.allauth-form-inner-content :is(.form-control:focus,.form-select:focus,.form-check-input:focus){
+  box-shadow: var(--form-shadow);
 }
 
 .allauth-form-inner-content button,
@@ -363,4 +395,8 @@ button.btn-special:is(:hover, :focus) {
   color: var(--primary);
   background-color: var(--secondary);
   border-radius: 5px;
+}
+
+form{
+  padding-bottom: 2rem;
 }
