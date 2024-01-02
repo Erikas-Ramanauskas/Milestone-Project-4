@@ -15,6 +15,7 @@ def all_products(request):
     query = None
     categories = None
     brands = None
+    sex = None
 
     if request.GET:
         if 'category' in request.GET:
@@ -26,6 +27,10 @@ def all_products(request):
             brands = request.GET['brand'].split(',')
             products = products.filter(brand__name__in=brands)
             brands = Brand.objects.filter(name__in=brands)
+
+        if 'sex' in request.GET:
+            sex = request.GET['sex']
+            products = products.filter(shoe_sex__exact=sex)
 
         if 'q' in request.GET:
             query = request.GET['q']

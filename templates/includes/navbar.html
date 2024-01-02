@@ -40,7 +40,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Products
+                Men
               </a>
               <!-- both list loops though avialable options. if there are no shoe of specific brand or category the meniu will not display the category or brand -->
               <div class="dropdown-menu product-list">
@@ -49,9 +49,12 @@
                     <p class="color-4-bg dropdown-item navigation-type mb-0">By brand</p>
                     <hr />
                     <ul>
-                      {% for brand in brands %}
+                      {% for brand in male_brands %}
                       <li>
-                        <a class="dropdown-item" aria-current="page" href="{% url 'products' %}?brand={{ brand.name }}"
+                        <a 
+                          class="dropdown-item" 
+                          aria-current="page" 
+                          href="{% url 'products' %}?brand={{ brand.name }}&sex=male"
                           >{{ brand.friendly_name }}</a
                         >
                       </li>
@@ -62,12 +65,61 @@
                     <p class="color-4-bg dropdown-item navigation-type mb-0">By category</p>
                     <hr />
                     <ul>
-                      {% for category in categories %}
+                      {% for category in male_categories %}
                       <li>
                         <a
                           class="dropdown-item"
                           aria-current="page"
-                          href="{% url 'products' %}?category={{ category.name }}"
+                          href="{% url 'products' %}?category={{ category.name }}&sex=male"
+                          >{{ category.friendly_name }}</a
+                        >
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                aria-current="page"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Women
+              </a>
+              <!-- both list loops though avialable options. if there are no shoe of specific brand or category the meniu will not display the category or brand -->
+              <div class="dropdown-menu product-list">
+                <div>
+                  <div>
+                    <p class="color-4-bg dropdown-item navigation-type mb-0">By brand</p>
+                    <hr />
+                    <ul>
+                      {% for brand in female_brands %}
+                      <li>
+                        <a 
+                          class="dropdown-item" 
+                          aria-current="page" 
+                          href="{% url 'products' %}?brand={{ brand.name }}&sex=female"
+                          >{{ brand.friendly_name }}</a
+                        >
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="color-4-bg dropdown-item navigation-type mb-0">By category</p>
+                    <hr />
+                    <ul>
+                      {% for category in female_categories %}
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          aria-current="page"
+                          href="{% url 'products' %}?category={{ category.name }}&sex=female"
                           >{{ category.friendly_name }}</a
                         >
                       </li>

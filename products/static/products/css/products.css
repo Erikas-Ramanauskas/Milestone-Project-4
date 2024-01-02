@@ -1,24 +1,4 @@
-/* Root always change on base.css then copy it to here */
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
 
-:root {
-  /* fonts */
-  --title: "Lato", sans-serif;
-  --main-font: "Roboto", sans-serif;
-
-  /* Colours */
-  --text: #0b1d07;
-  --background: #f8fdf7;
-  --primary: #611a74;
-  --secondary: #f4cde9;
-  --accent: #592ec7;
-
-  /* Utility */
-  --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-  --boxshadow: 0 0 1rem rgba(89, 46, 199, 0.2);
-  --border: 1px solid rgba(0, 0, 0, 0.2);
-  --skew-angle: 2deg;
-}
 
 .test {
   border: 1px solid rgb(255, 0, 162);

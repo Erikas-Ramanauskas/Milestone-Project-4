@@ -5,6 +5,7 @@
   /* fonts */
   --title: "Lato", sans-serif;
   --main-font: "Playfair Display", serif;
+  --navigation-font: "Roboto", sans-serif;
 
   /* Colours */
   --text: #0b1d07;
@@ -181,9 +182,15 @@ footer {
 }
 
 .nav-link {
+  font-family: var(--navigation-font);
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--text);
+}
+
+a.nav-link,
+a.dropdown-item{
+  font-family: var(--navigation-font);
 }
 
 .nav-link:is(:hover, :focus) {
