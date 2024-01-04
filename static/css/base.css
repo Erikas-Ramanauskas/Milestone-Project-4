@@ -188,6 +188,7 @@ footer {
   color: var(--text);
 }
 
+p.navigation-type,
 a.nav-link,
 a.dropdown-item{
   font-family: var(--navigation-font);
