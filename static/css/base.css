@@ -18,7 +18,7 @@
   --form-shadow: 0 0 0.7rem var(--primary);
   --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   --boxshadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-  --border: 1px solid rgba(0, 0, 0, 0.2);
+  --border: 2px 8px 2px 2px;
   --skew-angle: 5deg;
 }
 
@@ -159,9 +159,10 @@ footer {
 .form {
   width: 100%;
   margin: 3% auto;
-  box-shadow: var(--form-shadow);
-  border-radius: 5px;
   padding: 5px 10px;
+  border-style: solid; /* Use a solid border style */
+  border-width: var(--border); 
+  border-color: var(--primary);
 }
 
 /* Navigation */
@@ -264,10 +265,20 @@ a.dropdown-item{
 
 .dropdown-menu ul li :is(:hover, :focus) {
   background-color: var(--secondary) !important;
+  border-style: solid; /* Use a solid border style */
+  border-width: 0 8px 0 0; 
+  border-color: var(--primary);
 }
 
 .dropdown-menu .navigation-type:is(:hover, :focus) {
   background-color: var(--secondary);
+}
+
+.dropdown-item.navigation-type{
+  border-style: solid; /* Use a solid border style */
+  border-width: 0 8px 0 0; 
+  border-color: var(--primary);
+  background-color: var(--secondary)
 }
 
 @media screen and (max-width: 768px) {
