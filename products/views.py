@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category, Brand
+from .models import Product, Category, Brand, Quality
 from .forms import ProductForm
 
 # Create your views here.
@@ -133,3 +133,15 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def quality(request):
+    """ A view to show quality page """
+    
+    quality = Quality.objects.all()
+    
+    context = {
+        'quality': quality,
+    }
+
+    return render(request, 'products/quality.html', context)

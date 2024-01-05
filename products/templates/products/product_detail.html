@@ -44,16 +44,24 @@
         {% endif %}
         <h3 class="mb-0 color-1-text">{{ product.brand.friendly_name }}</h3>
         <h4 class="">{{ product.name }}</h4>
-        <p class="mb-0 px-1 mt-3 text-left font-weight-bold color-5-text">
+        <p class="mb-2 px-2 mt-3 text-left font-weight-bold color-5-text">
           <i class="fa-solid fa-sterling-sign"></i>{{ product.price }}
         </p>
-        {% if product.size %}
-        <small class="text-muted"
-          ><i class="color-5-text fa-solid fa-shoe-prints"></i> Size: {{ product.size }} UK</small
-        >
-        {% else %}
-        <small class="text-muted">No Size</small>
-        {% endif %}
+        <div class="row">
+          <div class="col-12">
+            <small class="px-2 text-muted">
+              <i class="color-5-text fa-solid fa-shoe-prints"></i>
+              Size: {{ product.size }} UK</small>
+          </div>
+          <div class="col-12"> 
+            <a class="px-2 py-1 quality-link" href="{% url 'quality' %}">
+              <small>
+                <i class="color-5-text fa-solid fa-medal"></i>
+                Quality: {{ product.quality }}</small>
+            </a>
+          </div> 
+        </div>
+           
         <p class="mt-3">{{ product.description }}</p>
         <div class="d-flex justify-content-center mt-4">
           <form action="{% url 'add_to_bag' product.id %}" method="POST">

@@ -22,7 +22,7 @@
 }
 
 .order-history{
-  border-style: solid; /* Use a solid border style */
+  border-style: solid; 
   border-width: var(--border); 
   border-color: var(--primary);
   background-color: var(--secondary);

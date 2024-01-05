@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
+from django.core.validators import MinValueValidator, MaxValueValidator
+
 
 SHOE_SEX_CHOICES = (
     ("male", "Male"),
@@ -66,11 +68,21 @@ class Size(models.Model):
         return self.eu_name
 
 
-class Product(models.Model):
-    """
-    Model definition for Product.
-    """
+class Quality(models.Model):
 
+    class Meta:
+        verbose_name_plural = "Quality"  # Admin panel name
+
+    name = models.CharField(max_length=50)
+    description = models.TextField()
+    rating = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(5)])
+
+    def __str__(self):
+        return self.name
+
+
+class Product(models.Model):
     category = models.ForeignKey(
         "Category", max_length=254, null=True, blank=True, on_delete=models.SET_NULL
     )
@@ -79,6 +91,9 @@ class Product(models.Model):
     )
     size = models.ForeignKey(
         "Size", max_length=254, null=True, blank=True, on_delete=models.SET_NULL
+    )
+    quality = models.ForeignKey(  # Add Quality field
+        "Quality", max_length=254, null=True, blank=True, on_delete=models.SET_NULL
     )
 
     sku = models.CharField(max_length=254, null=True, blank=True)

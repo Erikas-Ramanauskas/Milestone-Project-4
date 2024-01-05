@@ -46,8 +46,8 @@ td {
 }
 
 .summary-container{
-    border-style: solid; /* Use a solid border style */
-    border-width: var(--border); /* top right bottom left */
+    border-style: solid; 
+    border-width: var(--border); 
     border-color: var(--primary);
     background-color: var(--secondary);
 }

@@ -1,0 +1,47 @@
+[
+  {
+    "model": "products.quality",
+    "pk": 1,
+    "fields": {
+      "name": "Like New",
+      "description": "These shoes are in impeccable condition, almost indistinguishable from new. They've likely been worn once or twice, displaying minimal to no signs of wear. There are no visible scuffs, marks, or creases, and the soles remain in excellent shape.",
+      "rating": 5
+    }
+  },
+  {
+    "model": "products.quality",
+    "pk": 2,
+    "fields": {
+      "name": "Very Good",
+      "description": "Shoes labeled as 'Very Good' have been gently worn and might show slight signs of wear, such as minor scuffing or light creasing. Overall, they are in great condition, with wear that's hardly noticeable. The soles may exhibit some wear but still have substantial life left.",
+      "rating": 4
+    }
+  },
+  {
+    "model": "products.quality",
+    "pk": 3,
+    "fields": {
+      "name": "Good",
+      "description": "Shoes in the 'Good' category have been moderately worn and may display visible signs of wear, such as scuff marks, creases, or slight discoloration. While they exhibit wear, these shoes are structurally sound, and the wear is considered typical for used shoes. Soles might show moderate wear but are still functional.",
+      "rating": 3
+    }
+  },
+  {
+    "model": "products.quality",
+    "pk": 4,
+    "fields": {
+      "name": "Fair",
+      "description": "This category includes shoes with noticeable signs of wear and tear. They may have scuffs, marks, creases, and visible wear on both the uppers and soles. Although still wearable, these shoes might require minor repairs or refurbishment to restore their appearance or functionality.",
+      "rating": 2
+    }
+  },
+  {
+    "model": "products.quality",
+    "pk": 5,
+    "fields": {
+      "name": "Worn",
+      "description": "Shoes in this category have been heavily worn and exhibit significant signs of wear and tear. They might have extensive scuffing, deep creases, faded colors, or other visible damages. Soles may be significantly worn down and may require replacement or repair for continued use.",
+      "rating": 1
+    }
+  }
+]

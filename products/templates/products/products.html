@@ -44,12 +44,9 @@
                                     <div class="pt-0 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
-                                                <p class="mb-0 px-1 text-left font-weight-bold color-5-text"><i class="fa-solid fa-sterling-sign"></i>{{ product.price }}</p>
-                                                {% if product.size %}
-                                                    <small class="text-muted"><i class="color-5-text fa-solid fa-shoe-prints"></i> Size: {{ product.size }} UK</small>
-                                                {% else %}
-                                                    <small class="text-muted">No Rating</small>
-                                                {% endif %}
+                                                <p class="mb-2 px-1 text-left font-weight-bold color-5-text"><i class="fa-solid fa-sterling-sign"></i>{{ product.price }}</p>
+                                                <small class="text-muted"><i class="color-5-text fa-solid fa-shoe-prints"></i> Size: {{ product.size }} UK</small>
+                                                <small class="text-muted"><i class="color-5-text fa-solid fa-medal"></i> Quality: {{ product.quality }}</small>
                                             </div>
                                         </div>
                                     </div>

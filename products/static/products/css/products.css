@@ -189,3 +189,25 @@ footer {
   margin-top: 2rem;
 }
 
+a.quality-link{
+  color: var(--text);
+  text-decoration: none !important;
+}
+
+a.quality-link:is(:hover, :focus) {
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  i{
+    color: white;
+  }
+  small{
+    color: white;
+  }
+}
+
+
+.product-details-container{
+  border-style: solid; 
+  border-width: var(--border); 
+  border-color: var(--primary);
+}

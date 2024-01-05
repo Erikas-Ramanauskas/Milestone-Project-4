@@ -86,8 +86,8 @@ img.main-page-pic {
 .accordion-button:not(.collapsed) {
   background-color: var(--primary);
   color: white;
-  border-style: solid; /* Use a solid border style */
-  border-width: 0 8px 0 0; /* top right bottom left */
+  border-style: solid; 
+  border-width: 0 8px 0 0; 
   border-color: var(--secondary);
 }
 
@@ -96,17 +96,13 @@ img.main-page-pic {
 }
 
 .category-container{
-  border-style: solid; /* Use a solid border style */
-  border-width: var(--border); /* top right bottom left */
+  border-style: solid; 
+  border-width: var(--border); 
   border-color: var(--primary);
 }
 
 .faq-container{
-  border-style: solid; /* Use a solid border style */
-  border-width: 0 8px 0 0; /* top right bottom left */
+  border-style: solid; 
+  border-width: 0 8px 0 0; 
   border-color: var(--primary);
-}
-
-.faq-container :is(:focus, :hover){
-
 }
