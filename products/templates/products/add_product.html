@@ -9,13 +9,7 @@
 <script defer src="{% static 'products/js/products-edit.js' %}" crossorigin="anonymous"></script>
 {% endblock %}
 
-{% block page_header %}
-<div class="container header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
-</div>
-{% endblock %} {% block content %}
+{% block content %}
 <div class="overlay"></div>
 <div class="container">
   <div class="row justify-content-center">
@@ -30,8 +24,14 @@
   <div class="row justify-content-center">
     <div class="col-12 col-md-6">
       <form method="POST" action="{% url 'add_product' %}" class="form mb-2 product-managment-form" enctype="multipart/form-data">
-        {% csrf_token %} {% for field in form %} {% if field.name != 'image' %} {{ field | as_crispy_field }} {% else %}
-        {{ field }} {% endif %} {% endfor %}
+        {% csrf_token %} 
+        {% for field in form %} 
+        {% if field.name != 'image' %} 
+        {{ field | as_crispy_field }} 
+        {% else %}
+        {{ field }} 
+        {% endif %} 
+        {% endfor %}
         <div class="text-right">
           <a class="btn btn-special-cancel" href="{% url 'products' %}">Cancel</a>
           <button class="btn btn-special" type="submit">Add Product</button>

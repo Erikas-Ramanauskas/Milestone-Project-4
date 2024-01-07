@@ -83,7 +83,7 @@ img.main-page-pic {
 }
 
 /* accordion css */
-.accordion-button:not(.collapsed) {
+.accordion-button:not(.collapsed){
   background-color: var(--primary);
   color: white;
   border-style: solid; 
@@ -91,7 +91,25 @@ img.main-page-pic {
   border-color: var(--secondary);
 }
 
-.accordion-button {
+.accordion-button:focus:is(.collapsed){
+  border-style: solid;
+  border-width: 0 8px 0 0;
+  border-color: var(--accent);
+  outline-style: solid;
+  outline-width: var(--border);
+  outline-color: var(--accent);
+}
+
+.accordion-button:not(.collapsed):focus {
+  border-style: solid;
+  border-width: 0 8px 0 0;
+  border-color: var(--accent);
+  outline-style: solid;
+  outline-width: var(--border);
+  outline-color: var(--accent);
+}
+
+.accordion-button{
   background-color: var(--secondary);
 }
 

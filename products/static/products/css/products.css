@@ -211,3 +211,20 @@ a.quality-link:is(:hover, :focus) {
   border-width: var(--border); 
   border-color: var(--primary);
 }
+
+.edit-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-btn,
+.delete-btn{
+ font-size: 1.5rem;
+ margin: 0 0.2rem;
+ color: var(--primary);
+}
+
+.edit-btn:is(:hover, :focus),
+.delete-btn:is(:hover, :focus){
+  color: var(--accent);
+}

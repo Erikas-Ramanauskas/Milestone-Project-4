@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+
+{% load static %} 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
+{% endblock %} 
+{% block extra_js %}
+<script defer src="{% static 'products/js/products.js' %}" crossorigin="anonymous"></script>
+{% endblock %} 
+
+{% block content %}
+
+<div id="chat-container" class="row">
+  <div class="col">
+    <h4 class="center-align">Messages</h4>
+    {% for chat in messages_list %}
+     {{ chat }}
+     <br>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

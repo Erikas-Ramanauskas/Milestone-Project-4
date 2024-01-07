@@ -18,15 +18,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font mb-5">Quality</h2>
+                <h2 class="logo-font mb-5">Quality guideline</h2>
             </div>
         </div>
         <div class="row justify-content-center">
             {% for q in quality %}
-            <div class="col-8">
-                <h4>{{ q.name }}</h4>
+            <div class="col-8 border-special pt-2 my-2 color-4-bg">
+                <h5 class="mx-2">{{ q.name }}</h5>
                 <p>{{ q.description }}</p>
-            
             </div>
             {% endfor %}
         </div>

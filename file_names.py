@@ -1,5 +1,4 @@
-# For assesment purpose. This file is not being used at all in the project but i used it to collect picture names from the media folder to use them in the database.
-
+# For assesment team. This file is not being used at all in the project but i used it to collect picture names from the media folder to use them in the database.
 
 import os
 

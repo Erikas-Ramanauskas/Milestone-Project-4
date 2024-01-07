@@ -154,6 +154,13 @@ footer {
   fill: var(--text);
 }
 
+
+.border-special{
+  border-style: solid; 
+  border-width: var(--border); 
+  border-color: var(--primary);
+
+}
 /* Form */
 
 .form {

@@ -37,10 +37,14 @@
     <div class="col-12 col-md-6 col-lg-4">
       <div class="product-details-container mb-5 mt-md-5 p-4 color-4-bg rounded-3">
         {% if request.user.is_superuser %}
-        <small class="ml-3">
-          <a href="{% url 'edit_product' product.id %}">Edit</a> |
-          <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-        </small>
+        <div class="edit-container">
+            <a class="edit-btn" href="{% url 'edit_product' product.id %}" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Edit"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a class="delete-btn" href="{% url 'delete_product' product.id %}" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Delete"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+        {% elif user.is_authenticated %}
+        <div class="edit-container">
+            <a class="edit-btn" href="{% url 'message' product.id %}" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ask about"><i class="fa-regular fa-comment"></i></a>
+        </div>
         {% endif %}
         <h3 class="mb-0 color-1-text">{{ product.brand.friendly_name }}</h3>
         <h4 class="">{{ product.name }}</h4>

@@ -1,0 +1,105 @@
+{% extends "base.html" %} 
+
+{% load static %} 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
+{% endblock %} 
+{% block extra_js %}
+<script defer src="{% static 'products/js/products.js' %}" crossorigin="anonymous"></script>
+{% endblock %} 
+
+{% block content %}
+
+<div id="chat-container" class="row">
+  <div class="col">
+    <h4 class="center-align">Messages</h4>
+    <div>
+      {% if messages_list | length == 0 %}
+      <h4 class="center-align">
+        No conversations started
+      </h4>
+      {% else %}
+      <!-- loop start -->
+      {% for chat in messages_list %}
+      <!-- Time calculation -->
+        {% set time_d = (current_datetime - chat.messages[-1].timestamp).days %} 
+        {% set time_m = ((current_datetime - chat.messages[-1].timestamp).seconds / 60) | round(0, 'floor') | int %} 
+        {% set time_h = ((current_datetime - chat.messages[-1].timestamp).seconds / 3600) |round(0, 'floor') | int %} 
+        {% if time_d == 1 %} 
+        {% set time_ago = (time_d | string + " day ago") %} 
+        {% elif time_d > 0 %} 
+        {% set time_ago = (time_d | string + " days ago") %} 
+        {% elif time_m == 1 %} 
+        {% set time_ago = (time_m | string + " minute ago") %} 
+        {% elif time_m < 59 %} 
+        {% set time_ago=(time_m| string + " minutes ago" ) %}
+        {% elif time_h==1 %} 
+        {% set time_ago=(time_h | string + " hour ago" ) %}
+        {% elif time_h < 59 %} 
+        {% set time_ago=(time_h | string + " hours ago" ) %} 
+        {% endif %}
+
+      <a
+        class="row message-line"
+        href="{% url 'messages' product.id %}"
+      >
+        <div class="col s12 messages-name">
+          <p>
+            Message
+          </p>
+        </div>
+        <div class="col s12 messages-message-container teal-color-text">
+          <p class="message-text">{{ last_message }}</p>
+          <p class="white-text messages-time">{{ time_ago }}</p>
+        </div>
+      </a>
+      {% else %}
+      <a
+        class="row grey darken-1 message-line"
+        href="{{url_for('message', reciever=user_name)}}"
+      >
+        <div class="col m12 messages-name">
+          <p>
+            {% if chat.messages[-1].user == session.user %}
+            <span class="white-text">Sent to </span>
+            {% else %}
+            <span class="white-text">Recieved from </span>
+            {% endif %}
+            <span class="orange-color-text messages-user">{{ user_name }}</span>
+            {% if session.user == chat.user1 and chat.user1_unread > 0 %}
+            <span class="messages-circle"> {{ chat.user1_unread }}</span>
+            {% elif session.user == chat.user2 and chat.user2_unread > 0 %}
+            <span class="messages-circle"> {{ chat.user2_unread }}</span>
+            {% endif %}
+          </p>
+        </div>
+        <div class="col s12 messages-message-container teal-color-text">
+          <p class="message-text">{{ last_message }}</p>
+          <p class="white-text messages-time">{{ time_ago }}</p>
+        </div>
+      </a>
+      {% endif %} {% endfor %} {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+        {% if request.user.is_superuser %}
+          {% for message in chat.messages.all %}
+            {% if message.superuser %}
+              <p class="message-container message-sent">{{ message.content }}</p>
+            {% else %}
+              <p class="message-container message-received">{{ message.content }}</p>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% for message in chat.messages.all %}
+            {% if message.superuser %}
+              <p class="message-container message-received">{{ message.content }}</p>
+            {% else %}
+              <p class="message-container message-sent">{{ message.content }}</p>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
