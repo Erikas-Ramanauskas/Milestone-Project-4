@@ -41,7 +41,7 @@
         {% endif %}
       </div>
       <div class="">
-        <form method="POST" action="{% url 'message' product.id %}" id="message-form" enctype="multipart/form-data">
+        <form method="POST" action="{% url 'message' product.id request.user.id %}" id="message-form" enctype="multipart/form-data">
           {% csrf_token %} 
           <input type="hidden" name="product_id" value="{{ product.id }}">
           

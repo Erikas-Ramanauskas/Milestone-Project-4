@@ -10,13 +10,22 @@
 
 {% block content %}
 
-<div id="chat-container" class="row">
-  <div class="col">
-    <h4 class="center-align">Messages</h4>
-    {% for chat in messages_list %}
-     {{ chat }}
-     <br>
-    {% endfor %}
+<div class="container">
+  <div id="chat-container" class="row justify-content-center">
+    <h4 class="text-center">Messages</h4>
+    <div class="col col-lg-8">
+      {% for chat in messages_list %}
+      <a href="{% url 'message' chat.product.id chat.sender.id %}">
+        <div class="card">
+          <div class="">
+            <h5 class="">{{ chat.product.name }}</h5>
+            <p class="">{{ chat.sender.username }}</p>
+          </div>
+        </div>
+      </a>
+       <br>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
