@@ -1,29 +1,66 @@
 {% extends "base.html" %} 
 
-{% load static %} 
+{% load static %}
+{% load custom_filters %}
+
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
+<link rel="stylesheet" href="{% static 'chat_system/css/chat_system.css' %}" />
 {% endblock %} 
+
 {% block extra_js %}
-<script defer src="{% static 'products/js/products.js' %}" crossorigin="anonymous"></script>
+<script defer src="{% static 'chat_system/js/chat_system.js' %}" crossorigin="anonymous"></script>
 {% endblock %} 
 
 {% block content %}
 
 <div class="container">
-  <div id="chat-container" class="row justify-content-center">
-    <h4 class="text-center">Messages</h4>
+  <h2 class="text-center">Messages</h2>
+  <div class="row justify-content-center">
     <div class="col col-lg-8">
-      {% for chat in messages_list %}
-      <a href="{% url 'message' chat.product.id chat.sender.id %}">
-        <div class="card">
-          <div class="">
-            <h5 class="">{{ chat.product.name }}</h5>
-            <p class="">{{ chat.sender.username }}</p>
+       {% for chat in messages_list %}
+        <a href="{% url 'message' chat.product.id chat.sender.id %}" class="message-list-container">
+          <div class="color-4-bg">
+            {% if request.user.is_authenticated %} 
+              {% if request.user.is_superuser %}
+                <div class="message-list-headder">
+                  <p>
+                    {% if chat.last_message_superuser %}
+                      <span class="white-text">Sent to: </span>
+                    {% else %}
+                      <span class="white-text">Recieved from: </span>
+                    {% endif %}
+                      <span class="color-5-text">{{ chat.sender }}</span>
+                      <span class="color-white">{{ chat.product }}</span>
+                  </p>
+                </div>
+                <div class="message-list-footer">
+                  <p class="col s12 messages-message-container teal-color-text">
+                    <span class="message-text">{{ chat.last_message }}</span>
+                    <span class="white-text messages-time">{{ chat.timestamp|calculate_time_ago }}</span>
+                  </p>
+                </div>
+              {% else %}
+                <div class="message-list-headder">
+                  <p>
+                    {% if chat.last_message_superuser %}
+                      <span class="white-text">Recieved from: </span>
+                    {% else %}
+                      <span class="white-text">Send to: </span>
+                    {% endif %}
+                      <span class="color-5-text">Support</span>
+                      <span class="color-white">{{ chat.product }}</span>
+                  </p>
+                </div>
+                <div class="message-list-footer">
+                  <p class="col s12 messages-message-container teal-color-text">
+                    <span class="message-text">{{ chat.last_message }}</span>
+                    <span class="white-text messages-time">{{ chat.timestamp|calculate_time_ago }}</span>
+                  </p>
+                </div>
+              {% endif %}
+            {% endif %}
           </div>
-        </div>
-      </a>
-       <br>
+        </a>
       {% endfor %}
     </div>
   </div>

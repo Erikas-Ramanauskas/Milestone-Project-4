@@ -12,9 +12,11 @@ from django.contrib.auth.models import User
 @login_required
 def send_message(request, product_id, user_id):
     product = get_object_or_404(Product, id=product_id)
+    superuser = False
 
     if request.user.is_superuser:
         user = User.objects.get(id=user_id)
+        superuser = True
         try:
             chat = Messages.objects.get(sender=user, product=product)
         except Messages.DoesNotExist:
@@ -39,6 +41,9 @@ def send_message(request, product_id, user_id):
 
             chat.messages.add(message_content)
             chat.timestamp = timezone.now()
+
+            chat.last_message = message_content.content
+            chat.last_message_superuser = superuser
             chat.save()
 
             # Clear the form by providing a fresh instance

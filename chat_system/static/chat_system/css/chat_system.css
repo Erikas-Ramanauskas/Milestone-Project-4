@@ -64,3 +64,13 @@
    display: flex;
    justify-content: start;
 }
+
+a.message-list-container{
+   text-decoration: none;
+}
+
+.message-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

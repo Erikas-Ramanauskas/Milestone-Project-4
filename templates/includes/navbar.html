@@ -172,6 +172,14 @@
                     >Order History</a
                   >
                 </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link {% if url_name == 'order_list' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'messages' %}"
+                    >Messages</a
+                  >
+                </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
                   <a
