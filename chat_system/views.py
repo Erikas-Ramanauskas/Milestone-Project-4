@@ -15,12 +15,14 @@ def send_message(request, product_id, user_id):
     superuser = False
 
     if request.user.is_superuser:
-        user = User.objects.get(id=user_id)
+        regular_user = User.objects.get(id=user_id)
         superuser = True
         try:
-            chat = Messages.objects.get(sender=user, product=product)
+            chat = Messages.objects.get(sender=regular_user, product=product)
+            print(chat)
         except Messages.DoesNotExist:
-            chat = Messages.objects.create(sender=user, product=product)
+            chat = Messages.objects.create(
+                sender=regular_user, product=product)
     else:
         try:
             chat = Messages.objects.get(sender=request.user, product=product)
@@ -29,15 +31,13 @@ def send_message(request, product_id, user_id):
                 sender=request.user, product=product)
 
     if request.method == 'POST':
-        if request.user.is_superuser:
-            message_form = MessageContentForm(
-                request.POST, initial={'superuser': True})
-        else:
-            message_form = MessageContentForm(request.POST)
+        message_form = MessageContentForm(request.POST)
 
         if message_form.is_valid():
+
             message_content = message_form.save(commit=False)
             message_content.save()
+            print(message_content.superuser)
 
             chat.messages.add(message_content)
             chat.timestamp = timezone.now()

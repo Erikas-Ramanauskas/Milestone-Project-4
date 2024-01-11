@@ -14,7 +14,7 @@
 {% block content %}
 
 <div class="container">
-  <h2 class="text-center">Messages</h2>
+  <h2 class="text-center mt-3 mb-5">Messages</h2>
   <div class="row justify-content-center">
     <div class="col col-lg-8">
        {% for chat in messages_list %}
@@ -25,36 +25,36 @@
                 <div class="message-list-headder">
                   <p>
                     {% if chat.last_message_superuser %}
-                      <span class="white-text">Sent to: </span>
+                      <span class="reciever-pretext">Sent to: </span>
                     {% else %}
-                      <span class="white-text">Recieved from: </span>
+                      <span class="reciever-pretext">Recieved from: </span>
                     {% endif %}
-                      <span class="color-5-text">{{ chat.sender }}</span>
-                      <span class="color-white">{{ chat.product }}</span>
+                      <span class="color-5-text"> {{ chat.sender }}</span>
+                      <span>{{ chat.product }}</span>
                   </p>
                 </div>
                 <div class="message-list-footer">
                   <p class="col s12 messages-message-container teal-color-text">
                     <span class="message-text">{{ chat.last_message }}</span>
-                    <span class="white-text messages-time">{{ chat.timestamp|calculate_time_ago }}</span>
+                    <span class="messages-time">{{ chat.timestamp|calculate_time_ago }}</span>
                   </p>
                 </div>
               {% else %}
                 <div class="message-list-headder">
                   <p>
                     {% if chat.last_message_superuser %}
-                      <span class="white-text">Recieved from: </span>
+                      <span class="reciever-pretext">Recieved from: </span>
                     {% else %}
-                      <span class="white-text">Send to: </span>
+                      <span class="reciever-pretext">Send to: </span>
                     {% endif %}
                       <span class="color-5-text">Support</span>
-                      <span class="color-white">{{ chat.product }}</span>
+                      <span >{{ chat.product }}</span>
                   </p>
                 </div>
                 <div class="message-list-footer">
                   <p class="col s12 messages-message-container teal-color-text">
                     <span class="message-text">{{ chat.last_message }}</span>
-                    <span class="white-text messages-time">{{ chat.timestamp|calculate_time_ago }}</span>
+                    <span class="messages-time">{{ chat.timestamp|calculate_time_ago }}</span>
                   </p>
                 </div>
               {% endif %}

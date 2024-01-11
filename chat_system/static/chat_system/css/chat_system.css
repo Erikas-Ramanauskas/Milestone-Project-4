@@ -52,7 +52,6 @@
 .message-received p{
     border-radius: 5px 5px 5px 0;
     background-color: var(--accent);
-    color: var(--background);
 }
 
 .message-sent{
@@ -65,12 +64,51 @@
    justify-content: start;
 }
 
-a.message-list-container{
-   text-decoration: none;
+a {
+  all: initial;
+}
+
+
+a.message-list-container>div{
+   border-style: solid; 
+   border-width: var(--border);
+   border-color: var(--primary);
+   margin: 0.5rem 0;
+}
+
+a.message-list-container p{
+ margin: 0.3rem 0.7rem;
 }
 
 .message-text{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: var(--accent);
+    
+}
+
+.reciever-pretext{
+    font-weight: bold; 
+    color: var(--primary);
+}
+
+.message-list-footer p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.message-list-headder p{
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-list-headder p span:nth-child(3) {
+  margin-left: auto;
+}
+
+.messages-time{
+    font-style: italic;
+    color: var(--accent);
 }

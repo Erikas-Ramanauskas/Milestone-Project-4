@@ -42,13 +42,10 @@
       </div>
       <div class="">
         <form method="POST" action="{% url 'message' product.id request.user.id %}" id="message-form" enctype="multipart/form-data">
-          {% csrf_token %} 
-          <input type="hidden" name="product_id" value="{{ product.id }}">
-          
+          {% csrf_token %}
           {% for field in message_form %} 
           {{ field }} 
           {% endfor %}
-          
           <button class="btn btn-special" type="submit"><i class="fa-regular fa-paper-plane"></i></button>
         </form>
       </div>
