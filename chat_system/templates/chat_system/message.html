@@ -40,8 +40,12 @@
           {% endfor %}
         {% endif %}
       </div>
-      <div class="">
+      <div>
+        {% if request.user.is_superuser %}
+        <form method="POST" action="{% url 'message' product.id customer.id %}" id="message-form" enctype="multipart/form-data">
+        {% else %}
         <form method="POST" action="{% url 'message' product.id request.user.id %}" id="message-form" enctype="multipart/form-data">
+        {% endif %}
           {% csrf_token %}
           {% for field in message_form %} 
           {{ field }} 

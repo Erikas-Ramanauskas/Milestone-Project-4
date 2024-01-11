@@ -24,6 +24,7 @@ def send_message(request, product_id, user_id):
             chat = Messages.objects.create(
                 sender=regular_user, product=product)
     else:
+        regular_user = request.user
         try:
             chat = Messages.objects.get(sender=request.user, product=product)
         except Messages.DoesNotExist:
@@ -34,10 +35,10 @@ def send_message(request, product_id, user_id):
         message_form = MessageContentForm(request.POST)
 
         if message_form.is_valid():
-
             message_content = message_form.save(commit=False)
-            message_content.save()
+            message_content.superuser = request.user.is_superuser
             print(message_content.superuser)
+            message_content.save()
 
             chat.messages.add(message_content)
             chat.timestamp = timezone.now()
@@ -54,6 +55,7 @@ def send_message(request, product_id, user_id):
                 'message_form': message_form,
                 'product': product,
                 'chat': chat,
+                'customer': regular_user,
             }
             return render(request, template, context)
     else:
@@ -64,6 +66,7 @@ def send_message(request, product_id, user_id):
         'message_form': message_form,
         'product': product,
         'chat': chat,
+        'customer': regular_user,
     }
     return render(request, template, context)
 
