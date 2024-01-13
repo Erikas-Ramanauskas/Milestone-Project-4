@@ -41,8 +41,8 @@
         <tr>
           <td class="p-2">
             <a href="{% url 'product_detail' item.product.id %}">
-              {% if item.product.image_url.0 %}
-              <img class="img-fluid bag-img" src="{{ item.product.image_url.0 }}" />
+              {% if item.product.get_first_image %}
+              <img class="img-fluid bag-img" src="{{ item.product.get_first_image }}" />
               {% else %}
               <img class="img-fluid bag-img" src="{{ MEDIA_URL }}noimage.png" />
               {% endif %}

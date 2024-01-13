@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category, Brand, Quality, ProductImage
+from .models import Product, Category, Brand, Quality, Image
 from .forms import ProductForm
 
 # Create your views here.
@@ -11,7 +11,7 @@ from .forms import ProductForm
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    products = Product.objects.filter(sold__exact=False)
     query = None
     categories = None
     brands = None
@@ -78,7 +78,7 @@ def add_product(request):
             product = form.save()
             images = request.FILES.getlist('images')
             for image in images:
-                ProductImage.objects.create(product=product, image=image)
+                Image.objects.create(product=product, image=image)
 
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))

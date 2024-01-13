@@ -1,19 +1,15 @@
 from django import forms
-from .models import Product, Category
+from .models import Product, Category, Image
 
 
 class ProductForm(forms.ModelForm):
-
     class Meta:
         model = Product
         fields = '__all__'
 
-    widgets = {
-        'display_image': forms.ClearableFileInput(attrs={
-            'class': 'form-control',
-            'placeholder': 'Select banner image',
-        }),
-    }
+    # Change to FileField for multiple image uploads
+    images = forms.FileField(label='Images', required=False,
+                             widget=forms.ClearableFileInput(attrs={'multiple': True}))
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

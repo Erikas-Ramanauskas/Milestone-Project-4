@@ -105,26 +105,24 @@ class Product(models.Model):
         max_length=254, choices=SHOE_SEX_CHOICES, default="Female"
     )
 
-    banner = models.ForeignKey(
-        'ProductImage', null=True, blank=True, default=None, on_delete=models.SET_NULL, related_name='banner')
+    sold = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
 
-    def save(self, *args, **kwargs):
-        if not self.banner and self.image.exists():
-            first_image = self.image.first()
-            self.banner = first_image
-        super().save(*args, **kwargs)
+    def get_first_image(self):
+        first_image = self.images.first()
+        return first_image.image.url if first_image else None
 
 
-class ProductImage(models.Model):
+class Image(models.Model):
     class Meta:
         verbose_name = 'Photo'
         verbose_name_plural = 'Photos'
 
     product = models.ForeignKey(
         Product, related_name='images', on_delete=models.CASCADE, null=True, blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
