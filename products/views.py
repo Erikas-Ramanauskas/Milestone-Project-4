@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category, Brand, Quality
+from .models import Product, Category, Brand, Quality, ProductImage
 from .forms import ProductForm
 
 # Create your views here.
@@ -76,6 +76,10 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
+            images = request.FILES.getlist('images')
+            for image in images:
+                ProductImage.objects.create(product=product, image=image)
+
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -137,9 +141,9 @@ def delete_product(request, product_id):
 
 def quality(request):
     """ A view to show quality page """
-    
+
     quality = Quality.objects.all()
-    
+
     context = {
         'quality': quality,
     }

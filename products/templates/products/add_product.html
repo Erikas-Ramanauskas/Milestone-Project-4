@@ -26,11 +26,19 @@
       <form method="POST" action="{% url 'add_product' %}" class="form mb-2 product-managment-form" enctype="multipart/form-data">
         {% csrf_token %} 
         {% for field in form %} 
-        {% if field.name != 'image' %} 
-        {{ field | as_crispy_field }} 
-        {% else %}
-        {{ field }} 
-        {% endif %} 
+          {% if field.name != 'image' %} 
+            {{ field | as_crispy_field }} 
+          {% else %}
+            {{ field }} 
+          {% endif %} 
+        {% endfor %}
+        
+        {{ form.images.management_form }} {# Render management form for images #}
+        {% for image_form in form.images.forms %}
+          {% for image_field in image_form.visible_fields %}
+            {{ image_field }}
+          {% endfor %}
+          <br>
         {% endfor %}
         <div class="text-right">
           <a class="btn btn-special-cancel" href="{% url 'products' %}">Cancel</a>

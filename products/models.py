@@ -84,16 +84,16 @@ class Quality(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(
-        "Category", max_length=254, null=True, blank=True, on_delete=models.SET_NULL
+        "Category", null=True, blank=True, on_delete=models.SET_NULL
     )
     brand = models.ForeignKey(
-        "Brand", max_length=254, null=True, blank=True, on_delete=models.SET_NULL
+        "Brand", null=True, blank=True, on_delete=models.SET_NULL
     )
     size = models.ForeignKey(
-        "Size", max_length=254, null=True, blank=True, on_delete=models.SET_NULL
+        "Size", null=True, blank=True, on_delete=models.SET_NULL
     )
     quality = models.ForeignKey(  # Add Quality field
-        "Quality", max_length=254, null=True, blank=True, on_delete=models.SET_NULL
+        "Quality", null=True, blank=True, on_delete=models.SET_NULL
     )
 
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -101,13 +101,31 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=254, decimal_places=2)
 
-    image = ArrayField(models.CharField(max_length=50), null=True, blank=True)
-    image_url = ArrayField(models.CharField(
-        max_length=1024), null=True, blank=True)
-
     shoe_sex = models.CharField(
         max_length=254, choices=SHOE_SEX_CHOICES, default="Female"
     )
 
+    banner = models.ForeignKey(
+        'ProductImage', null=True, blank=True, default=None, on_delete=models.SET_NULL, related_name='banner')
+
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.banner and self.image.exists():
+            first_image = self.image.first()
+            self.banner = first_image
+        super().save(*args, **kwargs)
+
+
+class ProductImage(models.Model):
+    class Meta:
+        verbose_name = 'Photo'
+        verbose_name_plural = 'Photos'
+
+    product = models.ForeignKey(
+        Product, related_name='images', on_delete=models.CASCADE, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return f"Image for {self.product.name}"

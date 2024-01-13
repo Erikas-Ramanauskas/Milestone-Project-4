@@ -27,15 +27,9 @@
                     {% for product in products %}
                         <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="h-100 border-0">
-                                {% if product.image %}
                                 <a class="product-link mt-5" href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top" src="{{ product.image_url.0 }}" alt="{{ product.name }}">
+                                    <img class="card-img-top" src="{{ product.banner }}" alt="{{ product.name }}">
                                 </a>
-                                {% else %}
-                                <a class="product-link" href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
                                 <div class="product-card-text">
                                     <div class="pb-0">
                                         <h6 class="mb-1 product-brand color-1-text">{{ product.brand.friendly_name }} </h6>
