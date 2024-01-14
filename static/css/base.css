@@ -207,6 +207,28 @@ a.dropdown-item{
   text-decoration: underline;
 }
 
+.total-navigation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa:hover,
+.fa:focus {
+  outline: none !important;
+}
+
+/* Remove focus outline for the parent anchor tag as well */
+.total-navigation:hover,
+.total-navigation:focus {
+  outline: none !important;
+}
+
+.total-navigation p{
+  font-size: 0.8rem;
+}
+
 /* Search Button */
 
 #search-button {
@@ -270,6 +292,10 @@ a.dropdown-item{
   width: 200px;
 }
 
+.dropdown-menu li.nav-personal-link {
+  width: auto;
+}
+
 .dropdown-menu ul li :is(:hover, :focus) {
   background-color: var(--secondary) !important;
   border-style: solid; 
@@ -302,14 +328,15 @@ a.dropdown-item{
   list-style: none;
 }
 
-.nav-item .fa-cart-shopping,
-.nav-item .fa-user {
+.nav-item :is(.fa-cart-shopping, .fa-user, .fa-screwdriver-wrench) {
   font-size: 1.5rem;
   color: var(--text);
 }
 
-.nav-item .fa-cart-shopping:is(:hover, :focus),
-.nav-item .fa-user:is(:hover, :focus) {
+.nav-item :is(
+.fa-cart-shopping:is(:hover, :focus), 
+.fa-user:is(:hover, :focus), 
+.fa-screwdriver-wrench:is(:hover, :focus)){
   color: var(--primary);
 }
 
@@ -425,4 +452,19 @@ button.btn-special-cancel:is(:hover, :focus) {
 
 form{
   padding-bottom: 2rem;
+}
+
+.custom-tooltip .tooltip-inner {
+    background-color: var(--primary); 
+    color: var(--background); 
+}
+
+.custom-tooltip .tooltip-arrow
+ {
+    border-color: var(--primary) !important;
+}
+
+.bg-special{
+  background-color: var(--primary)!important;
+  left: 65%;
 }

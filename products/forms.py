@@ -8,8 +8,8 @@ class ProductForm(forms.ModelForm):
         fields = '__all__'
 
     # Change to FileField for multiple image uploads
-    images = forms.FileField(label='Images', required=False,
-                             widget=forms.ClearableFileInput(attrs={'multiple': True}))
+    images = forms.MultipleChoiceField(label='images', required=False,
+                                       widget=forms.ClearableFileInput(attrs={'multiple': True}))
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

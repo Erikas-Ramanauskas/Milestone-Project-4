@@ -77,6 +77,22 @@
                       {% endfor %}
                     </ul>
                   </div>
+                  <div>
+                    <p class="color-4-bg dropdown-item navigation-type mb-0">By Size</p>
+                    <hr />
+                    <ul>
+                      {% for size in male_sizes %}
+                      <li>
+                        <a 
+                          class="dropdown-item" 
+                          aria-current="page" 
+                          href="{% url 'products' %}?size={{ size.uk_name }}&sex=male"
+                          >{{ size.get_uk_name }}</a
+                        >
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </li>
@@ -126,6 +142,22 @@
                       {% endfor %}
                     </ul>
                   </div>
+                  <div>
+                    <p class="color-4-bg dropdown-item navigation-type mb-0">By Size</p>
+                    <hr />
+                    <ul>
+                      {% for size in female_sizes %}
+                      <li>
+                        <a 
+                          class="dropdown-item" 
+                          aria-current="page" 
+                          href="{% url 'products' %}?size={{ size.uk_name }}&sex=female"
+                          >{{ size.get_uk_name }}</a
+                        >
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </li>
@@ -135,6 +167,54 @@
             <button id="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
           <ul id="log-in-items" class="navbar-nav mb-2 mb-lg-0">
+            <!-- Admin Link -->
+            {% if request.user.is_superuser %}
+             <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="nav-item nav-personal-link">
+                  <a
+                    class="nav-link {% if url_name == 'add_product' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'add_product' %}"
+                    >Add Product</a
+                  >
+                </li>
+                 <li class="nav-item nav-personal-link">
+                  <a
+                    class="nav-link {% if url_name == 'sold_products' %} active {% endif %}"
+                    aria-current="page"
+                    href="{% url 'sold_products' %}"
+                    >Sold Products</a
+                  >
+                </li>
+                <li class="nav-item nav-personal-link">
+                  <a
+                    class="nav-link {% if url_name == 'order_list' %} active {% endif %}  position-relative"
+                    aria-current="page"
+                    href="{% url 'messages' %}">
+                    Messages
+                    {% if unread_messages_count > 0 %}
+                        <span class="position-absolute badge rounded-pill bg-danger bg-special">
+                            {{ unread_messages_count }}
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    {% endif %}
+                  </a>
+                </li>
+              </ul>
+            </li>
+            {% endif %}
+            
+            <!-- User Dropdown -->
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -147,7 +227,7 @@
               </a>
               <ul class="dropdown-menu">
                 {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-                <li class="nav-item">
+                <li class="nav-item nav-personal-link">
                   <a
                     class="nav-link {% if url_name == 'add_product' %} active {% endif %}"
                     aria-current="page"
@@ -156,7 +236,7 @@
                   >
                 </li>
                 {% endif %}
-                <li class="nav-item">
+                <li class="nav-item nav-personal-link">
                   <a
                     class="nav-link {% if url_name == 'profile' %} active {% endif %}"
                     aria-current="page"
@@ -164,7 +244,7 @@
                     >Profile</a
                   >
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-personal-link">
                   <a
                     class="nav-link {% if url_name == 'order_list' %} active {% endif %}"
                     aria-current="page"
@@ -172,16 +252,24 @@
                     >Order History</a
                   >
                 </li>
-                <li class="nav-item">
+                {% if not request.user.is_superuser %}
+                <li class="nav-item nav-personal-link">
                   <a
-                    class="nav-link {% if url_name == 'order_list' %} active {% endif %}"
+                    class="nav-link {% if url_name == 'messages' %} active {% endif %}  position-relative"
                     aria-current="page"
-                    href="{% url 'messages' %}"
-                    >Messages</a
-                  >
+                    href="{% url 'messages' %}">
+                    Messages
+                    {% if unread_messages_count > 0 %}
+                        <span class="position-absolute badge rounded-pill bg-danger bg-special">
+                            {{ unread_messages_count }}
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    {% endif %}
+                  </a>
                 </li>
+                {% endif %}
                 <li><hr class="dropdown-divider" /></li>
-                <li class="nav-item">
+                <li class="nav-item nav-personal-link">
                   <a
                     class="nav-link {% if url_name == 'accounts_logout' %} active {% endif %}"
                     aria-current="page"
@@ -190,7 +278,7 @@
                   >
                 </li>
                 {% else %}
-                <li class="nav-item">
+                <li class="nav-item nav-personal-link">
                   <a
                     class="nav-link {% if url_name == 'accounts_singup' %} active {% endif %}"
                     aria-current="page"
@@ -198,7 +286,7 @@
                     >Register</a
                   >
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-personal-link">
                   <a
                     class="nav-link {% if url_name == 'accounts_login' %} active {% endif %}"
                     aria-current="page"
@@ -209,10 +297,19 @@
                 {% endif %}
               </ul>
             </li>
+            
+            <!-- Cart Link -->
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="{% url 'bag' %}"
-                ><i class="fa-solid fa-cart-shopping"></i
-              ></a>
+              <a class="nav-link total-navigation" aria-current="page" href="{% url 'bag' %}">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="my-0">
+                  {% if grand_total %}
+                      £{{ grand_total|floatformat:2 }}
+                  {% else %}
+                      £0.00
+                  {% endif %}
+                </p>
+              </a>
             </li>
           </ul>
         </div>

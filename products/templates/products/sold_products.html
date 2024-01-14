@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font mb-5">Sold Products</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-10 offset-1">
+                <div class="row">
+                    {% for product in products %}
+                        <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                            <div class="h-100 border-0">
+                                <a class="product-link mt-5" href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top" src="{{ product.get_first_image }}" alt="{{ product.name }}">
+                                </a>
+                                <div class="product-card-text">
+                                    <div class="pb-0">
+                                        <h6 class="mb-1 product-brand color-1-text">{{ product.brand.friendly_name }} </h6>
+                                        <p class="mb-2">{{ product.name }}</p>
+                                    </div>
+                                    <div class="pt-0 border-0 text-left">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="mb-2 px-1 text-left font-weight-bold color-5-text"><i class="fa-solid fa-sterling-sign"></i>{{ product.price }}</p>
+                                                <small class="text-muted"><i class="color-5-text fa-solid fa-shoe-prints"></i> Size: {{ product.size }} UK</small>
+                                                <small class="text-muted"><i class="color-5-text fa-solid fa-medal"></i> Quality: {{ product.quality }}</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden-info">
+                                <form action="{% url 'add_to_bag' product.id %}" method="POST">
+                                    <div>
+                                        {% csrf_token %}
+                                        {% if product.id in bag_ids %}
+                                            <input class="btn add-button add-button-card rounded-0 text-uppercase" value="Already in A Cart" disabled>
+                                        {% else %}
+                                            <input type="submit" class="btn add-button add-button-card rounded-0 text-uppercase" value="Add to cart">
+                                        {% endif %}
+                                    </div>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </form>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

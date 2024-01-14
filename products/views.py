@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category, Brand, Quality, Image
+from .models import Product, Category, Brand, Quality, Image, Size
 from .forms import ProductForm
 
 # Create your views here.
@@ -12,6 +12,62 @@ def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.filter(sold__exact=False)
+    query = None
+    categories = None
+    brands = None
+    sex = None
+    sizes = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
+        if 'brand' in request.GET:
+            brands = request.GET['brand'].split(',')
+            products = products.filter(brand__name__in=brands)
+            brands = Brand.objects.filter(name__in=brands)
+
+        if 'size' in request.GET:
+            sizes = request.GET['size'].split(',')
+            products = products.filter(size__uk_name__in=sizes)
+            sizes = Size.objects.filter(uk_name__in=sizes)
+
+        if 'sex' in request.GET:
+            sex = request.GET['sex']
+            products = products.filter(shoe_sex__exact=sex)
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(
+                    request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(
+                brand__name__icontains=query) | Q(category__name__icontains=query)
+            products = products.filter(queries)
+
+    context = {
+        'products': products,
+        'search_term': query,
+        'current_categories': categories,
+        'current_brands': brands,
+        'current_sizes': sizes,
+    }
+
+    return render(request, 'products/products.html', context)
+
+
+@login_required
+def sold_products(request):
+    """ A view to show all products, including sorting and search queries """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    products = Product.objects.filter(sold__exact=True)
     query = None
     categories = None
     brands = None
@@ -50,7 +106,7 @@ def all_products(request):
         'current_brands': brands,
     }
 
-    return render(request, 'products/products.html', context)
+    return render(request, 'products/sold_products.html', context)
 
 
 def product_detail(request, product_id):
@@ -108,6 +164,9 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
+            images = request.FILES.getlist('images')
+            for image in images:
+                Image.objects.create(product=product, image=image)
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:

@@ -22,6 +22,8 @@ class Messages(models.Model):
     last_message = models.CharField(
         max_length=200, null=True, blank=True)
     last_message_superuser = models.BooleanField(default=False)
+    user_read = models.BooleanField(default=True)
+    superuser_read = models.BooleanField(default=True)
 
     def __str__(self):
         return f"Sender: {self.sender} - Product: {self.product}"

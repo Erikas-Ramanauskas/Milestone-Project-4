@@ -19,7 +19,8 @@ def send_message(request, product_id, user_id):
         superuser = True
         try:
             chat = Messages.objects.get(sender=regular_user, product=product)
-            print(chat)
+            chat.superuser_read = True
+            chat.save()
         except Messages.DoesNotExist:
             chat = Messages.objects.create(
                 sender=regular_user, product=product)
@@ -27,6 +28,8 @@ def send_message(request, product_id, user_id):
         regular_user = request.user
         try:
             chat = Messages.objects.get(sender=request.user, product=product)
+            chat.user_read = True
+            chat.save()
         except Messages.DoesNotExist:
             chat = Messages.objects.create(
                 sender=request.user, product=product)
@@ -37,7 +40,6 @@ def send_message(request, product_id, user_id):
         if message_form.is_valid():
             message_content = message_form.save(commit=False)
             message_content.superuser = request.user.is_superuser
-            print(message_content.superuser)
             message_content.save()
 
             chat.messages.add(message_content)
@@ -45,6 +47,13 @@ def send_message(request, product_id, user_id):
 
             chat.last_message = message_content.content
             chat.last_message_superuser = superuser
+
+            # Update read status based on the sender
+            if request.user.is_superuser:
+                chat.user_read = False
+            else:
+                chat.superuser_read = False
+
             chat.save()
 
             # Clear the form by providing a fresh instance

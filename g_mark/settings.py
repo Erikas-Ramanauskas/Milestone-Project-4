@@ -104,6 +104,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'products.context_processors.all_categories',
                 'bag.contexts.bag_contents',
+                'chat_system.context_processors.unread_messages_count',
 
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
