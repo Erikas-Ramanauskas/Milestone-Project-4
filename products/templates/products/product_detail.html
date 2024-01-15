@@ -1,6 +1,10 @@
 {% extends "base.html" %} {% load static %} {% block extra_css %}
 <link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
-{% endblock %} {% block extra_js %}
+{% endblock %} 
+
+{% block title %}Product detail{% endblock %}
+
+{% block extra_js %}
 <script defer src="{% static 'products/js/products.js' %}" crossorigin="anonymous"></script>
 {% endblock %} {% block page_header %}
 <div class="container header-container">

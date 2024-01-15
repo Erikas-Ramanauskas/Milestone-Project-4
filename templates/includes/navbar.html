@@ -5,7 +5,8 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary color-4-bg">
     <div class="container-fluid">
       <!-- logo -->
-      <a class="navbar-brand" href="{% url 'home' %}">{% include 'includes/logo.html' %}</a>
+      <a class="navbar-brand" href="{% url 'home' %}" aria-label="Page Logo, link to home page"
+      >{% include 'includes/logo.html' %}</a>
 
       <button
         class="navbar-toggler"
@@ -164,7 +165,7 @@
           </ul>
           <form class="d-flex" id="search-button" role="search" method="GET" action="{% url 'products' %}">
             <input class="px-2" type="search" placeholder="Search" aria-label="Search" name="q" />
-            <button id="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass" aria-label="search button"></i></button>
           </form>
           <ul id="log-in-items" class="navbar-nav mb-2 mb-lg-0">
             <!-- Admin Link -->
@@ -179,7 +180,7 @@
               >
                 <i class="fa-solid fa-screwdriver-wrench"></i>
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu dd-personal">
                 <li class="nav-item nav-personal-link">
                   <a
                     class="nav-link {% if url_name == 'add_product' %} active {% endif %}"
@@ -226,16 +227,7 @@
                 <i class="fa-solid fa-user"></i>
               </a>
               <ul class="dropdown-menu">
-                {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-                <li class="nav-item nav-personal-link">
-                  <a
-                    class="nav-link {% if url_name == 'add_product' %} active {% endif %}"
-                    aria-current="page"
-                    href="{% url 'add_product' %}"
-                    >Add Product</a
-                  >
-                </li>
-                {% endif %}
+                {% if request.user.is_authenticated %}
                 <li class="nav-item nav-personal-link">
                   <a
                     class="nav-link {% if url_name == 'profile' %} active {% endif %}"

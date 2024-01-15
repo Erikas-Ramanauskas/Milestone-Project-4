@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="{% static 'chat_system/css/chat_system.css' %}" />
 {% endblock %} 
 
+{% block title %}Messages{% endblock %}
+
 {% block extra_js %}
 <script defer src="{% static 'chat_system/js/chat_system.js' %}" crossorigin="anonymous"></script>
 {% endblock %} 
@@ -42,15 +44,15 @@
       </div>
       <div>
         {% if request.user.is_superuser %}
-        <form method="POST" action="{% url 'message' product.id customer.id %}" id="message-form" enctype="multipart/form-data">
+          <form method="POST" action="{% url 'message' product.id customer.id %}" id="message-form" enctype="multipart/form-data">
         {% else %}
-        <form method="POST" action="{% url 'message' product.id request.user.id %}" id="message-form" enctype="multipart/form-data">
+      <form method="POST" action="{% url 'message' product.id request.user.id %}" id="message-form" enctype="multipart/form-data">
         {% endif %}
           {% csrf_token %}
           {% for field in message_form %} 
-          {{ field }} 
+            {{ field }} 
           {% endfor %}
-          <button class="btn btn-special" type="submit"><i class="fa-regular fa-paper-plane"></i></button>
+          <button class="btn btn-special" type="submit"><i class="fa-regular fa-paper-plane" aria-label="Send message"></i></button>
         </form>
       </div>
     </div>
