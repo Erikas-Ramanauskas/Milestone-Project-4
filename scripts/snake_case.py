@@ -39,5 +39,5 @@ def rename_files_to_snake_case(folder_path):
 
 if __name__ == "__main__":
     # Replace 'your_folder_path' with the path of the folder containing the files
-    folder_path = 'readme_images'
+    folder_path = './readme_images'
     rename_files_to_snake_case(folder_path)
