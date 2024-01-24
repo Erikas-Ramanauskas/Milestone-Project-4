@@ -189,6 +189,7 @@ footer {
   flex-direction: row;
 }
 
+
 .nav-link {
   font-family: var(--navigation-font);
   font-size: 1.2rem;
@@ -214,6 +215,20 @@ a.dropdown-item{
   align-items: center;
 }
 
+@media screen and (max-width: 992px) {
+  #navbar-supported-content > div {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: normal;
+  }
+   #navbar-supported-content > div > ul {
+    text-align: end;
+  }
+  .total-navigation {
+    align-items: end;
+  }
+}
+
 .fa:hover,
 .fa:focus {
   outline: none !important;
@@ -236,6 +251,8 @@ a.dropdown-item{
   border: 2px solid var(--text);
   border-radius: 5px;
   padding: 0;
+  width: fit-content;
+  align-self: flex-end;
 
   input {
     border: none;
@@ -264,6 +281,7 @@ a.dropdown-item{
   background-color: var(--primary);
   color: var(--background);
 }
+
 
 .dropdown-menu div {
   display: flex;
