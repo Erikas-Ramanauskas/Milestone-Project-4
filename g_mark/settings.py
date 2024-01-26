@@ -35,7 +35,7 @@ if DEBUG:
 else:
     # '*.herokuapp.com'
     ALLOWED_HOSTS += ['https://milestone-project--4-cae9f77b4759.herokuapp.com/',
-                      'https://milestone-project--4-cae9f77b4759.herokuapp.com/*', 'milestone-project--4-cae9f77b4759.herokuapp.com']
+                      'https://milestone-project--4-cae9f77b4759.herokuapp.com/*', 'milestone-project--4-cae9f77b4759.herokuapp.com', 'milestone-project--4-cae9f77b4759.herokuapp.com/*']
 
 # Application definition
 

@@ -4,7 +4,7 @@
 
 This is my final project for Code Institute diploma, based on full stack development of E-comerce shop.
 
-![Screenshot of Tedoku on multiple device](readme_images/site_mockup.png)
+![Screenshot of G-mark on multiple device](readme_images/site_mockup.png)
 
 ## Author
 Erikas Ramanauskas
@@ -139,7 +139,7 @@ Description
 ![Screenshot of colors](readme_images/color_list.png)
 
 
-* As a final project for code institutre i wanted to chalange my self to try different color pallete from other project i did. (Each one of them was aimed with different colors). Personaly I enjoy purple color so by playing around and read about colors I decides it would be best choice for shoe website.
+* As a final project for code institutre I wanted to chalange my self to try different color pallete from other project I did. (Each one of them was aimed with different colors). Personaly I enjoy purple color so by playing around and read about colors I decided it would be best choice for shoe website.
 
 * As quick google search says: "Purple combines the calm stability of blue and the fierce energy of red"
 
@@ -149,15 +149,15 @@ Description
 
 ### Typography
 
-- For the titles i chose Lato font.
-- For main font i chose Playfair Display font
-- For navigation i chose Roboto font
+- For the titles I chose Lato font.
+- For main font I chose Playfair Display font
+- For navigation I chose Roboto font
 
 ### Imagery
 
 - The logo and home page pictures were generated using ai [Midjorney](https://www.midjourney.com/)
 
-- The product images a real images i was given by my family member that sells used shoes online.
+- The product images a real images I was given by my family member that sells used shoes online.
 
 ## Wireframes
 
@@ -284,22 +284,32 @@ Description
 
 ### Solved bugs
 
-* During the development of of product models i have decided early that i wanted to include more than one picture per product. 
+* During the development of of product models I have decided early that I wanted to include more than one picture per product. 
 This lead me in to looking for the ways to creating array of values. Due to my precious project usign mongoDB non relational database I was more fmailiar with filling one of paramaters with an array and completley missed ManyToManyField field functionality. Instead I found ArrayField that is exlusively used by postgresssql. This lead me doing my models and fixutres around that and preventing me from using local sql database.
 
-However once iparticipated in Live london hackaton, we used django and my team explained my mistake and lead me the right path. I had to rework some of my code and research further how to i can attach all photos as separate model.
+However once iparticipated in Live london hackaton, we used django and my team explained my mistake and lead me the right path. I had to rework some of my code and research further how to I can attach all photos as separate model.
 
-* During the development of men and women shoe dropdown I wanted to make dinamic size dropdown depending on how many categories and brands showing up (sizes were aded after i solve all bugs). One issue with it that the the sectiins were either climbing on top of each other or going out side of the screen. Later i figured out that due to dinamic data passed there we no static measurment of any form thus any dinamic measurments given were completley off. At the end I just made it so it would of maximum 16 values in the column and jump over to next as well as static number of width.
+* During the development of men and women shoe dropdown I wanted to make dinamic size dropdown depending on how many categories and brands showing up (sizes were aded after I solve all bugs). One issue with it that the the sectiins were either climbing on top of each other or going out side of the screen. Later I figured out that due to dinamic data passed there we no static measurment of any form thus any dinamic measurments given were completley off. At the end I just made it so it would of maximum 16 values in the column and jump over to next as well as static number of width.
 
-* secondly my goal for men and womens shoe meniu is to filter out every product that belongs to men and women within database and only show brands, and categories that has at least one product. At the begining i succsseded just filtering cattegories or brands but when i had to do sepparate men and women i was recieving no data. I asked help for fellow student and [Pavlo Myskov](https://github.com/FlashDrag) helped me out with filtering and indetified that i was trying to filter for "Men" when my fixtures were set to "m". 
+* secondly my goal for men and womens shoe meniu is to filter out every product that belongs to men and women within database and only show brands, and categories that has at least one product. At the begining I succsseded just filtering cattegories or brands but when I had to do sepparate men and women I was recieving no data. I asked help for fellow student and [Pavlo Myskov](https://github.com/FlashDrag) helped me out with filtering and indetified that I was trying to filter for "Men" when my fixtures were set to "m". 
 
-* Another bug that took some time to figure out was superuser message save. When user sends any message it is saved on users size, however when superuser send it, it suposed to save superuser "true", however it would not and instead would load new chat that i did not intend to. This i solved with a litle help from london comuntiry as value was saved at the wrong location.
+* Another bug that took some time to figure out was superuser message save. When user sends any message it is saved on users size, however when superuser send it, it suposed to save superuser "true", however it would not and instead would load new chat that I did not intend to. This I solved with a litle help from london comuntiry as value was saved at the wrong location.
+
+*Multitude of other smaller bugs faced with css, type, certain functionalities. But nothing madjor that took research or additional help to solve.
 
 
 ### Remaining Bugs
 
+* Still need to work on changing the individual picture or multiple pictures from the product as current functionality only alows to add multiple pictures at the creation of product and replace them with brand new ones but not change them individualy
+
 
 ### Ideas and plans for improvement
+
+* I would love to add additional check before checkout offering shoe care protection kito or other similar product. Maybe even based on the type of shoes person is buying. Idea woudl be to upsell additional product before user checks out.
+
+* Additiona lcategory and filtered meniu could be added for children
+
+* Instead of hero images a lot of online shops have featured section, usualy a carousel. Similar thing could be implemented to promote different product on a front page. 
 
 
 
@@ -307,17 +317,18 @@ However once iparticipated in Live london hackaton, we used django and my team e
 
 ### Reasons for chosing such an aplication
 
+* As a final project based on Django ecomerce, the choice was limited to mostly selling products. Since my cousins sell Used shoes online, I asked for their pictures as dumy database. And based project aroudn shoe shop
 
+* I believe most of the the online shops functionality is similart ot boutique ado as all the products are consitent, SOeme will have certain stock. However used items always change over, so certain functionalities like a stock or different sizes should be treated in different ways.
 
 ### General choices for application
 
+* Due to products always changing and certain categories or brands may not have a single product at any particular moment. The decition was to add products to context processors and generate the navigation based off current products. 
+Example if "PUMA" brand is created but no product of that type exist within Unsold products "Puma" brand would not show up on men or women dropdown list. Same goes for type of shoes and sizes.
 
-
-### For anyone who is not familiar with the game
-
-
-
-### Idividual page functionalities
+* For product page since only one item each is avialable i did not added multiple item purchase and just add to cart button.
+* A small section openign up for adding product was insipred by Awmay.com 
+* An abbility to message to superuser "support" is added for individual products. So the visitor can ask questions. I felt since it is used products, publicly asked questions would not be well recieved and individual would be better.
 
 ## Deployment 
 
@@ -349,6 +360,10 @@ ALLOWED_HOSTS = ['{heroku deployed site URL here}', 'localhost' ]
 15. Go to Heroku settings, enable automatic deployments.
 16. Setup AWS S3 bucket (these settings might change since time of writing these instructions).
 
+### Product fixtures
+
+* Fixtures would need to be loaded in almoast any order with an exception of "Product" being second last, and "Picture" being last
+
 ## Credits
 
 ### Mentor
@@ -362,6 +377,8 @@ ALLOWED_HOSTS = ['{heroku deployed site URL here}', 'localhost' ]
 * Credit and thanks to numerous tutorials on YouTube by seasoned developers.
   * Thanks to [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified) for a number of code lessons in various topics;
   * Thanks to [Kevin Powell](https://www.youtube.com/@KevinPowell) for a number of code lessons in various nainly CSS designs that I learned for this and previous project;
+  
+* Also Credit to mentor [Dee](https://www.youtube.com/@IonaFrisbee), who created awesome series of videos doing django project that I took several ideas and inspirations form.
   
 
 ## Copyrights

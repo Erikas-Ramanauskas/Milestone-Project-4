@@ -21,7 +21,7 @@ function slider() {
   }
   
   function createImageList(imageLinks) {
-    let counter = 0
+    let counter = 0;
 
     imageLinks.forEach(link => {
       const listItem = document.createElement('li');
@@ -45,13 +45,13 @@ function slider() {
     document
       .querySelector(`.image_skips_picture[data-slide="${slide}"]`)
       .classList.add('image_skips_picture--active');
-  };
+  }
 
   function goToSlide(slide){
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
     );
-  };
+  }
   
   function nextSlide() {
     if (curSlide === maxSlide - 1) {
@@ -61,7 +61,7 @@ function slider() {
     }
     goToSlide(curSlide);
     activateSlide(curSlide);
-  };
+  }
 
   function prevSlide() {
     if (curSlide === 0) {
@@ -71,14 +71,14 @@ function slider() {
     }
     goToSlide(curSlide);
     activateSlide(curSlide);
-  };
+  }
 
   function init() {
-    createImageLinksArray()
-    createImageList(imageLinks)
+    createImageLinksArray();
+    createImageList(imageLinks);
     goToSlide(0);
     activateSlide(0);
-  };
+  }
   init();
 
   document.addEventListener('keydown', function (e) {
@@ -103,5 +103,5 @@ slider();
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl, {
-            customClass: 'custom-tooltip'
-        }))
+  customClass: 'custom-tooltip'
+}));

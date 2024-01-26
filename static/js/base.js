@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Eddit meniu
   const ulList = document.querySelectorAll(".product-list ul");
-  const windowHeight = window.innerHeight;
 
   for (let ul of ulList) {
     const li = ul.querySelectorAll("li");
