@@ -25,13 +25,14 @@ if os.path.exists('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEVELOPMENT', '') == 'True'
+DEBUG = os.environ.get('DEBUG')
 
 
 ALLOWED_HOSTS = []
 
 if DEBUG:
-    ALLOWED_HOSTS += ['localhost', '127.0.0.1']
+    ALLOWED_HOSTS += ['localhost', '127.0.0.1', 'https://milestone-project--4-cae9f77b4759.herokuapp.com/',
+                      'https://milestone-project--4-cae9f77b4759.herokuapp.com/*', 'milestone-project--4-cae9f77b4759.herokuapp.com', 'milestone-project--4-cae9f77b4759.herokuapp.com/*']
 else:
     # '*.herokuapp.com'
     ALLOWED_HOSTS += ['https://milestone-project--4-cae9f77b4759.herokuapp.com/',
