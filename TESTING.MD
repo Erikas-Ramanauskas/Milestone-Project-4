@@ -40,33 +40,33 @@ JSHint was used to test JavaScript code quality.
 ### Lighthouse Test Results
 
 * Desktop - Home
-* ![Desktop - Home](readme_images/desktop_home.jpg)
+* ![Desktop - Home](readme_images/desktop_home.png)
 * Desktop - Bag
-* ![Desktop - Bag](readme_images/desktop_bag.jpg)
+* ![Desktop - Bag](readme_images/desktop_bag.png)
 * Desktop - Message
-* ![Desktop - Message](readme_images/desktop_message.jpg)
+* ![Desktop - Message](readme_images/desktop_message.png)
 * Desktop - Message List
-* ![Desktop - Message List](readme_images/desktop_message_list.jpg)
+* ![Desktop - Message List](readme_images/desktop_message_list.png)
 * Desktop - Checkout
-* ![Desktop - Checkout](readme_images/desktop_checkout.jpg)
+* ![Desktop - Checkout](readme_images/desktop_checkout.png)
 * Desktop - Checkout Sucsess
-* ![Desktop - Checkout Sucsess](readme_images/desktop_checkout_sucsess.jpg)
+* ![Desktop - Checkout Sucsess](readme_images/desktop_checkout_sucsess.png)
 * Desktop - Add Produt
-* ![Desktop - Add Produt](readme_images/desktop_add_produt.jpg)
+* ![Desktop - Add Produt](readme_images/desktop_add_produt.png)
 * Desktop - Edit Product
-* ![Desktop - Edit Product](readme_images/desktop_edit_product.jpg)
+* ![Desktop - Edit Product](readme_images/desktop_edit_product.png)
 * Desktop - Product Details
-* ![Desktop - Product Details](readme_images/desktop_product_details.jpg)
+* ![Desktop - Product Details](readme_images/desktop_product_details.png)
 * Desktop - Products
-* ![Desktop - Products](readme_images/desktop_products.jpg)
+* ![Desktop - Products](readme_images/desktop_products.png)
 * Desktop - Quality
-* ![Desktop - Quality](readme_images/desktop_quality.jpg)
+* ![Desktop - Quality](readme_images/desktop_quality.png)
 * Desktop - Sold Products
-* ![Desktop - Sold Products](readme_images/desktop_sold_products.jpg)
+* ![Desktop - Sold Products](readme_images/desktop_sold_products.png)
 * Desktop - Profile
-* ![Desktop - Profile](readme_images/desktop_profile.jpg)
+* ![Desktop - Profile](readme_images/desktop_profile.png)
 * Desktop - Order List
-* ![Desktop - Order List](readme_images/desktop_order_list.jpg)
+* ![Desktop - Order List](readme_images/desktop_order_list.png)
 
 
 * Mobile - Home
@@ -104,7 +104,7 @@ JSHint was used to test JavaScript code quality.
 - only "Producsts" python files were tested but not all functionalities sucsessfull. 
 
 * Coverage test
-* ![Coverage test](readme_images/coverage.jpg)
+* ![Coverage test](readme_images/coverage.png)
 
 
 ## MANUAL TESTING
