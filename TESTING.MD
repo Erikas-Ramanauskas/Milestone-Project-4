@@ -70,33 +70,33 @@ JSHint was used to test JavaScript code quality.
 
 
 * Mobile - Home
-* ![Mobile - Home](readme_images/mobile_home.jpg)
+* ![Mobile - Home](readme_images/mobile_home.png)
 * Mobile - Bag
-* ![Mobile - Bag](readme_images/mobile_bag.jpg)
+* ![Mobile - Bag](readme_images/mobile_bag.png)
 * Mobile - Message
-* ![Mobile - Message](readme_images/mobile_message.jpg)
+* ![Mobile - Message](readme_images/mobile_message.png)
 * Mobile - Message List
-* ![Mobile - Message List](readme_images/mobile_message_list.jpg)
+* ![Mobile - Message List](readme_images/mobile_message_list.png)
 * Mobile - Checkout
-* ![Mobile - Checkout](readme_images/mobile_checkout.jpg)
+* ![Mobile - Checkout](readme_images/mobile_checkout.png)
 * Mobile - Checkout Sucsess
-* ![Mobile - Checkout Sucsess](readme_images/mobile_checkout_sucsess.jpg)
+* ![Mobile - Checkout Sucsess](readme_images/mobile_checkout_sucsess.png)
 * Mobile - Add Produt
-* ![Mobile - Add Produt](readme_images/mobile_add_produt.jpg)
+* ![Mobile - Add Produt](readme_images/mobile_add_produt.png)
 * Mobile - Edit Product
-* ![Mobile - Edit Product](readme_images/mobile_edit_product.jpg)
+* ![Mobile - Edit Product](readme_images/mobile_edit_product.png)
 * Mobile - Product Details
-* ![Mobile - Product Details](readme_images/mobile_product_details.jpg)
+* ![Mobile - Product Details](readme_images/mobile_product_details.png)
 * Mobile - Products
-* ![Mobile - Products](readme_images/mobile_products.jpg)
+* ![Mobile - Products](readme_images/mobile_products.png)
 * Mobile - Quality
-* ![Mobile - Quality](readme_images/mobile_quality.jpg)
+* ![Mobile - Quality](readme_images/mobile_quality.png)
 * Mobile - Sold Products
-* ![Mobile - Sold Products](readme_images/mobile_sold_products.jpg)
+* ![Mobile - Sold Products](readme_images/mobile_sold_products.png)
 * Mobile - Profile
-* ![Mobile - Profile](readme_images/mobile_profile.jpg)
+* ![Mobile - Profile](readme_images/mobile_profile.png)
 * Mobile - Order List
-* ![Mobile - Order List](readme_images/mobile_order_list.jpg)
+* ![Mobile - Order List](readme_images/mobile_order_list.png)
 
 ### Django Coverage
 
