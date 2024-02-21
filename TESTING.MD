@@ -128,79 +128,52 @@ Full testing was performed on the following devices:
 
 ### Website interaction testing
 
-| # | User Story | User | Priority | Completed |
+| # | Feature | Test performed | Expected outcome | Pass/Fail |
 | :---: | :--- | :---: | :---: | :---: |
-| | Visitor navigation | | | |
+| | Not loged in navigation | | | |
 | --- | --- | --- | --- | --- |
-| 1 | As a user I can view link to home page | Visitor | High | ✅ |
-| 2 | As a user I can view link to list of men brands | Visitor | High | ✅ |
-| 3 | As a user I can view link to list of men categories | Visitor | High | ✅ |
-| 4 | As a user I can view link to list of men sizes | Visitor | High | ✅ |
-| 5 | As a user I can view link to list of female categories | Visitor | High | ✅ |
-| 6 | As a user I can view link to list of female categories | Visitor | High | ✅ |
-| 7 | As a user I can view link to list of female sizes | Visitor | High | ✅ |
-| 8 | As a user I can view search bar and button | Visitor | High | ✅ |
-| 9 | As a user I can view link to register account | Visitor | High | ✅ |
-| 10 | As a user I can view link to log in account | Visitor | High | ✅ |
-| 11 | As a user I can view link to check bag | Visitor | High | ✅ |
-| 12 | As a user I can view link in footer to Facebook page | Visitor | Low | ✅ |
-| 13 | As a user I can view link in footer to Twitter page | Visitor | Low | ✅ |
-| 14 | As a user I can view link in footer to Youtube page | Visitor | Low | ✅ |
-| 15 | As a user I can view link in footer to Instagram page | Visitor | Low | ✅ |
-| 16 | As a user I can view link in footer to Instagram page | Visitor | Low | ✅ |
-| 17 | As a user I can press on logo to return to home page | Visitor | Low | ✅ |
+| 1 | Navigation logo link | Click on logo | Redirected to home page | ✅ |
+| 2 | Navigation link to men's shoes | Click link | Men's brands, categories, and sizes shown in dropdown | ✅ |
+| 3 | Navigation link to women's shoes | Click link | Women's brands, categories, and sizes shown in dropdown | ✅ |
+| 4 | Enter All Products via Home Hero Button | Click link | All products should be accessible from the home page | ✅ |
+| 5 | Check Product Groups via Home Page | Click link | Product groups should be accessible | ✅ |
+| 6 | Search for Specific Products within Navigation Bar | Use the search bar | Search results for the specific product should be displayed | ✅ |
+| 7 | Add Products to Bag | Add a product | Product should be added to the user's bag | ✅ |
+| 8 | See Products Added to Bag | View the contents | Products in the bag should be visible | ✅ |
+| 9 | See Individual Product Details | Click on | Product details page should be accessible | ✅ |
+| 10 | Remove Products from Bag | Remove a product | Product should be removed from the user's bag | ✅ |
+| 11 | Order and Pay for Products | Proceed to checkout | Order should be successfully placed and payment processed | ✅ |
+| 12 | See Order History | User's order history should be accessible | ✅ |
+| 13 | Edit Profile with Pre-filled Address | Edit the profile | Profile should be successfully updated with the new address | ✅ |
+| 14 | Register Account with G-mark | Complete the registration process | User should be successfully registered with G-mark | ✅ |
+| 15 | Log In to Account | Log in with valid credentials | User should be successfully logged in | ✅ |
+| 16 | Log Out of Account | Log out of the account | User should be successfully logged out | ✅ |
+| 17 | Recover Password of Account | Initiate password recovery process | User should receive instructions to recover the password | ✅ |
+| 18 | Link in Footer to Facebook Page | Click on link | Redirected to Facebook page | ✅ |
+| 19 | Link in Footer to Instagram Page | Click on link | Redirected to Instagram page | ✅ |
+| 20 | Link in Footer to Twitter Page | Click on link | Redirected to Twitter page | ✅ |
+| 21 | Link in Footer to LinkedIn Page | Click on link | Redirected to LinkedIn page | ✅ |
+| 22 | Link in Footer to YouTube Page | Click on link | Redirected to YouTube page | ✅ |
 | -- | --- | --- | --- | --- |
-| | Registred user navigation | | | |
+| | Loged in user | | | |
 | --- | --- | --- | --- | --- |
-| 18 | As a registed user I can view link to profile | User | High | ✅ |
-| 19 | As a registed user I can view link to order history | User | High | ✅ |
-| 20 | As a registed user I can view link to messages | User | High | ✅ |
-| 21 | As a registed user I can view link to logout button | User | High | ✅ |
+| 23 | Link to Profile | Click link | User's profile page should be accessible | ✅ |
+| 24 | Link to Order History | Click link | User's order history page should be accessible | ✅ |
+| 25 | Link to Messages | Click link | User's messages page should be accessible | ✅ |
+| 26 | Link to Logout Button | Click link | User should be able to log out | ✅ |
+| 27 | ""Ask About"" Link within Product Detail Page | Click link | Leads directly to message to support | ✅ |
+| 28 | See List of Messages to Support | View the list of messages | User should see a list of messages sent to support | ✅ |
 | -- | --- | --- | --- | --- |
-| | Superuser navigation | | | |
+| | Superuser | | | |
 | --- | --- | --- | --- | --- |
-| 22 | As superuser I can view link to add product link | Superuser | High | ✅ |
-| 23 | As superuser I can view link to sold products link | Superuser | Medium | ✅ |
-| 24 | As superuser I can view link to superuser messages link | Superuser | Medium | ✅ |
-| -- | --- | --- | --- | --- |
-| | Special navigation | | | |
-| --- | --- | --- | --- | --- |
-| 25 | As registed user I can view ask about link within product detail page | User | Medium | ✅ |
-| 26 | As superuser I can view edit product link within product detail page | Superuser | High | ✅ |
-| 27 | As superuser I can view delete product link within product detail page | Superuser | High | ✅ |
-| -- | --- | --- | --- | --- |
-| | Product Functionalities | | | |
-| --- | --- | --- | --- | --- |
-| 28 | As a user I can enter all prodcuts via home hero button | Visitor | High | ✅ |
-| 29 | As a user I can check product groups via home page | Visitor | High | ✅ |
-| 30 | As a user I can search sprecific products within navigation bar | Visitor | High | ✅ |
-| 31 | As a user I can add products to a bag | Visitor | High | ✅ |
-| 32 | As a user I can see the produts that were added to a bag | Visitor | High | ✅ |
-| 33 | As a user I can see individual product details | Visitor | High | ✅ |
-| 34 | As a user I can remove products from my bag | Visitor | High | ✅ |
-| 35 | As a registered user I can send a message to support about specific product | User | Medium | ✅ |
-| -- | --- | --- | --- | --- |
-| | Order Functionalities | | | |
-| --- | --- | --- | --- | --- |
-| 36 | As a user I can order and pay for the products I purchase | Visitor | High | ✅ |
-| 37 | As a registered user I can see my order history | User | High | ✅ |
-| 38 | As a registered user I can edit my profile with prefill adress | User | Medium | ✅ |
-| 39 | As a registered user I can see a list of messages to suport | User | Medium | ✅ |
-| -- | --- | --- | --- | --- |
-| | User functionalities | | | |
-| --- | --- | --- | --- | --- |
-| 40 | As Visitor I can register my acount with G-mark | User | High | ✅ |
-| 41 | As user I can log in to my acount | User | High | ✅ |
-| 42 | As user I can log out of my account | User | High | ✅ |
-| 43 | As user I can recover password of my account | User | High | ✅ |
-| -- | --- | --- | --- | --- |
-| | Superuser functionalities | | | |
-| --- | --- | --- | --- | --- |
-| 44 | As a superuser I can add new products | Superuser | High | ✅ |
-| 45 | As a superuser I remove products | Superuser | High | ✅ |
-| 46 | As superuser I can edit product | Superuser | High | ✅ |
-| 47 | As superuser I can see all messages send by ussers to support and respond | Superuser | Medium | ✅ |
-| 48 | As a superuser I can see all sold products | Superuser | Medium | ✅ |
+| 29 | Link to Add Product | Click link | Add product page should be accessible | ✅ |
+| 30 | Link to Sold Products | Click link | Sold products page should be accessible | ✅ |
+| 31 | Link to Superuser Messages | Click link | Superuser messages page should be accessible | ✅ |
+| 32 | ""Edit Product"" Link within Product Detail Page | Click link | ""Edit product"" link should be visible | ✅ |
+| 33 | ""Delete Product"" Link within Product Detail Page | Click link | ""Delete product"" link should be visible | ✅ |
+| 34 | Add New Products | Add a new product | New product should be successfully added | ✅ |
+| 35 | Remove Products | Remove a product | Product should be successfully removed | ✅ |
+
 
 
 
