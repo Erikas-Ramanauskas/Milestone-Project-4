@@ -385,4 +385,4 @@ ALLOWED_HOSTS = ['{heroku deployed site URL here}', 'localhost' ]
 
 [Erikas Ramanauskas, 2024](https://www.linkedin.com/in/erikas-ramanauskas)
 
-Visit [TSTING.md](TESTING.md)
+Visit [TESTING.md](TESTING.md)
